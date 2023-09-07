@@ -64,49 +64,49 @@ const NavBar = () => {
       </div>
 
       {/* Mobile Menu */}
-      <div className={`fixed top-1/2 left-0 w-full transform -translate-y-1/2 ${!nav ? "hidden" : ""} flex flex-col items-center text-xl space-y-6`}>
+      <div className={`fixed left-0 w-full ${!nav ? "hidden" : ""} flex flex-col items-center text-xl space-y-6`} style={{ top: "50%" }}>
         <ul className="flex flex-col items-center justify-center p-10 bg-background-white border-2 border-line-white">
           <li>
-            <Link to="home" className="flex flex-col items-center">
+            <Link to="home" className="flex flex-col items-center" onClick={() => setNav(false)}>
               <TiHome /> 
               <p>Home</p>
             </Link>
           </li>
           <li>
-            <Link to="about" className="flex flex-col items-center">
+            <Link to="about" className="flex flex-col items-center" onClick={() => setNav(false)}>
               <FaUserCircle /> 
               <p>About me</p>
             </Link>
           </li>
           <li>
-            <Link to="project" className="flex flex-col items-center">
+            <Link to="project" className="flex flex-col items-center" onClick={() => setNav(false)}>
               <FaLaptopCode />
               <p>Projects</p>
             </Link>
           </li>
           <li>
-            <Link to="research" className="flex flex-col items-center">
+            <Link to="research" className="flex flex-col items-center" onClick={() => setNav(false)}>
               <FaGlasses />
               <p>Research</p>
             </Link>
           </li>
           <li>
-            <Link to="contact" className="flex flex-col items-center">
+            <Link to="contact" className="flex flex-col items-center" onClick={() => setNav(false)}>
               <FaPaperPlane />
               <p>Contact Me</p>
             </Link>
           </li>
-          <li className="flex flex-col items-center">
+          <li className="flex flex-col items-center" onClick={() => setNav(false)}>
             <FaFileAlt />
             <p>Resume</p>
           </li>
-          <li className="flex flex-col items-center">
+          <li className="flex flex-col items-center" onClick={() => setNav(false)}>
             <a href="https://github.com/Ryuichi-Yamafuji-Lun" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="flex flex-col items-center justify-center">
               <FaGithub />
               <p>Github</p>
             </a>
           </li>
-          <li className="flex flex-col items-center">
+          <li className="flex flex-col items-center" onClick={() => setNav(false)}>
             <a href="https://www.linkedin.com/in/ryulun/" target="_blank" rel="noopener noreferrer" aria-label="Linkedin" className="flex flex-col items-center justify-center">
               <FaLinkedin />
               <p>Linkedin</p>
