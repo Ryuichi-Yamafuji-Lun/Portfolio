@@ -1,3 +1,4 @@
+import Headroom from "react-headroom";
 
 import NavBar from "./components/NavBar";
 import Home from "./pages/Home";
@@ -11,7 +12,9 @@ import SideBar from "./components/SideBar";
 function App() {
   return (
     <div>
-      <NavBar />
+      <Headroom>
+        <NavBar />
+      </Headroom>
       <SideBar />
       <Home />
       <About />
