@@ -11,7 +11,7 @@ const NavBar = () => {
   const handleClick = () => setNav(!nav);
 
   return (
-    <div className="sticky top-0 px-4 h-20 w-screen flex justify-between items-center font-lato text-line-white ">
+    <div className="sticky top-0 px-4 h-20 w-screen flex justify-between items-center font-lato bg-background-white text-line-white ">
       <div>
         <img
           src={LightLogo}
