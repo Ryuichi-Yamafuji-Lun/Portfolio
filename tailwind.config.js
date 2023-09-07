@@ -17,8 +17,8 @@ module.exports = {
         'dark-blue': '#0000AA',
 
         // Background Colors & Text
-        'backgroud-white': '#F2F2F2',
-        't-white': '#B0925A',
+        'background-white': '#F2F2F2',
+        'line-white': '#B0925A',
       },
 
       fontFamily: {

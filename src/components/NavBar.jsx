@@ -11,7 +11,7 @@ const NavBar = () => {
   const handleClick = () => setNav(!nav);
 
   return (
-    <div className="fixed top-0 px-4 h-20 w-screen flex justify-between items-center font-lato text-t-white ">
+    <div className="fixed top-0 px-4 h-20 w-screen flex justify-between items-center font-lato text-line-white ">
       <div>
         <img
           src={LightLogo}
@@ -64,54 +64,56 @@ const NavBar = () => {
       </div>
 
       {/* Mobile Menu */}
-      <ul className={`fixed top-1/2 left-0 w-full transform -translate-y-1/2 ${!nav ? "hidden" : ""} flex flex-col items-center text-xl space-y-6 bg-blue`}>
-        <li>
-          <Link to="home" className="flex flex-col items-center">
-            <TiHome /> 
-            <p>Home</p>
-          </Link>
-        </li>
-        <li>
-          <Link to="about" className="flex flex-col items-center">
-            <FaUserCircle /> 
-            <p>About me</p>
-          </Link>
-        </li>
-        <li>
-          <Link to="project" className="flex flex-col items-center">
-            <FaLaptopCode />
-            <p>Projects</p>
-          </Link>
-        </li>
-        <li>
-          <Link to="research" className="flex flex-col items-center">
-            <FaGlasses />
-            <p>Research</p>
-          </Link>
-        </li>
-        <li>
-          <Link to="contact" className="flex flex-col items-center">
-            <FaPaperPlane />
-            <p>Contact Me</p>
-          </Link>
-        </li>
-        <li className="flex flex-col items-center">
-          <FaFileAlt />
-          <p>Resume</p>
-        </li>
-        <li className="flex flex-col items-center">
-          <a href="https://github.com/Ryuichi-Yamafuji-Lun" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="flex flex-col items-center justify-center">
-            <FaGithub />
-            <p>Github</p>
-          </a>
-        </li>
-        <li className="flex flex-col items-center">
-          <a href="https://www.linkedin.com/in/ryulun/" target="_blank" rel="noopener noreferrer" aria-label="Linkedin" className="flex flex-col items-center justify-center">
-            <FaLinkedin />
-            <p>Linkedin</p>
-          </a>
-        </li>
-      </ul>
+      <div className={`fixed top-1/2 left-0 w-full transform -translate-y-1/2 ${!nav ? "hidden" : ""} flex flex-col items-center text-xl space-y-6`}>
+        <ul className="flex flex-col items-center justify-center p-10 bg-background-white border-2 border-line-white">
+          <li>
+            <Link to="home" className="flex flex-col items-center">
+              <TiHome /> 
+              <p>Home</p>
+            </Link>
+          </li>
+          <li>
+            <Link to="about" className="flex flex-col items-center">
+              <FaUserCircle /> 
+              <p>About me</p>
+            </Link>
+          </li>
+          <li>
+            <Link to="project" className="flex flex-col items-center">
+              <FaLaptopCode />
+              <p>Projects</p>
+            </Link>
+          </li>
+          <li>
+            <Link to="research" className="flex flex-col items-center">
+              <FaGlasses />
+              <p>Research</p>
+            </Link>
+          </li>
+          <li>
+            <Link to="contact" className="flex flex-col items-center">
+              <FaPaperPlane />
+              <p>Contact Me</p>
+            </Link>
+          </li>
+          <li className="flex flex-col items-center">
+            <FaFileAlt />
+            <p>Resume</p>
+          </li>
+          <li className="flex flex-col items-center">
+            <a href="https://github.com/Ryuichi-Yamafuji-Lun" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="flex flex-col items-center justify-center">
+              <FaGithub />
+              <p>Github</p>
+            </a>
+          </li>
+          <li className="flex flex-col items-center">
+            <a href="https://www.linkedin.com/in/ryulun/" target="_blank" rel="noopener noreferrer" aria-label="Linkedin" className="flex flex-col items-center justify-center">
+              <FaLinkedin />
+              <p>Linkedin</p>
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
   );
 };

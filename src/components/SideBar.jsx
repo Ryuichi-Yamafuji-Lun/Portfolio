@@ -3,7 +3,7 @@ import { FaGithub, FaLinkedin, FaSun, FaMoon } from 'react-icons/fa'
 
 export const SideBar = () => {
   return (
-    <div className="fixed bottom-0 left-0 px-8 py-4 w-1/6 text-t-white hidden md:flex">
+    <div className="fixed bottom-0 left-0 px-8 py-4 w-1/6 text-line-white hidden md:flex">
         <div className="py-4"> 
             <ul>
                 <li className="mb-2">
