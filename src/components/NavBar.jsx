@@ -2,7 +2,7 @@
 import { Link } from "react-scroll";
 import { useState } from "react";
 import { TiHome } from "react-icons/ti";
-import { FaUserCircle, FaGlasses, FaLaptopCode, FaPaperPlane, FaFileAlt, FaBars, FaTimes } from "react-icons/fa"
+import { FaUserCircle, FaGlasses, FaLaptopCode, FaPaperPlane, FaFileAlt, FaBars, FaTimes, FaGithub, FaLinkedin, } from "react-icons/fa"
 import LightLogo from "../assets/icons/Light-Logo.png"
 
 const NavBar = () => {
@@ -98,6 +98,18 @@ const NavBar = () => {
         <li className="flex flex-col items-center">
           <FaFileAlt />
           <p>Resume</p>
+        </li>
+        <li className="flex flex-col items-center">
+          <a href="https://github.com/Ryuichi-Yamafuji-Lun" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="flex flex-col items-center justify-center">
+            <FaGithub />
+            <p>Github</p>
+          </a>
+        </li>
+        <li className="flex flex-col items-center">
+          <a href="https://www.linkedin.com/in/ryulun/" target="_blank" rel="noopener noreferrer" aria-label="Linkedin" className="flex flex-col items-center justify-center">
+            <FaLinkedin />
+            <p>Linkedin</p>
+          </a>
         </li>
       </ul>
     </div>
