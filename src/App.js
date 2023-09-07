@@ -1,18 +1,25 @@
 
-import SideBar from "./components/SideBar";
-import Footer from "./components/Footer";
+import NavBar from "./components/NavBar";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Project from "./pages/Project";
 import Research from "./pages/Research";
 import Contact from "./pages/Contact";
+import SideBar from "./components/SideBar";
+
 
 function App() {
   return (
     <div>
-      <h1> App </h1>
+      <NavBar />
+      <SideBar />
+      <Home />
+      <About />
+      <Project />
+      <Research />
+      <Contact />
     </div>
   );
-}
+};
 
 export default App;

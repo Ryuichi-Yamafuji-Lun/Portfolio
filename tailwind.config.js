@@ -8,7 +8,7 @@ module.exports = {
       colors: {
         // Light Mode
         'light-red': '#FFAAAA',
-        'light-gold': '#FFFFAA',
+        'light-gold': '#EDDDB8',
         'light-blue': '#AAAAFF',
 
         // Dark Mode
@@ -16,13 +16,13 @@ module.exports = {
         'dark-gold': '#888800',
         'dark-blue': '#0000AA',
 
-        // Background Colors
-        'eggshell-white': '#F0EAD6',
+        // Background Colors & Text
+        'backgroud-white': '#F2F2F2',
+        't-white': '#B0925A',
       },
 
       fontFamily: {
-        'caslon': ['"Adobe Caslon Pro"', 'serif'],
-        'lato': ['Lato', 'sans-serif'],
+        lato: ['Lato', 'sans-serif'],
       },
     },
   },

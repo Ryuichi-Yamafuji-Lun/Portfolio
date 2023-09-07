@@ -2,7 +2,9 @@
 
 const Research = () => {
   return (
-    <div>Research</div>
+    <div name="research" className="w-full h-screen">
+      Research
+    </div>
   );
 };
 
