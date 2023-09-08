@@ -1,6 +1,6 @@
 // Web Page
 import { Link } from "react-scroll";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { TiHome } from "react-icons/ti";
 import { FaUserCircle, FaGlasses, FaLaptopCode, FaPaperPlane, FaFileAlt, FaBars, FaTimes, FaGithub, FaLinkedin, } from "react-icons/fa"
 import LightLogo from "../assets/icons/Light-Logo.png"
@@ -9,6 +9,22 @@ const NavBar = () => {
 
   const [nav, setNav] = useState(false);
   const handleClick = () => setNav(!nav);
+
+  useEffect(() => {
+    // Function to handle window resize
+    const handleResize = () => {
+      if (window.innerWidth >= 768) {
+        setNav(false);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
 
   return (
     <div className="sticky top-0 px-4 h-20 w-screen flex justify-between items-center font-lato bg-background-white text-line-white ">
@@ -64,7 +80,7 @@ const NavBar = () => {
       </div>
 
       {/* Mobile Menu */}
-      <div className={`fixed left-0 w-full ${!nav ? "hidden" : ""} flex flex-col items-center text-xl space-y-6`} style={{ top: "50%" }}>
+      <div className={`fixed left-0 w-full ${!nav ? "hidden" : ""} flex flex-col items-center text-xl space-y-6`} style={{ top: "80%" }}>
         <ul className="flex flex-col items-center justify-center p-10 bg-background-white border-2 border-line-white">
           <li>
             <Link to="home" className="flex flex-col items-center" onClick={() => setNav(false)}>
