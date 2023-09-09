@@ -80,7 +80,7 @@ const NavBar = () => {
       </div>
 
       {/* Mobile Menu */}
-      <div className={`fixed left-0 w-full ${!nav ? "hidden" : ""} flex flex-col items-center text-xl space-y-6`} style={{ top: "80%" }}>
+      <div className={`fixed left-0 w-full ${!nav ? "hidden" : ""} flex flex-col items-center text-xl space-y-6`} style={{ top: "50%", transform: "translateY(20%)" }}>
         <ul className="flex flex-col items-center justify-center p-10 bg-background-white border-2 border-line-white">
           <li>
             <Link to="home" className="flex flex-col items-center" onClick={() => setNav(false)}>
