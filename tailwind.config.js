@@ -24,8 +24,11 @@ module.exports = {
       fontFamily: {
         lato: ['Lato', 'sans-serif'],
       },
+
+      backgroundImage: {
+        'test-pattern': "url('./assets/image/temp.jpg')",
+      },
     },
   },
   plugins: [],
 }
-

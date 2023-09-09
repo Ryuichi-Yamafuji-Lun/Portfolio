@@ -4,6 +4,7 @@ import NavBar from "./components/NavBar";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Project from "./pages/Project";
+import OtherProjects from "./pages/OtherProjects";
 import Research from "./pages/Research";
 import Contact from "./pages/Contact";
 import SideBar from "./components/SideBar";
@@ -19,6 +20,7 @@ function App() {
       <Home />
       <About />
       <Project />
+      <OtherProjects />
       <Research />
       <Contact />
     </div>
