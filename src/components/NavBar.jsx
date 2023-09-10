@@ -37,7 +37,7 @@ const NavBar = () => {
       </div>
 
       {/* Desktop Menu */}
-      <ul className="hidden md:flex space-x-6">
+      <ul className="hidden md:flex md:pr-5 space-x-6">
         <li>
           <Link to="home" className="flex items-center">
             <TiHome /> 
