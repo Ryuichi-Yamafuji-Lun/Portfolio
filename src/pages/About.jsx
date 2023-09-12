@@ -1,5 +1,8 @@
 import { BiLogoPython, BiLogoJavascript, BiLogoHtml5, BiLogoCss3, BiLogoReact, BiLogoTailwindCss } from "react-icons/bi";
 
+import C_Dark from "../assets/icons/programming/C-dark.png";
+import Cpp_Dark from "../assets/icons/programming/C++-dark.png";
+
 const About = () => {
   return (
     <div name="about" className="w-full font-lato">
@@ -26,8 +29,14 @@ const About = () => {
                 <BiLogoPython size={48} />
                 <span>Python</span>
               </div>
-              <div className="flex flex-col items-center">C</div>
-              <div className="flex flex-col items-center">C++</div>
+              <div className="flex flex-col items-center">
+                <img src={C_Dark} alt="C Programming Icon"/>
+                <span>C</span>
+              </div>
+              <div className="flex flex-col items-center">
+                <img src={Cpp_Dark} alt="C++ Programming Icon"/>
+                <span>C++</span>
+              </div>
               <div className="flex flex-col items-center">
                 <BiLogoJavascript size={48} />
                 <span>Javascript</span>
