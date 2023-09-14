@@ -1,4 +1,4 @@
-
+import { Link } from "react-scroll";
 
 const Home = () => {
   return (
@@ -12,9 +12,11 @@ const Home = () => {
           I'm a Software Engineer.
         </p>
         <div>
-          <button className='text-line-white group border-2 border-line-white px-6 py-3 my-2 flex items-center hover:bg-black'>
-            View Work
-          </button>
+          <Link to="project">
+            <button className='text-line-white group border-2 border-line-white px-6 py-3 my-2 flex items-center hover:bg-black'>
+              View Work
+            </button>
+          </Link> 
         </div>
       </div>
     </div>
