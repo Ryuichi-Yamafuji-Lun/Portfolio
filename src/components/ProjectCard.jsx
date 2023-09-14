@@ -2,7 +2,7 @@
 
 const ProjectCard = ({ title, imageSrc, technologies, description, websiteLink, sourceCodeLink }) => {
     return (
-      <div className="w-max-[1000px] m-3 mt-20 md:mt-0 rounded-lg overflow-hidden shadow-lg">
+      <div className="transition w-max-[1000px] m-3 mt-20 md:mt-0 rounded-lg overflow-hidden shadow-lg hover:-translate-y-1 hover:scale-105">
         <div className="mb-4 relative w-full">
           <a
             href={websiteLink}
@@ -22,7 +22,7 @@ const ProjectCard = ({ title, imageSrc, technologies, description, websiteLink, 
                 href={websiteLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-bold text-line-white bg-background-white border-2 border-line-white p-1 rounded-lg hover:bg-black mx-2"
+                className="transition font-bold text-line-white bg-background-white border-2 border-line-white p-1 rounded-lg hover:bg-black mx-2 hover:-translate-y-1 hover:scale-110"
               >
                 Website
               </a>
@@ -32,7 +32,7 @@ const ProjectCard = ({ title, imageSrc, technologies, description, websiteLink, 
                 href={sourceCodeLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-bold text-line-white bg-background-white border-2 border-line-white p-1 rounded-lg hover:bg-black mx-2"
+                className="transition font-bold text-line-white bg-background-white border-2 border-line-white p-1 rounded-lg hover:bg-black mx-2 hover:-translate-y-1 hover:scale-110"
               >
                 Source Code
               </a>

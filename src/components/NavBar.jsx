@@ -39,36 +39,36 @@ const NavBar = () => {
       {/* Desktop Menu */}
       <ul className="hidden md:flex md:pr-5 space-x-6">
         <li>
-          <Link to="home" className="flex items-center">
+          <Link to="home" className="flex items-center transition hover:-translate-y-1 hover:scale-110">
             <TiHome /> 
             <p className="pl-1">Home</p>
           </Link>
         </li>
         <li>
-          <Link to="about" className="flex items-center">
+          <Link to="about" className="flex items-center transition hover:-translate-y-1 hover:scale-110">
             <FaUserCircle />
             <p className="pl-1">About Me</p>
           </Link>
         </li>
         <li>
-          <Link to="project" className="flex items-center">
+          <Link to="project" className="flex items-center transition hover:-translate-y-1 hover:scale-110">
             <FaLaptopCode />
             <p className="pl-1">Projects</p>
           </Link>
         </li>
-        <li className="flex items-center">
-          <Link to="research" className="flex items-center">
+        <li>
+          <Link to="research" className="flex items-center transition hover:-translate-y-1 hover:scale-110">
             <FaGlasses />
             <p className="pl-1">Research</p>
           </Link>
         </li>
         <li>
-          <Link to="contact" className="flex items-center">
+          <Link to="contact" className="flex items-center transition hover:-translate-y-1 hover:scale-110">
             <FaPaperPlane />
             <p className="pl-1">Contact Me</p>
           </Link>
         </li>
-        <li className="flex items-center">
+        <li className="flex items-center transition hover:-translate-y-1 hover:scale-110">
           <FaFileAlt />
           <p className="pl-1">Resume</p>
         </li>
@@ -81,7 +81,7 @@ const NavBar = () => {
 
       {/* Mobile Menu */}
       <div className={`fixed left-0 w-full ${!nav ? "hidden" : ""} flex flex-col items-center text-xl space-y-6`} style={{ top: "50%", transform: "translateY(20%)" }}>
-        <ul className="flex flex-col items-center justify-center p-10 bg-background-white border-2 border-line-white">
+        <ul className="flex flex-col items-center justify-center p-10 bg-background-white border-2 border-line-white rounded-lg">
           <li>
             <Link to="home" className="flex flex-col items-center" onClick={() => setNav(false)}>
               <TiHome /> 
