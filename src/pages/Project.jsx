@@ -1,6 +1,7 @@
 import { BiLogoReact, BiLogoTailwindCss, BiLogoFlask, BiLogoFirebase, BiLogoTypescript } from "react-icons/bi";
 import mySQL_Dark from "../assets/icons/programming/mySQL-Dark.png";
 import theDuck from "../assets/image/OpenTron/duck.jpeg";
+import ProjectCard from "../components/ProjectCard";
 
 const Project = () => {
   const projects = [
@@ -55,46 +56,7 @@ const Project = () => {
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-3 ">
           {projects.map((project, index) => (
-            <div key={index} className="max-w-[1000px] px-4 md:pl-20 pr-3 md:pr-5 mt-20 md:mt-0">
-              <p className="text-2xl text-line-white font-bold md:text-3xl">{project.title}</p>
-              <div className="mb-4 pt-1 relative">
-                <a
-                  href={project.websiteLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img src={project.imageSrc} alt="Project Image" />
-                </a>
-                {/* Buttons container */}
-                <div className="flex items-center justify-center absolute bottom-0 left-0 right-0 p-4">
-                  <a
-                    href={project.websiteLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="font-bold text-line-white bg-background-white border-2 border-line-white p-1 hover:bg-black mx-2"
-                  >
-                    Website
-                  </a>
-                  <a
-                    href={project.sourceCodeLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="font-bold text-line-white bg-background-white border-2 border-line-white p-1 hover:bg-black mx-2"
-                  >
-                    Source Code
-                  </a>
-                </div>
-              </div>
-              <div className="flex items-center space-x-2 mb-4">
-                <p className="text-line-white text-sm">Created with: </p>
-                {project.technologies.map((tech, techIndex) => (
-                  <div key={techIndex} className="flex items-center space-x-1">
-                    {tech.logo}
-                  </div>
-                ))}
-              </div>
-              <p className="pb-2">{project.description}</p>
-            </div>
+            <ProjectCard key={index} {...project} />
           ))}
         </div>
       </div>
