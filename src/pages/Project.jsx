@@ -31,7 +31,9 @@ const Project = () => {
         { logo: <BiLogoFirebase size={35} />, name: "Firebase" },
         { logo: <BiLogoTypescript size={35} />, name: "TypeScript" },
       ],
-      description: "Maigo is a GeoGuessr clone for MMO made with a team of six. I specifically assisted in the authentication using firebase and other miscellaneous tasks.",
+      description: `
+      Maigo is a GeoGuessr clone for MMO made with a team of six. I specifically 
+      assisted in the authentication using firebase and other miscellaneous tasks.`,
       websiteLink: "https://maigo-bd6b7.web.app/",
       sourceCodeLink: "https://github.com/leochoo/maigo",
     },
@@ -42,7 +44,7 @@ const Project = () => {
         { logo: <BiLogoReact size={35} />, name: "React"},
         { logo: <BiLogoTailwindCss size={35} />, name: "Tailwindcss"},
       ],
-      description: "My Portfolio was made with React and Tailwindcss to showcase my works",
+      description: `My Portfolio was made with React and Tailwindcss to showcase my works`,
       websiteLink: "https://maigo-bd6b7.web.app/",
       sourceCodeLink: "https://github.com/leochoo/maigo",
     }
