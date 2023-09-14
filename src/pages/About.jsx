@@ -6,7 +6,7 @@ import Cpp_Dark from "../assets/icons/programming/C++-dark.png";
 const About = () => {
   return (
     <div name="about" className="w-full font-lato">
-      <div className="container mx-auto p-10 md:p-20">
+      <div className="container mx-auto p-5">
         <div className="grid grid-cols-1 lg:grid-cols-3">
           {/* About Me */}
           <div className="md:col-span-2">
