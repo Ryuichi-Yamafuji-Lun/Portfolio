@@ -6,7 +6,7 @@ import ProjectCard from "../components/ProjectCard";
 const Project = () => {
   const projects = [
     {
-      title: "PSMS",
+      title: "PokeStore Management System",
       imageSrc: theDuck,
       technologies: [
         { logo: <img src={mySQL_Dark} alt="mySQL icon" />, name: "MySQL" },

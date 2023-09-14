@@ -17,7 +17,7 @@ const OtherProjects = () => {
       description: "description",
     },
     {
-      title: "B+Tree ",
+      title: "B+Tree Implementation",
       imageSrc: theDuck,
       technologies: [
         { logo: <img src={C_Dark} alt="mySQL icon" style={{ height: '35px', width: '35px' }}/>, name: "C" },
