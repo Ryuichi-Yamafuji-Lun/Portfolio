@@ -1,4 +1,6 @@
-import { BiLogoReact, BiLogoTailwindCss, BiLogoFlask, BiLogoFirebase, BiLogoTypescript } from "react-icons/bi";
+import { BiLogoPython } from "react-icons/bi";
+import C_Dark from "../assets/icons/programming/C-dark.png";
+import Cpp_Dark from "../assets/icons/programming/C++-dark.png";
 
 const OtherProjects = () => {
   const otherprojects = [
@@ -6,9 +8,7 @@ const OtherProjects = () => {
       title: "Opentron Coding",
       imageSrc: "URL_TO_YOUR_IMAGE_1",
       technologies: [
-        { logo: <BiLogoFlask size={35} />, name: "Flask" },
-        { logo: <BiLogoReact size={35} />, name: "React" },
-        { logo: <BiLogoTailwindCss size={35} />, name: "Tailwind CSS" },
+        { logo: <BiLogoPython size={35} />, name: "Flask" },
       ],
       description: `
       description`,
@@ -17,8 +17,9 @@ const OtherProjects = () => {
       title: "B+Tree Implementation",
       imageSrc: "URL_TO_YOUR_IMAGE_2",
       technologies: [
-        { logo: <BiLogoFirebase size={35} />, name: "Firebase" },
-        { logo: <BiLogoTypescript size={35} />, name: "TypeScript" },
+        { logo: <img src={C_Dark} alt="mySQL icon" />, name: "C" },
+        { logo: <img src={Cpp_Dark} alt="mySQL icon" />, name: "C++" },
+
       ],
       description: "description",
     },
