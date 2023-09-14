@@ -18,8 +18,8 @@ const OtherProjects = () => {
       description`,
     },
     {
-      title: "B+Tree Implementation",
-      imageSrc: "URL_TO_YOUR_IMAGE_2",
+      title: "B+Tree ",
+      imageSrc: theDuck,
       technologies: [
         { logo: <img src={C_Dark} alt="mySQL icon" style={{ height: '35px', width: '35px' }}/>, name: "C" },
         { logo: <img src={Cpp_Dark} alt="mySQL icon" style={{ height: '35px', width: '35px' }}/>, name: "C++" },
@@ -32,7 +32,10 @@ const OtherProjects = () => {
   return (
     <div name="otherproject" className="w-full font-lato">
       <div className="container mx-auto p-10 md:p-20">
-        <div className="grid grid-cols-1 lg:grid-cols-3 ">
+        <div className="text-center text-line-white font-bold pb-4">
+          <p className="text-6xl">Other Projects</p>
+        </div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 ">
           {otherprojects.map((otherprojects, index) => (
             <div key={index} className="max-w-[1000px] px-4 md:pl-20 pr-3 md:pr-5 mt-20 md:mt-0">
               <p className="text-2xl text-line-white font-bold md:text-3xl">{otherprojects.title}</p>

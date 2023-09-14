@@ -34,11 +34,25 @@ const Project = () => {
       websiteLink: "https://maigo-bd6b7.web.app/",
       sourceCodeLink: "https://github.com/leochoo/maigo",
     },
+    {
+      title: "Portfolio",
+      imageSrc: theDuck,
+      technologies: [
+        { logo: <BiLogoReact size={35} />, name: "React"},
+        { logo: <BiLogoTailwindCss size={35} />, name: "Tailwindcss"},
+      ],
+      description: "My Portfolio was made with React and Tailwindcss to showcase my works",
+      websiteLink: "https://maigo-bd6b7.web.app/",
+      sourceCodeLink: "https://github.com/leochoo/maigo",
+    }
   ];
 
   return (
     <div name="project" className="w-full font-lato">
       <div className="container mx-auto p-10">
+        <div className="text-center text-line-white font-bold p-4">
+          <p className="text-6xl">Projects</p>
+        </div>
         <div className="grid grid-cols-1 lg:grid-cols-3 ">
           {projects.map((project, index) => (
             <div key={index} className="max-w-[1000px] px-4 md:pl-20 pr-3 md:pr-5 mt-20 md:mt-0">
