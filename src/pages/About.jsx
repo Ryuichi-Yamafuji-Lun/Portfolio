@@ -20,7 +20,7 @@ const About = () => {
             </div>
           </div>
           {/* Technologies */}
-          <div className="max-w-prose px-4 md:pl-10 mt-10 md:mt-0">
+          <div className="max-w-prose px-4 md:pl-10 mt-10 md:mt-2">
             <div className="text-center">
               <p className="text-3xl text-line-white font-bold pb-5 sm:text-6xl">Technologies</p>
             </div>

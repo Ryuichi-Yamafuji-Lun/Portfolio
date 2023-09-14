@@ -7,13 +7,13 @@ const Project = () => {
       <div className="container mx-auto p-10 md:p-20">
         <div className="grid grid-cols-1 lg:grid-cols-3">
           {/* Project 1 */}
-          <div className="max-w-[1000px] px-4 md:pl-20 pr-4 md:pr-5 mt-20 md:mt-0">
+          <div className="max-w-[1000px] px-4 md:pl-20 pr-3 md:pr-5 mt-20 md:mt-0">
             <p className="text-2xl text-line-white font-bold md:text-3xl">PokéStore Management System</p>
             <div>
               Image
             </div>
             <div className="flex items-center space-x-2">
-              <p className="text-line-white">Created with: </p>
+              <p className="text-line-white text-sm">Created with: </p>
               <img src={mySQL_Dark} alt="mySQL icon" />
               <BiLogoFlask size={35}/>
               <BiLogoReact size={35}/>
@@ -35,7 +35,7 @@ const Project = () => {
               Image
             </div>
             <div className="flex items-center space-x-2">
-              <p className="text-line-white">Created with: </p>
+              <p className="text-line-white text-sm">Created with: </p>
               <BiLogoFirebase size={35}/>
               <BiLogoTypescript size={35}/>
             </div>
@@ -45,6 +45,21 @@ const Project = () => {
             </p>
           </div>
           {/* Project 3 */}
+          <div className="max-w-[1000px] px-4 md:pl-20 pr-4 md:pr-5 mt-20 md:mt-0">
+            <p className="text-2xl text-line-white font-bold md:text-3xl">Maigo</p>
+            <div>
+              Image
+            </div>
+            <div className="flex items-center space-x-2">
+              <p className="text-line-white text-sm">Created with: </p>
+              <BiLogoFirebase size={35}/>
+              <BiLogoTypescript size={35}/>
+            </div>
+            <p className="pb-2">
+              Maigo is a GeoGuessr clone for MMO made with a team of six. I specifically assisted
+              in the authentication and other miscellaneous task. 
+            </p>
+          </div>
         </div>
       </div>
     </div>
