@@ -40,7 +40,8 @@ const ProjectCard = ({ title, imageSrc, technologies, description, websiteLink, 
           </div>
         </div>
         <div className="max-w-full px-4"> {/* Set maxWidth to 100% */}
-          <p className="text-2xl text-line-white font-bold md:text-3xl mb-1">{title}</p>
+          <p className="text-2xl text-line-white font-bold mb-1">{title}</p>
+          <p className="pb-2">{description}</p>
           <div className="flex items-center space-x-2 mb-4">
             <p className="text-line-white text-sm">Created with: </p>
             {technologies.map((tech, techIndex) => (
@@ -49,7 +50,6 @@ const ProjectCard = ({ title, imageSrc, technologies, description, websiteLink, 
               </div>
             ))}
           </div>
-          <p className="pb-2">{description}</p>
         </div>
       </div>
     );

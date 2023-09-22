@@ -31,7 +31,7 @@ const OtherProjects = () => {
     <div name="otherproject" className="w-full font-lato">
       <div className="container mx-auto p-10 md:p-20">
         <div className="text-center text-line-white font-bold pb-4">
-          <p className="text-6xl">Other Projects</p>
+          <p className="text-6xl">OTHER PROJECTS</p>
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-2">
           {otherprojects.map((project, index) => (

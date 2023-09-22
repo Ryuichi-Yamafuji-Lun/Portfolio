@@ -10,8 +10,8 @@ const About = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3">
           {/* About Me */}
           <div className="md:col-span-2">
-            <div className="max-w-[1000px] px-4 md:pl-20 pr-4 md:pr-5 mt-20 md:mt-0">
-              <p className="text-3xl text-line-white font-bold pb-5 text-center sm:text-6xl lg:text-left"> About Me</p>
+            <div className="max-w-[1000px] px-4 md:pl-20 pr-4 md:pr-5 mt-20 md:mt-20">
+              <p className="text-3xl text-line-white font-bold pb-5 text-center sm:text-6xl lg:text-left">ABOUT ME</p>
               <p className="text-2xl">
                 Hello, I'm Ryuichi Yamafuji Lun, a dedicated software engineer fueled by an 
                 insatiable appetite for learning and a zest for embracing cutting-edge technologies.
@@ -20,7 +20,7 @@ const About = () => {
             </div>
           </div>
           {/* Technologies */}
-          <div className="max-w-prose px-4 md:pl-10 mt-10 md:mt-2">
+          <div className="max-w-prose px-4 md:pl-10 mt-10">
             <div className="text-center">
               <p className="text-3xl text-line-white font-bold pb-5 sm:text-6xl">Technologies</p>
             </div>
