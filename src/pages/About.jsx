@@ -17,6 +17,9 @@ const About = () => {
                 insatiable appetite for learning and a zest for embracing cutting-edge technologies.
                 Currently, I'm engaged as an undergraduate researcher at the Data Platform Laboratory at Keio University.
               </p>
+              <p className="pt-2">
+                Technologies: Python, C/C++, Javascript, HTML, CSS, React, Tailwindcss
+              </p>
             </div>
           </div>
           {/* Technologies */}
