@@ -1,59 +1,59 @@
-// ProjectCard.jsx
+import { MdWebAsset } from "react-icons/md";
+import { BiCodeAlt } from "react-icons/bi";
 
 const ProjectCard = ({ title, imageSrc, technologies, description, websiteLink, sourceCodeLink }) => {
-    return (
-      <div className="transition w-max-[1000px] m-3 mt-20 md:mt-0 rounded-lg overflow-hidden shadow-lg hover:-translate-y-1 hover:scale-105">
-        <div className="mb-4 relative w-full">
-          <a
-            href={websiteLink}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              src={imageSrc}
-              alt=""
-              className="w-full h-auto" 
-            />
-          </a>
-          {/* Buttons container */}
-          <div className="flex items-center justify-center absolute bottom-0 left-0 right-0 p-4">
-            {websiteLink && (
-              <a
-                href={websiteLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="transition font-bold text-line-white bg-background-white border-2 border-line-white p-1 rounded-lg hover:bg-black mx-2 hover:-translate-y-1 hover:scale-110"
-              >
-                Website
-              </a>
-            )}
-            {sourceCodeLink && (
-              <a
-                href={sourceCodeLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="transition font-bold text-line-white bg-background-white border-2 border-line-white p-1 rounded-lg hover:bg-black mx-2 hover:-translate-y-1 hover:scale-110"
-              >
-                Source Code
-              </a>
-            )}
-          </div>
-        </div>
-        <div className="max-w-full px-4"> {/* Set maxWidth to 100% */}
-          <p className="text-2xl text-line-white font-bold mb-1">{title}</p>
-          <p className="pb-2">{description}</p>
-          <div className="flex items-center space-x-2 mb-4">
-            <p className="text-line-white text-sm">Created with: </p>
-            {technologies.map((tech, techIndex) => (
-              <div key={techIndex} className="flex items-center space-x-1">
-                {tech.logo}
-              </div>
-            ))}
-          </div>
+  return (
+    <div className="transition w-full md:w-[500px] m-3 mt-20 md:mt-0 rounded-lg overflow-hidden hover:shadow-lg hover:backdrop-blur-md flex flex-col md:flex-row">
+      <div className="w-full md:w-1/3">
+        <a
+          href={websiteLink}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src={imageSrc}
+            alt=""
+            className="w-full h-auto p-3 rounded"
+          />
+        </a>
+        <div className="flex items-center space-x-2 mt-2 p-3 md:mt-0">
+          {websiteLink && (
+            <a
+              href={websiteLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition font-bold text-line-white bg-background-white "
+            >
+              <MdWebAsset className='transition hover:-translate-y-1 hover:translate-x-1 hover:scale-110'/>
+            </a>
+          )}
+          {sourceCodeLink && (
+            <a
+              href={sourceCodeLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition font-bold text-line-white bg-background-white"
+            >
+              <BiCodeAlt className='transition hover:-translate-y-1 hover:translate-x-1 hover:scale-110'/>
+            </a>
+          )}
         </div>
       </div>
-    );
-  };
-  
-  export default ProjectCard;
-  
+      <div className="w-full md:w-2/3 bg-background-white p-4">
+        <p className="text-2xl text-line-white font-bold mb-1">{title}</p>
+        <p className="pb-2">{description}</p>
+        <div className="flex flex-wrap items-center space-x-2 mb-4">
+          {technologies.map((tech, techIndex) => (
+            <div key={techIndex} className="flex items-center space-x-1 mb-2">
+              <div className="rounded-full bg-[#385feb] p-1 px-2 text-white">
+                {tech.logo}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default ProjectCard;

@@ -1,7 +1,4 @@
-import { BiLogoPython, BiLogoJavascript, BiLogoHtml5, BiLogoCss3, BiLogoReact, BiLogoTailwindCss } from "react-icons/bi";
-
-import C_Dark from "../assets/icons/programming/C-dark.png";
-import Cpp_Dark from "../assets/icons/programming/C++-dark.png";
+import React from "react";
 
 const About = () => {
   return (
@@ -10,55 +7,27 @@ const About = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3">
           {/* About Me */}
           <div className="md:col-span-2">
-            <div className="max-w-[1000px] px-4 md:pl-20 pr-4 md:pr-5 mt-20 md:mt-20">
+            <div className="max-w-[1000px] px-4 md:pl-10 pr-4 md:pr-5 mt-20 md:mt-20">
               <p className="text-3xl text-line-white font-bold pb-5 text-center sm:text-6xl lg:text-left">ABOUT ME</p>
               <p className="text-2xl">
                 Hello, I'm Ryuichi Yamafuji Lun, a dedicated software engineer fueled by an 
                 insatiable appetite for learning and a zest for embracing cutting-edge technologies.
                 Currently, I'm engaged as an undergraduate researcher at the Data Platform Laboratory at Keio University.
               </p>
-              <p className="pt-2">
-                Technologies: Python, C/C++, Javascript, HTML, CSS, React, Tailwindcss
-              </p>
-            </div>
-          </div>
-          {/* Technologies */}
-          <div className="max-w-prose px-4 md:pl-10 mt-10">
-            <div className="text-center">
-              <p className="text-3xl text-line-white font-bold pb-5 sm:text-6xl">Technologies</p>
-            </div>
-            <div className="grid grid-cols-3 gap-4 mt-10 md:mt-0 text-center">
-              <div className="flex flex-col items-center">
-                <BiLogoPython size={48} />
-                <span>Python</span>
-              </div>
-              <div className="flex flex-col items-center">
-                <img src={C_Dark} alt="C Programming Icon"/>
-                <span>C</span>
-              </div>
-              <div className="flex flex-col items-center">
-                <img src={Cpp_Dark} alt="C++ Programming Icon"/>
-                <span>C++</span>
-              </div>
-              <div className="flex flex-col items-center">
-                <BiLogoJavascript size={48} />
-                <span>Javascript</span>
-              </div>
-              <div className="flex flex-col items-center">
-                <BiLogoHtml5 size={48} />
-                <span>HTML</span>
-              </div>
-              <div className="flex flex-col items-center">
-                <BiLogoCss3 size={48} />
-                <span>CSS</span>
-              </div>
-              <div className="flex flex-col items-center">
-                <BiLogoReact size={48} />
-                <span>React</span>
-              </div>
-              <div className="flex flex-col items-center">
-                <BiLogoTailwindCss size={48} />
-                <span>Tailwindcss</span>
+              <div className="pt-4">
+                <p className="pb-2">Technologies:</p>
+                <div className="flex flex-wrap">
+                  {["Python", "C/C++", "Javascript", "HTML", "CSS", "React", "Tailwindcss"].map(
+                    (tech, index) => (
+                      <span
+                        key={index}
+                        className="rounded-full bg-[#385feb] p-1 px-2 text-white mr-2 mb-2"
+                      >
+                        {tech}
+                      </span>
+                    )
+                  )}
+                </div>
               </div>
             </div>
           </div>

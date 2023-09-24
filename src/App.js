@@ -16,7 +16,6 @@ function App() {
       <Headroom>
         <NavBar />
       </Headroom>
-      <SideBar />
       <Home />
       <About />
       <Project />

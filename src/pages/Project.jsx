@@ -4,16 +4,16 @@ import ProjectCard from "../components/ProjectCard";
 const Project = () => {
   const projects = [
     {
-      title: "PokéStore Management System",
+      title: "Store Management System",
       imageSrc: theDuck,
       technologies: [
         { logo: "MySQL" },
         { logo: "Flask" },
         { logo: "React" },
-        { logo: "Tailwind CSS" },
+        { logo: "Tailwindcss" },
       ],
       description: `
-      A full-stack PokéMart themed management system with hidden easter eggs.
+      A full-stack Grocery Store Management System.
       `,
       websiteLink: "https://maigo-bd6b7.web.app/",
       sourceCodeLink: "https://github.com/Ryuichi-Yamafuji-Lun/PokeStore-management-system",
@@ -46,12 +46,14 @@ const Project = () => {
   return (
     <div name="project" className="w-full font-lato">
       <div className="container mx-auto p-10">
-        <div className="text-center text-line-white font-bold p-4">
+        <div className="text-line-white font-bold p-4">
           <p className="text-6xl">PROJECTS</p>
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-3 ">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {projects.map((project, index) => (
-            <ProjectCard key={index} {...project} />
+            <div className="w-full md:w-[400px]" key={index}> {/* Adjust the width here */}
+              <ProjectCard {...project} />
+            </div>
           ))}
         </div>
       </div>
