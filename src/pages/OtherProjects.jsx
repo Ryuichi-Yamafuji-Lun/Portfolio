@@ -33,7 +33,7 @@ const OtherProjects = () => {
         <div className="text-center text-line-white font-bold pb-4">
           <p className="text-6xl">OTHER PROJECTS</p>
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-2">
+        <div className="grid grid-cols-1 ">
           {otherprojects.map((project, index) => (
             <ProjectCard key={index} {...project} />
           ))}

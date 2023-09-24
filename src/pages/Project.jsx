@@ -45,11 +45,11 @@ const Project = () => {
 
   return (
     <div name="project" className="w-full font-lato">
-      <div className="container mx-auto p-10">
+      <div className="container mx-auto p-10 md:p-20">
         <div className="text-line-white font-bold p-4">
           <p className="text-6xl">PROJECTS</p>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 gap-4">
           {projects.map((project, index) => (
             <div className="w-full md:w-[400px]" key={index}> {/* Adjust the width here */}
               <ProjectCard {...project} />
