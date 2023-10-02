@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState } from "react";
 import { Link } from "react-scroll";
 import { TiHome } from "react-icons/ti";
 import { FaUserCircle, FaGlasses, FaLaptopCode, FaPaperPlane, FaFileAlt, FaBars, FaTimes, FaGithub, FaLinkedin } from "react-icons/fa";
@@ -7,8 +7,8 @@ import LightLogo from "../assets/icons/Light-Logo.png";
 const MobileMenuItems = [
   { label: "Home", icon: <TiHome />, to: "home" },
   { label: "About Me", icon: <FaUserCircle />, to: "about" },
-  { label: "Projects", icon: <FaLaptopCode />, to: "project" },
   { label: "Research", icon: <FaGlasses />, to: "research" },
+  { label: "Projects", icon: <FaLaptopCode />, to: "project" },
   { label: "Contact Me", icon: <FaPaperPlane />, to: "contact" },
   { label: "Resume", icon: <FaFileAlt />, to: "resume" },
 ];
