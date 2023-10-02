@@ -1,8 +1,4 @@
-import { BiLogoPython } from "react-icons/bi";
-import C_Dark from "../assets/icons/programming/C-dark.png";
-import Cpp_Dark from "../assets/icons/programming/C++-dark.png";
 import theDuck from "../assets/image/OpenTron/duck.jpeg";
-import openTron from "../assets/icons/programming/openTron.png";
 import ProjectCard from "../components/ProjectCard";
 
 const OtherProjects = () => {
@@ -11,8 +7,8 @@ const OtherProjects = () => {
       title: "Opentron OT-2",
       imageSrc: theDuck,
       technologies: [
-        { logo: <BiLogoPython size={35} />, name: "Python" },
-        { logo: <img src={openTron} alt="OpenTron icon" style={{ height: '35px', width: '35px' }}/>, name: "openTron" },
+        { logo: "Python" },
+        { logo: "openTron" },
       ],
       description: "description",
     },
@@ -20,8 +16,8 @@ const OtherProjects = () => {
       title: "B+Tree Implementation",
       imageSrc: theDuck,
       technologies: [
-        { logo: <img src={C_Dark} alt="mySQL icon" style={{ height: '35px', width: '35px' }}/>, name: "C" },
-        { logo: <img src={Cpp_Dark} alt="mySQL icon" style={{ height: '35px', width: '35px' }}/>, name: "C++" },
+        { logo: "C" },
+        { logo: "C++" },
       ],
       description: "description",
     },
