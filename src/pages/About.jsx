@@ -9,8 +9,7 @@ const About = () => {
             <div className="max-w-4xl px-4 mt-20 md:mt-20"> 
               {/*<p className="text-3xl text-line-white font-bold pb-5 text-center sm:text-6xl lg:text-left">ABOUT ME</p>*/}
               <p className="text-2xl">
-                Hello, I'm Ryuichi Yamafuji Lun, a dedicated software engineer fueled by an 
-                insatiable appetite for learning and a zest for embracing cutting-edge technologies.
+                Hello, I'm Ryuichi Yamafuji Lun, a dedicated software engineer.
                 Currently, I'm engaged as an undergraduate researcher at the Data Platform Laboratory at Keio University.
               </p>
               <div className="pt-4">
