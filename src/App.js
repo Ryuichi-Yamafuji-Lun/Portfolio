@@ -7,7 +7,6 @@ import Project from "./pages/Project";
 import OtherProjects from "./pages/OtherProjects";
 import Research from "./pages/Research";
 import Contact from "./pages/Contact";
-import SideBar from "./components/SideBar";
 
 function App() {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
@@ -39,9 +38,9 @@ function App() {
       <div className="md:col-span-4">
         {/* Single-page application sections */}
         <About />
+        <Research />
         <Project />
         <OtherProjects />
-        <Research />
         <Contact />
       </div>
     </div>
