@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Link } from "react-scroll";
 
 const MenuItems = [
@@ -7,6 +8,13 @@ const MenuItems = [
 ];
 
 const Home = () => {
+  const [activeSection, setActiveSection] = useState(null);
+
+  const handleSetActive = (to) => {
+    const activeIndex = MenuItems.findIndex((item) => item.to === to);
+    setActiveSection(activeIndex);
+  };
+
   return (
     <div name="home" className="w-full h-screen font-lato">
       <div className="max-w-[1000px] mx-auto p-8 flex flex-col h-full justify-center">
@@ -19,10 +27,23 @@ const Home = () => {
         <ul className="flex flex-col p-10">
           {MenuItems.map((item, index) => (
             <li key={index} className="menu-item group">
-              <Link to={item.to}>
-                <div className="flex items-center hover:font-bold">
-                  <span className="nav-indicator mr-4 h-px w-8 bg-black transition-all group-hover:w-16 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none"></span>
-                  <p className="transition-transform transform hover:scale-110 hover:translate-x-1">
+              <Link
+                to={item.to}
+                spy={true}
+                smooth={true}
+                duration={500}
+                onSetActive={handleSetActive}
+                offset={-100} // Adjust this offset as needed
+              >
+                <div className={`flex items-center ${activeSection === index ? "font-bold" : ""}`}>
+                  <span
+                    className="nav-indicator mr-4 h-px w-8 bg-black transition-all group-hover:w-16 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none"
+                    style={{ width: activeSection === index ? "75px" : "30px" }}
+                  ></span>
+                  <p
+                    className="transition-transform transform hover:scale-110 hover:translate-x-1"
+                    style={{ minWidth: "150px" }}
+                  >
                     {item.label}
                   </p>
                 </div>
