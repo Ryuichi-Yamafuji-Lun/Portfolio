@@ -22,7 +22,7 @@ const Home = () => {
           Ryuichi Yamafuji Lun,
         </p>
         <p className="text-3xl text-line-white sm:text-4xl font-bold sm:text-left">
-          Software Engineer.
+          software engineer.
         </p>
         <ul className="flex flex-col p-10">
           {MenuItems.map((item, index) => (
