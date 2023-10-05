@@ -1,8 +1,8 @@
 
 
-const Research = () => {
+const Experience = () => {
   return (
-    <div name="research" className="w-full font-lato">
+    <div name="experience" className="w-full font-lato">
       <div className="container mx-auto p-5">
         <div className="max-w-[1000px] px-4 md:pl-20 pr-4 md:pr-5 mt-20 md:mt-0">
           <p className="text-3xl text-line-white font-bold pb-5 text-center sm:text-6xl lg:text-left">RESEARCH</p>
@@ -20,4 +20,4 @@ const Research = () => {
   );
 };
 
-export default Research;
+export default Experience;

@@ -2,9 +2,9 @@ import { useState } from "react";
 import { Link } from "react-scroll";
 
 const MenuItems = [
-  { label: "About Me", to: "about" },
-  { label: "Research", to: "research" },
-  { label: "Projects", to: "project" },
+  { label: "ABOUT ME", to: "about" },
+  { label: "EXPERIENCE", to: "experience" },
+  { label: "PROJECTS", to: "project" },
 ];
 
 const Home = () => {

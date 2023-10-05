@@ -7,7 +7,7 @@ import LightLogo from "../assets/icons/Light-Logo.png";
 const MobileMenuItems = [
   { label: "Home", icon: <TiHome />, to: "home" },
   { label: "About Me", icon: <FaUserCircle />, to: "about" },
-  { label: "Research", icon: <FaGlasses />, to: "research" },
+  { label: "Experience", icon: <FaGlasses />, to: "experience" },
   { label: "Projects", icon: <FaLaptopCode />, to: "project" },
   { label: "Contact Me", icon: <FaPaperPlane />, to: "contact" },
   { label: "Resume", icon: <FaFileAlt />, to: "resume" },

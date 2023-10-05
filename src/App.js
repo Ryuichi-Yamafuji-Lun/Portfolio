@@ -5,8 +5,8 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Project from "./pages/Project";
 import OtherProjects from "./pages/OtherProjects";
-import Research from "./pages/Research";
 import Contact from "./pages/Contact";
+import Experience from "./pages/Experience";
 
 function App() {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
@@ -38,7 +38,7 @@ function App() {
       <div className="md:col-span-4">
         {/* Single-page application sections */}
         <About />
-        <Research />
+        <Experience />
         <Project />
         <OtherProjects />
         <Contact />
