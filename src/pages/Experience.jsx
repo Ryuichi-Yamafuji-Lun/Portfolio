@@ -1,19 +1,62 @@
-
+import { ExperienceCard } from "../components/ExperienceCard";
 
 const Experience = () => {
+
+  const experiences = [
+    {
+      title: "Data Platform Laboratory",
+      date: "Apr 2022 ~ present",
+      technologies: [
+        { logo: "C" },
+        { logo: "C++" },
+      ],
+      description: `
+      Kawashima Hideyuki Laboratory: Data Platform and Algorithm Sciences. 
+      Currently researching on AI and concurrency control (SILO and 2-PL with Starvation Freedom). 
+      `,
+    },
+    {
+      title: "Program Participant and Student Representative",
+      date: "Aug 2023",
+      technologies: [
+        { logo: "Python" },
+        { logo: "OpenTron" },
+      ],
+      description: `
+      Participated in the full-scale R&D project 'Accelerating Life Sciences by Robotics Biology' of the JST-Mirai Program. 
+      Automated liquid handling processes of molecular biology experiments on the Opentrons application. Led the optimization 
+      and refinement of protocol programs and codes with particular emphases on increasing efficiency and decreasing resource waste (samples, reagents, and pipette tips). 
+      `,
+    },
+    {
+      title: "Software Systems Laboratory",
+      date: "Oct 2021 ~ July 2022",
+      technologies: [
+        { logo: "GatsbyJS" },
+        { logo: "SCSS" },
+        { logo: "Svelte" },
+        { logo: "Typescript" },
+        { logo: "Vite" },
+        { logo: "Firebase" },
+      ],
+      description: `
+      Hagino-Hattori Laboratory: Participated in 2 projects involving web development, (1) Maigo and (2) a tourist location info-sharing app.
+      `,
+    }
+  ]
+
   return (
     <div name="experience" className="w-full font-lato">
-      <div className="container mx-auto p-5">
-        <div className="max-w-[1000px] px-4 md:pl-20 pr-4 md:pr-5 mt-20 md:mt-0">
-          <p className="text-3xl text-line-white font-bold pb-5 text-center sm:text-6xl lg:text-left">RESEARCH</p>
-          <p className="text-2xl">
-          I am currently an undergraduate researcher at Keio 
-          University's <a href="https://sites.google.com/view/dpl-sfc/%E3%83%9B%E3%83%BC%E3%83%A0?authuser=0" target="_blank" rel="noreferrer" className="text-line-white underline hover:font-bold">Data Platform and Algorithm Science Laboratory</a>
-          , where my primary focus is on 
-          researching <a href="https://www.geeksforgeeks.org/two-phase-locking-protocol/" target="_blank" rel="noreferrer" className="text-line-white underline hover:font-bold">2-phase locking </a> 
-          as a concurrency control mechanism, with a specific emphasis on
-          starvation freedom and fairTID. I conduct my research using C/C++.
-          </p>
+      <div className="container mx-auto p-10 md:p-20">
+        <div className="text-line-white font-bold p-4">
+          <p className="text-6xl">EXPERIENCE</p>
+        </div>
+        <div className="grid grid-cols-1 gap-4">
+          {experiences.map((experience, index) => (
+            <div className="w-full md:w-[400px]" key={index}> {/* Adjust the width here */}
+              <ExperienceCard {...experience} />
+            </div>
+          ))}
         </div>
       </div>
     </div>

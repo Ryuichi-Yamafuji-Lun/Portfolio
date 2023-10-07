@@ -3,7 +3,7 @@ import { BiCodeAlt } from "react-icons/bi";
 
 const ProjectCard = ({ title, imageSrc, technologies, description, websiteLink, sourceCodeLink }) => {
   return (
-    <div className="transition w-full md:w-[500px] m-3 mt-20 md:mt-0 rounded-lg overflow-hidden hover:shadow-lg hover:backdrop-blur-md flex flex-col md:flex-row">
+    <div className="transition w-full md:w-[600px] m-3 mt-20 md:mt-0 rounded-lg overflow-hidden hover:shadow-lg hover:backdrop-blur-md flex flex-col md:flex-row">
       <div className="w-full md:w-1/3">
         <a
           href={websiteLink}
@@ -13,7 +13,7 @@ const ProjectCard = ({ title, imageSrc, technologies, description, websiteLink, 
           <img
             src={imageSrc}
             alt=""
-            className="w-full h-auto p-3 rounded"
+            className="w-full h-2/3 p-3 rounded-2xl"
           />
         </a>
         <div className="flex items-center space-x-2 mt-2 p-3 md:mt-0">
