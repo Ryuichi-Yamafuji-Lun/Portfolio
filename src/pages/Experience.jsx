@@ -16,7 +16,7 @@ const Experience = () => {
       `,
     },
     {
-      title: "Program Participant and Student Representative",
+      title: "JST-Mirai Program",
       date: "AUG 2023",
       technologies: [
         { logo: "Python" },
