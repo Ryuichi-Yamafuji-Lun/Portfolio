@@ -5,7 +5,7 @@ const Experience = () => {
   const experiences = [
     {
       title: "Data Platform Laboratory",
-      date: "Apr 2022 ~ present",
+      date: "APR 2022 ~ PRESENT",
       technologies: [
         { logo: "C" },
         { logo: "C++" },
@@ -17,7 +17,7 @@ const Experience = () => {
     },
     {
       title: "Program Participant and Student Representative",
-      date: "Aug 2023",
+      date: "AUG 2023",
       technologies: [
         { logo: "Python" },
         { logo: "OpenTron" },
@@ -30,7 +30,7 @@ const Experience = () => {
     },
     {
       title: "Software Systems Laboratory",
-      date: "Oct 2021 ~ July 2022",
+      date: "OCT 2021 ~ JULY 2022",
       technologies: [
         { logo: "GatsbyJS" },
         { logo: "SCSS" },
@@ -53,7 +53,7 @@ const Experience = () => {
         </div>
         <div className="grid grid-cols-1 gap-4">
           {experiences.map((experience, index) => (
-            <div className="w-full md:w-[400px]" key={index}> {/* Adjust the width here */}
+            <div className="w-full md:w-[400px]" key={index}> 
               <ExperienceCard {...experience} />
             </div>
           ))}

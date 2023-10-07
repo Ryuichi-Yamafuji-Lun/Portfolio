@@ -51,7 +51,7 @@ const Project = () => {
         </div>
         <div className="grid grid-cols-1 gap-4">
           {projects.map((project, index) => (
-            <div className="w-full md:w-[400px]" key={index}> {/* Adjust the width here */}
+            <div className="w-full md:w-[400px]" key={index}>
               <ProjectCard {...project} />
             </div>
           ))}
