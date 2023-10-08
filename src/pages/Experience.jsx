@@ -1,3 +1,5 @@
+import { AiOutlineArrowRight } from "react-icons/ai";
+
 import { ExperienceCard } from "../components/ExperienceCard";
 
 const Experience = () => {
@@ -13,6 +15,17 @@ const Experience = () => {
       description: `
       Kawashima Hideyuki Laboratory: Data Platform and Algorithm Sciences. 
       Currently researching on AI and concurrency control (SILO and 2-PL with Starvation Freedom). 
+      `,
+    },
+    {
+      title: "Japan Venture Academy",
+      date: "AUG 2023 ~ PRESENT",
+      technologies: [
+        { logo: "React" },
+        { logo: "Tailwindcss" },
+      ],
+      description: `
+      Lead Engineer for the startup bOLD. 
       `,
     },
     {
@@ -57,6 +70,20 @@ const Experience = () => {
               <ExperienceCard {...experience} />
             </div>
           ))}
+        </div>
+        <div className="text-center mt-4">
+          <a
+            className="group resume-button flex items-center"
+            aria-label="View Full Résumé"
+            href="/resume.pdf" // Replace with resume when done
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span className="group-hover:underline font-bold transition-transform pr-2">
+              See My Résumé
+            </span>{" "}
+            <AiOutlineArrowRight className="group-hover:translate-x-3 transition-transform" />
+          </a>
         </div>
       </div>
     </div>
