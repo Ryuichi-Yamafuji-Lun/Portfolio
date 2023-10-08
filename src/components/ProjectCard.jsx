@@ -3,7 +3,8 @@ import { BiCodeAlt } from "react-icons/bi";
 
 const ProjectCard = ({ title, imageSrc, technologies, description, websiteLink, sourceCodeLink }) => {
   return (
-    <div className="transition w-full md:w-[600px] m-3 mt-20 md:mt-0 rounded-lg overflow-hidden hover:shadow-lg hover:backdrop-blur-md flex flex-col md:flex-row">
+    <div className="transition w-full md:w-[600px] m-3 mt-20 md:mt-0 rounded-lg overflow-hidden hover:backdrop-blur-3xl hover:bg-slate-800/50 hover:shadow-[inset_0px_1px_0px_0px_rgba(148,163,184,0.1)] flex flex-col md:flex-row">
+
       <div className="w-full md:w-1/3">
         <a
           href={websiteLink}
@@ -22,7 +23,7 @@ const ProjectCard = ({ title, imageSrc, technologies, description, websiteLink, 
               href={websiteLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="transition font-bold text-line-white bg-background-white "
+              className="transition font-bold text-line-white"
             >
               <div className="flex items-center transition hover:-translate-y-1 hover:translate-x-1 hover:scale-110">
                 <MdWebAsset />
@@ -35,7 +36,7 @@ const ProjectCard = ({ title, imageSrc, technologies, description, websiteLink, 
               href={sourceCodeLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="transition font-bold text-line-white bg-background-white"
+              className="transition font-bold text-line-white"
             >
               <div className="flex items-center transition hover:-translate-y-1 hover:translate-x-1 hover:scale-110">
                 <BiCodeAlt />
@@ -45,7 +46,7 @@ const ProjectCard = ({ title, imageSrc, technologies, description, websiteLink, 
           )}
         </div>
       </div>
-      <div className="w-full md:w-2/3 bg-background-white p-4">
+      <div className="w-full md:w-2/3 p-4">
         <p className="text-2xl text-line-white font-bold mb-1">{title}</p>
         <p className="pb-2">{description}</p>
         <div className="flex flex-wrap items-center space-x-2 mb-4">

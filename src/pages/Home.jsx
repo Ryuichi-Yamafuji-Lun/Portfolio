@@ -44,7 +44,7 @@ const Home = () => {
         {!isMobile && (
           <ul className="flex flex-col pt-4">
             {MenuItems.map((item, index) => (
-              <li key={index} className="pb-2">
+              <li key={index} className="pb-2 text-line-white">
                 <Link
                   to={item.to}
                   spy={true}
@@ -55,7 +55,7 @@ const Home = () => {
                 >
                   <div className={`flex items-center ${activeSection === index ? "font-bold" : ""}`}>
                     <span
-                      className="nav-indicator mr-4 h-px w-8 bg-black transition-all group-hover:w-16 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none"
+                      className="nav-indicator mr-4 h-px w-8 bg-line-white transition-all group-hover:w-16 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none"
                       style={{ width: activeSection === index ? "75px" : "30px" }}
                     ></span>
                     <p
@@ -78,7 +78,7 @@ const Home = () => {
               <li>
                 <a
                   href="https://github.com/Ryuichi-Yamafuji-Lun"
-                  className="text-black flex items-center"
+                  className="flex items-center"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -89,7 +89,7 @@ const Home = () => {
               <li>
                 <a
                   href="https://www.linkedin.com/in/ryulun/"
-                  className="text-black flex items-center"
+                  className="flex items-center"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -100,7 +100,7 @@ const Home = () => {
               <li>
                 <Link
                   to="resume"
-                  className="text-black flex items-center"
+                  className="flex items-center"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

@@ -24,7 +24,7 @@ const NavBar = () => {
   const handleClick = () => setNav(!nav);
 
   return (
-    <div className="sticky top-0 px-4 h-20 w-screen flex justify-between items-center font-lato bg-background-white text-line-white ">
+    <div className="sticky top-0 px-4 h-20 w-screen flex justify-between items-center font-lato bg-background-main text-line-white ">
       <div>
         <img src={LightLogo} alt="Logo" className="w-25 h-24" />
       </div>
@@ -37,7 +37,7 @@ const NavBar = () => {
       {/* Mobile Menu Items */}
       {nav && (
         <div className={`fixed left-0 w-full flex flex-col items-center text-xl space-y-6`} style={{ top: "50%", transform: "translateY(20%)" }}>
-          <ul className="flex flex-col items-center justify-center p-10 bg-background-white border-2 border-line-white rounded-lg">
+          <ul className="flex flex-col items-center justify-center p-10 bg-background-main border-2 border-line-white rounded-lg">
             {MobileMenuItems.map((item, index) => (
               <li key={index}>
                 <Link to={item.to} className="flex flex-col items-center" onClick={() => setNav(false)}>

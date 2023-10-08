@@ -7,8 +7,9 @@ module.exports = {
     extend: {
       colors: {
         // Background Colors & Text
-        'background-white': '#F2F2F2',
-        'line-white': '#B0925A',
+        'background-main': '#030F33',
+        'background-card-hover': '#061440',
+        'line-white': '#EDEEFF',
       },
 
       fontFamily: {

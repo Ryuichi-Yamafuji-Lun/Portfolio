@@ -60,8 +60,8 @@ const Experience = () => {
 
   return (
     <div name="experience" className="w-full font-lato">
-      <div className="container mx-auto p-10 md:p-5">
-        <div className="text-line-white font-bold p-4">
+      <div className="container mx-auto p-10 md:p-5 text-line-white">
+        <div className="font-bold p-4">
           <p className="text-6xl">EXPERIENCE</p>
         </div>
         <div className="grid grid-cols-1 gap-4">
