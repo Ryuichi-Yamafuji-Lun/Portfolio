@@ -24,7 +24,10 @@ const ProjectCard = ({ title, imageSrc, technologies, description, websiteLink, 
               rel="noopener noreferrer"
               className="transition font-bold text-line-white bg-background-white "
             >
-              <MdWebAsset className='transition hover:-translate-y-1 hover:translate-x-1 hover:scale-110'/>
+              <div className="flex items-center transition hover:-translate-y-1 hover:translate-x-1 hover:scale-110">
+                <MdWebAsset />
+                <span>Live</span>
+              </div>
             </a>
           )}
           {sourceCodeLink && (
@@ -34,7 +37,10 @@ const ProjectCard = ({ title, imageSrc, technologies, description, websiteLink, 
               rel="noopener noreferrer"
               className="transition font-bold text-line-white bg-background-white"
             >
-              <BiCodeAlt className='transition hover:-translate-y-1 hover:translate-x-1 hover:scale-110'/>
+              <div className="flex items-center transition hover:-translate-y-1 hover:translate-x-1 hover:scale-110">
+                <BiCodeAlt />
+                <span>Source Code</span>
+              </div>
             </a>
           )}
         </div>

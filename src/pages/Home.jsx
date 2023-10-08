@@ -42,9 +42,9 @@ const Home = () => {
 
         {/* Menu Items */}
         {!isMobile && (
-          <ul className="flex flex-col pt-10">
+          <ul className="flex flex-col pt-4">
             {MenuItems.map((item, index) => (
-              <li key={index} className="menu-item group">
+              <li key={index} className="pb-2">
                 <Link
                   to={item.to}
                   spy={true}

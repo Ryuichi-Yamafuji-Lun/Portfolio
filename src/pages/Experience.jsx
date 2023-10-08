@@ -55,7 +55,7 @@ const Experience = () => {
       description: `
       Hagino-Hattori Laboratory: Participated in 2 projects involving web development, (1) Maigo and (2) a tourist location info-sharing app.
       `,
-    }
+    }, 
   ]
 
   return (
@@ -71,7 +71,7 @@ const Experience = () => {
             </div>
           ))}
         </div>
-        <div className="text-center mt-4">
+        <div className="text-center mt-4 p-4 ">
           <a
             className="group resume-button flex items-center"
             aria-label="View Full Résumé"
