@@ -2,7 +2,7 @@
 const About = () => {
   return (
     <div name="about" className="w-full font-lato">
-      <div className="container mx-auto p-10 md:p-20">
+      <div className="container mx-auto p-10 md:p-5">
         <div className="grid grid-cols-1 lg:grid-cols-2"> 
           <div className="md:col-span-2">
             <div className="max-w-4xl px-4 mt-20 md:mt-20"> 
