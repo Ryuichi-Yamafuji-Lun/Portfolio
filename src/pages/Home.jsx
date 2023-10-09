@@ -74,7 +74,7 @@ const Home = () => {
         {/* Footer Section */}
         {!isMobile && (
           <footer className="mt-10">
-            <ul className="flex space-x-4">
+            <ul className="flex space-x-4 text-line-white">
               <li>
                 <a
                   href="https://github.com/Ryuichi-Yamafuji-Lun"

@@ -6,9 +6,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // Background Colors & Text
+        // Color schema for the website
         'background-main': '#030F33',
-        'background-card-hover': '#061440',
         'line-white': '#EDEEFF',
       },
 
