@@ -27,7 +27,7 @@ const OtherProjects = () => {
     <div name="otherproject" className="w-full font-lato">
       <div className="container mx-auto p-10 md:p-5 text-line-white">
         <div className="font-bold p-4">
-          <p className="text-6xl">OTHER PROJECTS</p>
+          <p className="text-3xl text-center md:text-left md:text-6xl">OTHER PROJECTS</p>
         </div>
         <div className="grid grid-cols-1 ">
           {otherprojects.map((project, index) => (
