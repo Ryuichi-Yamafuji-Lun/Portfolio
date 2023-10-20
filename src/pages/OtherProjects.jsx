@@ -1,11 +1,13 @@
 import theDuck from "../assets/image/OpenTron/duck.jpeg";
+import OTAction from "../assets/image/OpenTron/OpenTronInAction.png";
 import ProjectCard from "../components/ProjectCard";
+
 
 const OtherProjects = () => {
   const otherprojects = [
     {
       title: "Opentron OT-2",
-      imageSrc: theDuck,
+      imageSrc: OTAction,
       technologies: [
         { logo: "Python" },
         { logo: "openTron" },

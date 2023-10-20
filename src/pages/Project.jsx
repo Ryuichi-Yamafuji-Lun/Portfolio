@@ -1,11 +1,13 @@
 import theDuck from "../assets/image/OpenTron/duck.jpeg";
+import GSMSDashboard from "../assets/image/GSMS/GSMSDashboard.png";
+import MaigoGame from "../assets/image/Maigo/MaigoInGame.png";
 import ProjectCard from "../components/ProjectCard";
 
 const Project = () => {
   const projects = [
     {
       title: "Store Management System",
-      imageSrc: theDuck,
+      imageSrc: GSMSDashboard,
       technologies: [
         { logo: "MySQL" },
         { logo: "Flask" },
@@ -20,7 +22,7 @@ const Project = () => {
     },
     {
       title: "Maigo",
-      imageSrc: theDuck,
+      imageSrc: MaigoGame,
       technologies: [
         { logo: "Firebase" },
         { logo: "TypeScript" },
