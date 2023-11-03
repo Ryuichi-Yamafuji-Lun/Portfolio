@@ -1,6 +1,6 @@
-import theDuck from "../assets/image/OpenTron/duck.jpeg";
 import GSMSDashboard from "../assets/image/GSMS/GSMSDashboard.png";
 import MaigoGame from "../assets/image/Maigo/MaigoInGame.png";
+import CodeByteHP from "../assets/image/CodeByte/CodeByteHP.png";
 import ProjectCard from "../components/ProjectCard";
 
 const Project = () => {
@@ -33,15 +33,15 @@ const Project = () => {
       sourceCodeLink: "https://github.com/leochoo/maigo",
     },
     {
-      title: "Portfolio",
-      imageSrc: theDuck,
+      title: "CodeByte Library",
+      imageSrc: CodeByteHP,
       technologies: [
         { logo: "React"},
         { logo: "Tailwindcss"},
       ],
-      description: `My Portfolio was made with React and Tailwindcss to showcase my works`,
+      description: `CodeByte Library is a demo E-commerce store selling computer science books.`,
       websiteLink: "https://maigo-bd6b7.web.app/",
-      sourceCodeLink: "https://github.com/leochoo/maigo",
+      sourceCodeLink: "https://github.com/Ryuichi-Yamafuji-Lun/CodeByteLibrary",
     }
   ];
 
