@@ -40,7 +40,7 @@ const Project = () => {
         { logo: "Tailwindcss"},
       ],
       description: `CodeByte Library is a demo E-commerce store selling computer science books.`,
-      websiteLink: "https://maigo-bd6b7.web.app/",
+      websiteLink: "https://codebytelibrary.shop/",
       sourceCodeLink: "https://github.com/Ryuichi-Yamafuji-Lun/CodeByteLibrary",
     }
   ];
