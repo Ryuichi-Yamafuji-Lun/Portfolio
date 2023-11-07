@@ -39,7 +39,7 @@ const Home = () => {
         <p className="text-3xl text-line-white sm:text-4xl font-bold sm:text-left">
           software engineer.
         </p>
-
+        {/* Incorporate the Patalex alongside the menu items here */}
         {/* Menu Items */}
         {!isMobile && (
           <ul className="flex flex-col pt-4">
