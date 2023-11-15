@@ -25,7 +25,7 @@ const Experience = () => {
         { logo: "Tailwindcss" },
       ],
       description: `
-      Lead Engineer for the startup bOLD. 
+      Engineer for the startup JDA. 
       `,
     },
     {
