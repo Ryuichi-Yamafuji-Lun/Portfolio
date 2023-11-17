@@ -14,7 +14,7 @@ const Experience = () => {
       ],
       description: `
       Kawashima Hideyuki Laboratory: Data Platform and Algorithm Sciences. 
-      Currently researching on AI and concurrency control (SILO and 2-PL with Starvation Freedom). 
+      Currently researching on AI and concurrency control mechanism (SILO and 2-PL with Starvation Freedom). 
       `,
     },
     {
