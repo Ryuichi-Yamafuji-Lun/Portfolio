@@ -9,8 +9,8 @@ const OtherProjects = () => {
       title: "Opentron OT-2",
       imageSrc: OTAction,
       technologies: [
-        { logo: "Python" },
-        { logo: "openTron" },
+        { lang: "Python" },
+        { lang: "openTron" },
       ],
       description: "description",
     },
@@ -18,8 +18,8 @@ const OtherProjects = () => {
       title: "B+Tree Implementation",
       imageSrc: theDuck,
       technologies: [
-        { logo: "C" },
-        { logo: "C++" },
+        { lang: "C" },
+        { lang: "C++" },
       ],
       description: "description",
     },

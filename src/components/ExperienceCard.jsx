@@ -11,7 +11,7 @@ export const ExperienceCard = ({ title, date, technologies, description }) => {
           {technologies.map((tech, techIndex) => (
             <div key={techIndex} className="flex items-center space-x-1 mb-2">
               <div className="rounded-full bg-[#385feb] p-1 px-2 text-white">
-                {tech.logo}
+                {tech.lang}
               </div>
             </div>
           ))}

@@ -9,8 +9,8 @@ const Experience = () => {
       title: "Data Platform Laboratory",
       date: "APR 2022 ~ PRESENT",
       technologies: [
-        { logo: "C" },
-        { logo: "C++" },
+        { lang: "C" },
+        { lang: "C++" },
       ],
       description: `
       Kawashima Hideyuki Laboratory: Data Platform and Algorithm Sciences. 
@@ -21,8 +21,8 @@ const Experience = () => {
       title: "Japan Venture Academy",
       date: "AUG 2023 ~ PRESENT",
       technologies: [
-        { logo: "React" },
-        { logo: "Tailwindcss" },
+        { lang: "React" },
+        { lang: "Tailwindcss" },
       ],
       description: `
       Engineer for the startup JDA. 
@@ -32,8 +32,8 @@ const Experience = () => {
       title: "JST-Mirai Program",
       date: "AUG 2023",
       technologies: [
-        { logo: "Python" },
-        { logo: "OpenTron" },
+        { lang: "Python" },
+        { lang: "OpenTron" },
       ],
       description: `
       Participated in the full-scale R&D project 'Accelerating Life Sciences by Robotics Biology' of the JST-Mirai Program. 
@@ -45,12 +45,12 @@ const Experience = () => {
       title: "Software Systems Laboratory",
       date: "OCT 2021 ~ JULY 2022",
       technologies: [
-        { logo: "GatsbyJS" },
-        { logo: "SCSS" },
-        { logo: "Svelte" },
-        { logo: "Typescript" },
-        { logo: "Vite" },
-        { logo: "Firebase" },
+        { lang: "GatsbyJS" },
+        { lang: "SCSS" },
+        { lang: "Svelte" },
+        { lang: "Typescript" },
+        { lang: "Vite" },
+        { lang: "Firebase" },
       ],
       description: `
       Hagino-Hattori Laboratory: Participated in 2 projects involving web development, (1) Maigo and (2) a tourist location info-sharing app.
