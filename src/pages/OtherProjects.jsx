@@ -10,7 +10,8 @@ const OtherProjects = () => {
       imageSrc: OTAction,
       technologies: [
         { lang: "Python" },
-        { lang: "openTron" },
+        { lang: "OpenTron" },
+        { lang: "Arduino" }
       ],
       description: "description",
     },
