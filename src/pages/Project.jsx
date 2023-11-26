@@ -17,7 +17,6 @@ const Project = () => {
       description: `
       A full-stack Grocery Store Management System.
       `,
-      websiteLink: "https://maigo-bd6b7.web.app/",
       sourceCodeLink: "https://github.com/Ryuichi-Yamafuji-Lun/PokeStore-management-system",
     },
     {
