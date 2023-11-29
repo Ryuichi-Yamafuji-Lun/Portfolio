@@ -18,14 +18,15 @@ const Experience = () => {
       `,
     },
     {
-      title: "Japan Venture Academy",
-      date: "AUG 2023 ~ PRESENT",
+      title: "Mitsubishi UFJ Information Technology",
+      date: "OCT 2023 ~ PRESENT",
       technologies: [
-        { lang: "React" },
-        { lang: "Tailwindcss" },
+        { lang: "C" },
+        { lang: "C++" },
       ],
       description: `
-      Engineer for the startup JDA. 
+      Undergraduate researcher for one of the biggest banks in Japan MUFJ.
+      Solving issues about concurrency control mechanism.
       `,
     },
     {
