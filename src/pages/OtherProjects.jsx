@@ -9,20 +9,35 @@ const OtherProjects = () => {
       title: "Opentron OT-2",
       imageSrc: OTAction,
       technologies: [
-        { lang: "Python" },
-        { lang: "OpenTron" },
-        { lang: "Arduino" }
+        { logo: "Python" },
+        { logo: "OpenTron" },
+        { logo: "Arduino" }
       ],
-      description: "description",
+      description: `
+      Automation of the liquid handling processes of molecular biology experiments
+      `,
     },
     {
       title: "B+Tree Implementation",
       imageSrc: theDuck,
       technologies: [
-        { lang: "C" },
-        { lang: "C++" },
+        { logo: "C" },
+        { logo: "C++" },
       ],
-      description: "description",
+      description: `
+      Implementation of B+tree with 2-phase locking
+      `,
+    },
+    {
+      title: "TechScout",
+      imageSrc: theDuck,
+      technologies: [
+        { logo: "WebFlow" },
+      ],
+      description: `
+      Landing page for the seed level startup TechScout
+      `
+      ,
     },
   ];
 
