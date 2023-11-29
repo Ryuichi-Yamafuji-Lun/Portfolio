@@ -1,5 +1,6 @@
-import theDuck from "../assets/image/OpenTron/duck.jpeg";
 import OTAction from "../assets/image/OpenTron/OpenTronInAction.png";
+import BpTree from "../assets/image/BpTree/BptreeIMG.png";
+import TechScout from "../assets/image/TechScout/TechScoutIMG.png";
 import ProjectCard from "../components/ProjectCard";
 
 
@@ -19,7 +20,7 @@ const OtherProjects = () => {
     },
     {
       title: "B+Tree Implementation",
-      imageSrc: theDuck,
+      imageSrc: BpTree,
       technologies: [
         { logo: "C" },
         { logo: "C++" },
@@ -30,7 +31,7 @@ const OtherProjects = () => {
     },
     {
       title: "TechScout",
-      imageSrc: theDuck,
+      imageSrc: TechScout,
       technologies: [
         { logo: "WebFlow" },
       ],
