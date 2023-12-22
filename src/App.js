@@ -7,6 +7,7 @@ import Project from "./pages/Project";
 import OtherProjects from "./pages/OtherProjects";
 //import Contact from "./pages/Contact";
 import Experience from "./pages/Experience";
+import Contact from "./pages/Contact";
 
 function App() {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
@@ -41,6 +42,7 @@ function App() {
         <Experience />
         <Project />
         <OtherProjects />
+        <Contact />
       </div>
     </div>
   );

@@ -40,7 +40,7 @@ const Contact = ({ closeContactForm }) => {
         <form ref={form} onSubmit={sendEmail} className="p-2 space-y-4">
           <div>
             <label htmlFor="subject" className="block text-sm font-medium text-gray-900 dark:text-gray-300">
-              Subject
+              Name
             </label>
             <input
               type="text"
