@@ -36,7 +36,7 @@ const Contact = ({ closeContactForm }) => {
         >
           <FaTimes />
         </button>
-        <p className="text-center text-lg text-white font-bold">Contact Us</p>
+        <p className="text-center text-lg text-white font-bold">Contact Me</p>
         <form ref={form} onSubmit={sendEmail} className="p-2 space-y-4">
           <div>
             <label htmlFor="subject" className="block text-sm font-medium text-gray-900 dark:text-gray-300">

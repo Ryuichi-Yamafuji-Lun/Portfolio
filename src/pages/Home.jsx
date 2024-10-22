@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-scroll";
-
-import { FaGithub, FaLinkedin, FaFileAlt } from "react-icons/fa";
+import Contact from "./Contact";
+import { FaGithub, FaLinkedin, FaFileAlt, FaPaperPlane} from "react-icons/fa";
 
 const MenuItems = [
   { label: "ABOUT ME", to: "about" },
@@ -12,10 +12,19 @@ const MenuItems = [
 const Home = () => {
   const [activeSection, setActiveSection] = useState(null);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768); 
+  const [isContactFormVisible, setIsContactFormVisible] = useState(false);
 
   const handleSetActive = (to) => {
     const activeIndex = MenuItems.findIndex((item) => item.to === to);
     setActiveSection(activeIndex);
+  };
+
+  const openContactForm = () => {
+    setIsContactFormVisible(true);
+  };
+
+  const closeContactForm = () => {
+    setIsContactFormVisible(false);
   };
 
   useEffect(() => {
@@ -108,8 +117,20 @@ const Home = () => {
                   <span className="ml-2">Résumé</span>
                 </Link>
               </li>
+              <li>
+                <button
+                  onClick={openContactForm}
+                  className="flex items-center"
+                >
+                  <FaPaperPlane />
+                  <span className="ml-2">Contact Me</span>
+                </button>
+              </li>
             </ul>
           </footer>
+        )}
+        {isContactFormVisible && (
+          <Contact closeContactForm={closeContactForm} />
         )}
       </div>
     </div>

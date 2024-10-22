@@ -5,13 +5,13 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Project from "./pages/Project";
 import OtherProjects from "./pages/OtherProjects";
-//import Contact from "./pages/Contact";
 import Experience from "./pages/Experience";
-import Contact from "./pages/Contact";
+
 
 function App() {
+  // states of the website
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
-
+  
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth < 768);
@@ -42,7 +42,6 @@ function App() {
         <Experience />
         <Project />
         <OtherProjects />
-        <Contact />
       </div>
     </div>
   );
