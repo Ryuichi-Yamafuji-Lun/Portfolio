@@ -6,8 +6,18 @@ const Experience = () => {
 
   const experiences = [
     {
+      title: "Tomorrow's AI",
+      date: "Oct 2024 ~ Present",
+      technologies: [
+        { lang: "Python" },
+      ],
+      description: `
+      Software Developer Intern at Tomorrow's AI
+      `,
+    },
+    {
       title: "Data Platform Laboratory",
-      date: "APR 2022 ~ PRESENT",
+      date: "APR 2022 ~ Sep 2024",
       technologies: [
         { lang: "C" },
         { lang: "C++" },
@@ -19,7 +29,7 @@ const Experience = () => {
     },
     {
       title: "Mitsubishi UFJ Information Technology",
-      date: "OCT 2023 ~ PRESENT",
+      date: "OCT 2023 ~ Jun 2024",
       technologies: [
         { lang: "C" },
         { lang: "C++" },
