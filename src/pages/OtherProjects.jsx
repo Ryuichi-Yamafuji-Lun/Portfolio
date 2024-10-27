@@ -29,17 +29,6 @@ const OtherProjects = () => {
       Implementation of B+tree with 2-phase locking
       `,
     },
-    {
-      title: "TechScout",
-      imageSrc: TechScout,
-      technologies: [
-        { logo: "WebFlow" },
-      ],
-      description: `
-      Landing page for the seed level startup TechScout
-      `
-      ,
-    },
   ];
 
   return (
