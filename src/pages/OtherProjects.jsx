@@ -1,6 +1,5 @@
 import OTAction from "../assets/image/OpenTron/OpenTronInAction.png";
 import BpTree from "../assets/image/BpTree/BptreeIMG.png";
-import TechScout from "../assets/image/TechScout/TechScoutIMG.png";
 import ProjectCard from "../components/ProjectCard";
 
 
