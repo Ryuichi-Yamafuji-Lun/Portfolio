@@ -11,7 +11,7 @@ const MenuItems = [
 
 const Home = () => {
   const [activeSection, setActiveSection] = useState(null);
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 768); 
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 1150); 
   const [isContactFormVisible, setIsContactFormVisible] = useState(false);
 
   const handleSetActive = (to) => {
@@ -29,7 +29,7 @@ const Home = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth < 768); 
+      setIsMobile(window.innerWidth < 1150); 
     };
 
     window.addEventListener("resize", handleResize);
@@ -43,7 +43,7 @@ const Home = () => {
     <div name="home" className="w-full h-screen font-lato">
       <div className="max-w-[1000px] mx-auto p-8 flex flex-col h-full justify-center">
         <p className="text-4xl text-line-white font-bold sm:text-5xl sm:text-left">
-          Ryuichi Yamafuji Lun,
+          Ryuichi Y. Lun,
         </p>
         <p className="text-3xl text-line-white sm:text-4xl font-bold sm:text-left">
           software engineer.

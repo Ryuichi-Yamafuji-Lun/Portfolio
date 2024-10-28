@@ -10,11 +10,11 @@ import Experience from "./pages/Experience";
 
 function App() {
   // states of the website
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 1150);
   
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth < 768);
+      setIsMobile(window.innerWidth < 1150);
     };
 
     window.addEventListener("resize", handleResize);
