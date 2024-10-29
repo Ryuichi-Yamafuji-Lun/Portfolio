@@ -18,6 +18,12 @@ module.exports = {
       backgroundImage: {
         'test-pattern': "url('./assets/image/temp.jpg')",
       },
+      screens: {
+        sm: '640px',
+        md: '1150px',  
+        lg: '1280px',
+        xl: '1536px',
+      },
     },
   },
   plugins: [],
