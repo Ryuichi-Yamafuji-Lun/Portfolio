@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-scroll";
-import Contact from "./Contact";
 import { FaGithub, FaLinkedin, FaFileAlt, FaPaperPlane} from "react-icons/fa";
 
 const MenuItems = [
@@ -9,22 +8,13 @@ const MenuItems = [
   { label: "PROJECTS", to: "project" },
 ];
 
-const Home = () => {
+const Home = ({ openContactForm }) => {
   const [activeSection, setActiveSection] = useState(null);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 1150); 
-  const [isContactFormVisible, setIsContactFormVisible] = useState(false);
-
+  
   const handleSetActive = (to) => {
     const activeIndex = MenuItems.findIndex((item) => item.to === to);
     setActiveSection(activeIndex);
-  };
-
-  const openContactForm = () => {
-    setIsContactFormVisible(true);
-  };
-
-  const closeContactForm = () => {
-    setIsContactFormVisible(false);
   };
 
   useEffect(() => {
@@ -68,7 +58,7 @@ const Home = () => {
                       style={{ width: activeSection === index ? "75px" : "30px" }}
                     ></span>
                     <p
-                      className="transition-transform transform hover:scale-110 hover:translate-x-1"
+                      className="transition-transform transform hover:scale-110 hover:translate-x-1 cursor-pointer"
                       style={{ minWidth: "150px" }}
                     >
                       {item.label}
@@ -128,9 +118,6 @@ const Home = () => {
               </li>
             </ul>
           </footer>
-        )}
-        {isContactFormVisible && (
-          <Contact closeContactForm={closeContactForm} />
         )}
       </div>
     </div>

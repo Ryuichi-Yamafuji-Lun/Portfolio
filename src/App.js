@@ -6,12 +6,15 @@ import About from "./pages/About";
 import Project from "./pages/Project";
 import OtherProjects from "./pages/OtherProjects";
 import Experience from "./pages/Experience";
+import Contact from "./pages/Contact";
 
 
 function App() {
   // states of the website
   const [isMobile, setIsMobile] = useState(window.innerWidth < 1150);
-  
+  const [isContactFormVisible, setIsContactFormVisible] = useState(false);
+
+  // resizing
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth < 1150);
@@ -24,16 +27,25 @@ function App() {
     };
   }, []);
 
+  // state of contact form
+  const openContactForm = () => {
+    setIsContactFormVisible(true);
+  };
+
+  const closeContactForm = () => {
+    setIsContactFormVisible(false);
+  };
+
   return (
     <div className="grid grid-cols-1 md:grid-cols-7 gap-4">
       {isMobile && (
         <Headroom>
-          <NavBar />
+          <NavBar onContactClick={openContactForm}/>
         </Headroom>
       )}
       <div className="md:col-span-3">
         <div className={`sticky top-0 ${isMobile ? "" : "md:top-0"}`}>
-          <Home />
+          <Home openContactForm={openContactForm}/>
         </div>
       </div>
       <div className="md:col-span-4">
@@ -43,6 +55,7 @@ function App() {
         <Project />
         <OtherProjects />
       </div>
+      {isContactFormVisible && <Contact closeContactForm={closeContactForm} />}
     </div>
   );
 }

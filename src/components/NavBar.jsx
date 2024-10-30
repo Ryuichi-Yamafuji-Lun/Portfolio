@@ -9,7 +9,6 @@ const MobileMenuItems = [
   { label: "About Me", icon: <FaUserCircle />, to: "about" },
   { label: "Experience", icon: <FaGlasses />, to: "experience" },
   { label: "Projects", icon: <FaLaptopCode />, to: "project" },
-  { label: "Contact Me", icon: <FaPaperPlane />, to: "contact" },
   { label: "Resume", icon: <FaFileAlt />, to: "resume" },
 ];
 
@@ -18,7 +17,7 @@ const ExternalLinks = [
   { label: "Linkedin", icon: <FaLinkedin />, href: "https://www.linkedin.com/in/ryulun/" },
 ];
 
-const NavBar = () => {
+const NavBar = ({ onContactClick }) => {
   const [nav, setNav] = useState(false);
 
   const handleClick = () => setNav(!nav);
@@ -46,6 +45,10 @@ const NavBar = () => {
                 </Link>
               </li>
             ))}
+            <li className="flex flex-col items-center" onClick={() => { onContactClick(); setNav(false); }}>
+              <FaPaperPlane />
+              <p>Contact Me</p>
+            </li>
             {ExternalLinks.map((item, index) => (
               <li key={index}>
                 <a href={item.href} target="_blank" rel="noopener noreferrer" aria-label={item.label} className="flex flex-col items-center justify-center" onClick={() => setNav(false)}>
