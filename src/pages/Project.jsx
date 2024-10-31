@@ -1,6 +1,5 @@
 import GSMSDashboard from "../assets/image/GSMS/GSMSDashboard.png";
 import MaigoGame from "../assets/image/Maigo/MaigoInGame.png";
-import CodeByteHP from "../assets/image/CodeByte/CodeByteHP.png";
 import ProjectCard from "../components/ProjectCard";
 
 const Project = () => {
@@ -31,17 +30,6 @@ const Project = () => {
       websiteLink: "https://maigo-bd6b7.web.app/",
       sourceCodeLink: "https://github.com/leochoo/maigo",
     },
-    {
-      title: "CodeByte Library",
-      imageSrc: CodeByteHP,
-      technologies: [
-        { logo: "React"},
-        { logo: "Tailwindcss"},
-      ],
-      description: `CodeByte Library is a demo E-commerce store selling computer science books.`,
-      websiteLink: "https://codebytelibrary.shop/",
-      sourceCodeLink: "https://github.com/Ryuichi-Yamafuji-Lun/CodeByteLibrary",
-    }
   ];
 
   return (
