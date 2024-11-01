@@ -74,7 +74,7 @@ const Home = ({ openContactForm }) => {
         {!isMobile && (
           <footer className="mt-10">
             <ul className="flex space-x-4 text-line-white">
-              <li>
+              <li className="hover:scale-110 cursor-pointer">
                 <a
                   href="https://github.com/Ryuichi-Yamafuji-Lun"
                   className="flex items-center"
@@ -85,7 +85,7 @@ const Home = ({ openContactForm }) => {
                   <span className="ml-2">Github</span>
                 </a>
               </li>
-              <li>
+              <li className="hover:scale-110 cursor-pointer">
                 <a
                   href="https://www.linkedin.com/in/ryulun/"
                   className="flex items-center"
@@ -96,7 +96,7 @@ const Home = ({ openContactForm }) => {
                   <span className="ml-2">Linkedin</span>
                 </a>
               </li>
-              <li>
+              <li className="hover:scale-110 cursor-pointer">
                 <Link
                   to="resume"
                   className="flex items-center"
@@ -107,7 +107,7 @@ const Home = ({ openContactForm }) => {
                   <span className="ml-2">Résumé</span>
                 </Link>
               </li>
-              <li>
+              <li className="hover:scale-110 cursor-pointer">
                 <button
                   onClick={openContactForm}
                   className="flex items-center"
