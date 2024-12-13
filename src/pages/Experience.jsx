@@ -10,9 +10,12 @@ const Experience = () => {
       date: "Oct 2024 ~ Present",
       technologies: [
         { lang: "Python" },
+        { lang: "React" },
+        { lang: "Docker" },
+        { lang: "AWS" },
       ],
       description: `
-      Software Developer Intern at Tomorrow's AI
+      Software Engineer Intern at Tomorrow's AI
       `,
     },
     {
