@@ -71,54 +71,54 @@ const Home = ({ openContactForm }) => {
         )}
 
         {/* Footer Section */}
-        {!isMobile && (
-          <footer className="mt-10">
-            <ul className="flex space-x-4 text-line-white">
-              <li className="hover:scale-110 cursor-pointer">
-                <a
-                  href="https://github.com/Ryuichi-Yamafuji-Lun"
-                  className="flex items-center"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FaGithub />
-                  <span className="ml-2">Github</span>
-                </a>
-              </li>
-              <li className="hover:scale-110 cursor-pointer">
-                <a
-                  href="https://www.linkedin.com/in/ryulun/"
-                  className="flex items-center"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FaLinkedin />
-                  <span className="ml-2">Linkedin</span>
-                </a>
-              </li>
-              <li className="hover:scale-110 cursor-pointer">
-                <Link
-                  to="resume"
-                  className="flex items-center"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FaFileAlt />
-                  <span className="ml-2">Résumé</span>
-                </Link>
-              </li>
-              <li className="hover:scale-110 cursor-pointer">
-                <button
-                  onClick={openContactForm}
-                  className="flex items-center"
-                >
-                  <FaPaperPlane />
-                  <span className="ml-2">Contact Me</span>
-                </button>
-              </li>
-            </ul>
-          </footer>
-        )}
+        
+        <footer className="mt-10">
+          <ul className="flex space-x-4 text-line-white">
+            <li className="hover:scale-110 cursor-pointer">
+              <a
+                href="https://github.com/Ryuichi-Yamafuji-Lun"
+                className="flex items-center"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaGithub />
+                <span className="ml-2">Github</span>
+              </a>
+            </li>
+            <li className="hover:scale-110 cursor-pointer">
+              <a
+                href="https://www.linkedin.com/in/ryulun/"
+                className="flex items-center"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaLinkedin />
+                <span className="ml-2">Linkedin</span>
+              </a>
+            </li>
+            <li className="hover:scale-110 cursor-pointer">
+              <Link
+                to="resume"
+                className="flex items-center"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaFileAlt />
+                <span className="ml-2">Résumé</span>
+              </Link>
+            </li>
+            <li className="hover:scale-110 cursor-pointer">
+              <button
+                onClick={openContactForm}
+                className="flex items-center"
+              >
+                <FaPaperPlane />
+                <span className="ml-2">Contact Me</span>
+              </button>
+            </li>
+          </ul>
+        </footer>
+        
       </div>
     </div>
   );
