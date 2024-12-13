@@ -8,10 +8,10 @@ const MobileMenuItems = [
   { label: "About Me", icon: <FaUserCircle />, to: "about" },
   { label: "Experience", icon: <FaGlasses />, to: "experience" },
   { label: "Projects", icon: <FaLaptopCode />, to: "project" },
-  { label: "Resume", icon: <FaFileAlt />, to: "resume" },
 ];
 
 const ExternalLinks = [
+  { label: "Resume", icon: <FaFileAlt />, href: "https://docs.google.com/document/d/1LsHdHDT1QlYNuUpqcHDuX9iiHpufoeJY6G4o7vQz6IA/edit?usp=sharing" },
   { label: "Github", icon: <FaGithub />, href: "https://github.com/Ryuichi-Yamafuji-Lun" },
   { label: "Linkedin", icon: <FaLinkedin />, href: "https://www.linkedin.com/in/ryulun/" },
 ];

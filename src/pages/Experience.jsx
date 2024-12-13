@@ -89,7 +89,7 @@ const Experience = () => {
           <a
             className="group resume-button flex items-center"
             aria-label="View Full Résumé"
-            href="/resume.pdf" // Replace with resume when done
+            href="https://docs.google.com/document/d/1LsHdHDT1QlYNuUpqcHDuX9iiHpufoeJY6G4o7vQz6IA/edit?usp=sharing" 
             target="_blank"
             rel="noopener noreferrer"
           >

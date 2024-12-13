@@ -97,15 +97,15 @@ const Home = ({ openContactForm }) => {
               </a>
             </li>
             <li className="hover:scale-110 cursor-pointer">
-              <Link
-                to="resume"
+              <a
+                href="https://docs.google.com/document/d/1LsHdHDT1QlYNuUpqcHDuX9iiHpufoeJY6G4o7vQz6IA/edit?usp=sharing"
                 className="flex items-center"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <FaFileAlt className={`${isMobile ? "text-3xl" : "text-base"}`}/>
                 {!isMobile && <span className="ml-2">Résumé</span>}
-              </Link>
+              </a>
             </li>
             <li className="hover:scale-110 cursor-pointer">
               <button
