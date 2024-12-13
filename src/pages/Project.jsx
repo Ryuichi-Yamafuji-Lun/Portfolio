@@ -1,9 +1,25 @@
 import GSMSDashboard from "../assets/image/GSMS/GSMSDashboard.png";
 import MaigoGame from "../assets/image/Maigo/MaigoInGame.png";
+import NYHomePage from "../assets/image/NYHouse/LRAI_NY_Housing_Forecast.png"
 import ProjectCard from "../components/ProjectCard";
 
 const Project = () => {
   const projects = [
+    {
+      title: "Linear Regression AI model for NY House Value Forecast",
+      imageSrc: NYHomePage,
+      technologies: [
+        { logo: "FastAPI" },
+        { logo: "React" },
+        { logo: "Tailwindcss" },
+        { logo: "Scikit-learn" },
+      ],
+      description: `
+      A full-stack web app featuring a custom AI model built with Kaggle data to predict NYC house prices. Integrates FastAPI for backend processing and React with TailwindCSS for a responsive user experience.
+      `,
+      websiteLink: "https://new-york-housing-price-prediction.vercel.app/",
+      sourceCodeLink: "https://github.com/Ryuichi-Yamafuji-Lun/New-York-Housing-Price-Prediction",
+    },
     {
       title: "Store Management System",
       imageSrc: GSMSDashboard,
