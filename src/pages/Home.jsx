@@ -81,8 +81,8 @@ const Home = ({ openContactForm }) => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <FaGithub />
-                <span className="ml-2">Github</span>
+                <FaGithub className={`${isMobile ? "text-3xl" : "text-base"}`}/>
+                {!isMobile && <span className="ml-2">Github</span>}
               </a>
             </li>
             <li className="hover:scale-110 cursor-pointer">
@@ -92,8 +92,8 @@ const Home = ({ openContactForm }) => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <FaLinkedin />
-                <span className="ml-2">Linkedin</span>
+                <FaLinkedin className={`${isMobile ? "text-3xl" : "text-base"}`}/>
+                {!isMobile && <span className="ml-2">Linkedin</span>}
               </a>
             </li>
             <li className="hover:scale-110 cursor-pointer">
@@ -103,8 +103,8 @@ const Home = ({ openContactForm }) => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <FaFileAlt />
-                <span className="ml-2">Résumé</span>
+                <FaFileAlt className={`${isMobile ? "text-3xl" : "text-base"}`}/>
+                {!isMobile && <span className="ml-2">Résumé</span>}
               </Link>
             </li>
             <li className="hover:scale-110 cursor-pointer">
@@ -112,13 +112,12 @@ const Home = ({ openContactForm }) => {
                 onClick={openContactForm}
                 className="flex items-center"
               >
-                <FaPaperPlane />
-                <span className="ml-2">Contact Me</span>
+                <FaPaperPlane className={`${isMobile ? "text-3xl" : "text-base"}`}/>
+                {!isMobile && <span className="ml-2">Contact Me</span>}
               </button>
             </li>
           </ul>
-        </footer>
-        
+        </footer>    
       </div>
     </div>
   );
