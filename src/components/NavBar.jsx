@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-scroll";
 import { TiHome } from "react-icons/ti";
 import { FaUserCircle, FaGlasses, FaLaptopCode, FaPaperPlane, FaFileAlt, FaBars, FaTimes, FaGithub, FaLinkedin } from "react-icons/fa";
-import LightLogo from "../assets/icons/Light-Logo.png";
+
 
 const MobileMenuItems = [
   { label: "Home", icon: <TiHome />, to: "home" },
@@ -24,12 +24,9 @@ const NavBar = ({ onContactClick }) => {
 
   return (
     <div className="sticky top-0 px-4 h-20 w-screen flex justify-between items-center font-lato bg-background-main text-line-white ">
-      <div>
-        <img src={LightLogo} alt="Logo" className="w-25 h-24" />
-      </div>
 
       {/* Mobile Menu */}
-      <div onClick={handleClick} className={`md:hidden ${nav ? "hidden" : ""}`}>
+      <div onClick={handleClick} className={`md:hidden ml-auto pr-2 ${nav ? "hidden" : ""}`}>
         {!nav ? <FaBars className="text-3xl" /> : <FaTimes className="text-3xl" />}
       </div>
 
