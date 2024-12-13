@@ -8,13 +8,14 @@ const About = () => {
             <div className="max-w-4xl px-4 mt-20 md:mt-20 text-line-white"> 
               {/*<p className="text-3xl text-line-white font-bold pb-5 text-center sm:text-6xl lg:text-left">ABOUT ME</p>*/}
               <p className="text-2xl">
-                Hello, I'm Ryuichi Yamafuji Lun, a dedicated software engineer.
-                Currently, I'm engaged as an undergraduate researcher at the Data Platform Laboratory at Keio University.
+              Hi, I’m Ryuichi Lun, a Master’s student at USC’s Viterbi School of Engineering, specializing in Artificial Intelligence.
+              At Keio Research Institute, I contributed to groundbreaking research advancing the scalability and efficiency of database systems.
+              Fueled by a passion for applying AI to real-world challenges, I embrace opportunities to collaborate with diverse teams to create technologies that empower and inspire.
               </p>
               <div className="pt-4">
                 <p className="pb-2">Technologies:</p>
                 <div className="flex flex-wrap">
-                  {["Python", "C/C++", "Javascript", "HTML", "CSS", "React", "Tailwindcss"].map(
+                  {["Python", "C/C++", "Javascript", "React", "Flask", "FastAPI","PostgreSQL", "Docker", "AWS"].map(
                     (tech, index) => (
                       <span
                         key={index}
