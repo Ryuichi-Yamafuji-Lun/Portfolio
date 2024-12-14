@@ -1,10 +1,22 @@
 import OTAction from "../assets/image/OpenTron/OpenTronInAction.png";
 import BpTree from "../assets/image/BpTree/BptreeIMG.png";
+import DT from "../assets/image/FafnirDT/FafnirDT.png";
 import ProjectCard from "../components/ProjectCard";
 
 
 const OtherProjects = () => {
   const otherprojects = [
+    {
+      title: "Dynamic Timestamp in Lock-based Concurrency Control Protocols",
+      imageSrc: DT,
+      technologies: [
+        { logo: "C/C++" },
+        { logo: "CCBench" },
+      ],
+      description: `
+      Optimized Two-Phase Locking with Starvation Freedom (2PLSF) for high contention, integrating an elastic reader-writer lock and dynamic timestamp tracking to ensure performance even in rare zero-transaction scenarios.
+      `,
+    },
     {
       title: "Opentron OT-2",
       imageSrc: OTAction,
