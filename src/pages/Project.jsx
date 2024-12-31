@@ -1,10 +1,26 @@
-import GSMSDashboard from "../assets/image/GSMS/GSMSDashboard.png";
+import MediSkinAI from "../assets/image/MediSkinAI/MediSkinAI.png";
 import MaigoGame from "../assets/image/Maigo/MaigoInGame.png";
 import NYHomePage from "../assets/image/NYHouse/LRAI_NY_Housing_Forecast.png"
 import ProjectCard from "../components/ProjectCard";
 
 const Project = () => {
   const projects = [
+    {
+      title: "MediSkinAI",
+      imageSrc: MediSkinAI,
+      technologies: [
+        { logo: "FastAPI" },
+        { logo: "React" },
+        { logo: "Tailwindcss" },
+        { logo: "Pytorch" },
+      ],
+      description: `
+      Built a full-stack web app using PyTorch and a CNN (ResNet50) trained from scratch to analyze skin lesion images. Provides diagnoses, confidence scores, and recommendations. Developed with FastAPI for the backend and React for a seamless, privacy-focused interface.
+      `,
+
+      websiteLink: "https://mediskinai.vercel.app/",
+      sourceCodeLink: "https://github.com/Ryuichi-Yamafuji-Lun/MediSkinAI",
+    },
     {
       title: "Linear Regression AI model for NY House Value Forecast",
       imageSrc: NYHomePage,
@@ -19,20 +35,6 @@ const Project = () => {
       `,
       websiteLink: "https://new-york-housing-price-prediction.vercel.app/",
       sourceCodeLink: "https://github.com/Ryuichi-Yamafuji-Lun/New-York-Housing-Price-Prediction",
-    },
-    {
-      title: "Store Management System",
-      imageSrc: GSMSDashboard,
-      technologies: [
-        { logo: "MySQL" },
-        { logo: "Flask" },
-        { logo: "React" },
-        { logo: "Tailwindcss" },
-      ],
-      description: `
-      A full-stack Grocery Store Management System.
-      `,
-      sourceCodeLink: "https://github.com/Ryuichi-Yamafuji-Lun/PokeStore-management-system",
     },
     {
       title: "Maigo",
