@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/Portfolio/static/css/main.8da0e5d3.css",
+    "main.js": "/Portfolio/static/js/main.24b9118a.js",
+    "static/js/453.1407b060.chunk.js": "/Portfolio/static/js/453.1407b060.chunk.js",
+    "static/media/MaigoInGame.png": "/Portfolio/static/media/MaigoInGame.3afce91974239a4b23da.png",
+    "static/media/OpenTronInAction.png": "/Portfolio/static/media/OpenTronInAction.b49c19d125aef17dc4e2.png",
+    "static/media/LRAI_NY_Housing_Forecast.png": "/Portfolio/static/media/LRAI_NY_Housing_Forecast.ea4925ec0d66176bd94f.png",
+    "static/media/MediSkinAI.png": "/Portfolio/static/media/MediSkinAI.5668f58209a1570cabcb.png",
+    "static/media/Genetic.png": "/Portfolio/static/media/Genetic.cf4ab8585fbca74c7aa7.png",
+    "static/media/FafnirDT.png": "/Portfolio/static/media/FafnirDT.14a7a7dd88b3627ad5bd.png",
+    "index.html": "/Portfolio/index.html",
+    "main.8da0e5d3.css.map": "/Portfolio/static/css/main.8da0e5d3.css.map",
+    "main.24b9118a.js.map": "/Portfolio/static/js/main.24b9118a.js.map",
+    "453.1407b060.chunk.js.map": "/Portfolio/static/js/453.1407b060.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8da0e5d3.css",
+    "static/js/main.24b9118a.js"
+  ]
+}
