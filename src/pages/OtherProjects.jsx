@@ -1,5 +1,5 @@
 import OTAction from "../assets/image/OpenTron/OpenTronInAction.png";
-import BpTree from "../assets/image/BpTree/BptreeIMG.png";
+import Genetic from "../assets/image/Genetic/Genetic.png";
 import DT from "../assets/image/FafnirDT/FafnirDT.png";
 import ProjectCard from "../components/ProjectCard";
 
@@ -30,14 +30,13 @@ const OtherProjects = () => {
       `,
     },
     {
-      title: "B+Tree Implementation",
-      imageSrc: BpTree,
+      title: "3D Traveling Salesman Problem with Genetic Algorithm",
+      imageSrc: Genetic,
       technologies: [
-        { logo: "C" },
-        { logo: "C++" },
+        { logo: "Python" },
       ],
       description: `
-      Implementation of B+tree with 2-phase locking
+      Developed a 3D Traveling Salesman Problem solver using a Genetic Algorithm with tournament selection and inversion mutation to optimize complex routes efficiently. This project highlights my ability to apply AI-driven optimization techniques to real-world logistical challenges.
       `,
     },
   ];
