@@ -55,7 +55,7 @@ const NavBar = ({ onContactClick }) => {
                 </Link>
               </li>
             ))}
-            <li
+            {/* <li
               className="flex flex-col items-center"
               onClick={() => {
                 onContactClick();
@@ -64,7 +64,7 @@ const NavBar = ({ onContactClick }) => {
             >
               <FaPaperPlane />
               <p>Contact Me</p>
-            </li>
+            </li> */}
             {ExternalLinks.map((item, index) => (
               <li key={index}>
                 <a

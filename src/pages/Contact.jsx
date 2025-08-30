@@ -2,6 +2,7 @@ import { useRef, useState, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
 import { FaTimes } from 'react-icons/fa';
 
+/*Change to another API since EmailJS is not consistent*/ 
 const Contact = ({ closeContactForm }) => {
   const SERVICE_ID = process.env.REACT_APP_EMAILJS_SERVICE_ID;
   const TEMPLATE_ID = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
