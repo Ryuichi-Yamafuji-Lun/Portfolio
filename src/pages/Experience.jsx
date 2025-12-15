@@ -6,58 +6,66 @@ const Experience = () => {
 
   const experiences = [
     {
-      title: "Tomorrow's AI",
-      date: "Oct 2024 ~ Present",
+      title: "Software Engineer Intern",
+      company: "Tomorrow's AI, Remote",
+      date: "Oct 2024 ~ Oct 2025",
       technologies: [
         { lang: "Python" },
         { lang: "React" },
         { lang: "Docker" },
         { lang: "AWS" },
       ],
-      description: `
-      Software Engineer Intern at Tomorrow's AI
-      `,
-    },
-    {
-      title: "Data Platform Laboratory",
-      date: "APR 2022 ~ Sep 2024",
-      technologies: [
-        { lang: "C" },
-        { lang: "C++" },
+      description: [
+        "Revamped core UI with modular, mobile-optimized React components to enhance usability, reducing sprint completion time by 25%.",
+        "Increased hate speech detection accuracy by 30% by processing and normalizing 7+ real-world news datasets in Python.",
+        "Constructed a Dockerized data ingestion pipeline with web scrapers on AWS EC2, enhancing article freshness by 10% across 3 NLP model pipelines."
       ],
-      description: `
-      Kawashima Hideyuki Laboratory: Data Platform and Algorithm Sciences. 
-      Conducted research on AI and concurrency control mechanism (SILO and 2-PL with Starvation Freedom). 
-      `,
     },
     {
-      title: "Mitsubishi UFJ Information Technology",
-      date: "OCT 2023 ~ Jun 2024",
+      title: "Undergraduate Researcher",
+      company: "Data Platform Laboratory, Keio Research Institute",
+      date: "Mar 2022 ~ Sep 2024",
       technologies: [
-        { lang: "C" },
         { lang: "C++" },
+        { lang: "C" },
       ],
-      description: `
-      Undergraduate researcher for one of the biggest banks in Japan MUFJ.
-      Solving issues about concurrency control mechanism.
-      `,
+      description: [
+        "Discovered and diagnosed a critical failure in a high-throughput transactional database system where throughput collapsed to 0 transactions/sec.",
+        "Designed and implemented an elastic reader-writer lock in C++ to dynamically inject threads and timestamps, eliminating static allocation bottlenecks.",
+        "Restored system throughput from 0 to over 500,000 transactions/sec in benchmarks, achieving full recovery with <5% performance overhead.",
+        "Authored a technical paper on the novel architecture, accepted for presentation at the 163rd System Software & OS Symposium."
+      ],
     },
     {
-      title: "JST-Mirai Program",
-      date: "AUG 2023",
+      title: "Program Participant & Student Representative",
+      company: "JST-Mirai Program",
+      date: "Aug 2023 ~ Sep 2023",
       technologies: [
         { lang: "Python" },
-        { lang: "OpenTron" },
+        { lang: "Opentrons" },
       ],
-      description: `
-      Participated in the full-scale R&D project 'Accelerating Life Sciences by Robotics Biology' of the JST-Mirai Program. 
-      Automated liquid handling processes of molecular biology experiments on the Opentrons application. Led the optimization 
-      and refinement of protocol programs and codes with particular emphases on increasing efficiency and decreasing resource waste (samples, reagents, and pipette tips). 
-      `,
+      description: [
+        "Led protocol optimization for a JST R&D project, refining automation scripts to reduce resource waste by 75% (samples, reagents, pipette tips).",
+        "Reduced experimentation time by 50% by optimizing code and refining protocol execution for robotics-driven workflows.",
+        "Automated liquid handling processes for molecular biology experiments using the Opentrons application.",
+      ],
     },
     {
-      title: "Software Systems Laboratory",
-      date: "OCT 2021 ~ JULY 2022",
+      title: "Undergraduate Researcher",
+      company: "Mitsubishi UFJ Information Technology (MUFJ)",
+      date: "Oct 2023 ~ Jun 2024",
+      technologies: [
+        { lang: "C++" },
+        { lang: "C" },
+      ],
+      description: [
+        "Supported research on concurrency control mechanisms for high-transaction environments at one of Japan's largest banks."
+      ],
+    },
+    {
+      title: "Undergraduate Researcher",
+      company: "Software Systems Laboratory",
+      date: "Oct 2021 ~ Jul 2022",
       technologies: [
         { lang: "GatsbyJS" },
         { lang: "SCSS" },
@@ -66,10 +74,10 @@ const Experience = () => {
         { lang: "Vite" },
         { lang: "Firebase" },
       ],
-      description: `
-      Hagino-Hattori Laboratory: Participated in 2 projects involving web development, (1) Maigo and (2) a tourist location info-sharing app.
-      `,
-    }, 
+      description: [
+        "Participated in projects involving web development, including a tourist location info-sharing app and Maigo."
+      ],
+    },
   ]
 
   return (
