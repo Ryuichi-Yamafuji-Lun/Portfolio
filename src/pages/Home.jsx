@@ -107,7 +107,7 @@ const Home = ({ openContactForm }) => {
                 {!isMobile && <span className="ml-2">Résumé</span>}
               </a>
             </li>
-            <li className="hover:scale-110 cursor-pointer">
+            {/* <li className="hover:scale-110 cursor-pointer">
               <button
                 onClick={openContactForm}
                 className="flex items-center"
@@ -115,7 +115,7 @@ const Home = ({ openContactForm }) => {
                 <FaPaperPlane className={`${isMobile ? "text-3xl" : "text-base"}`}/>
                 {!isMobile && <span className="ml-2">Contact Me</span>}
               </button>
-            </li>
+            </li> */}
           </ul>
         </footer>    
       </div>
