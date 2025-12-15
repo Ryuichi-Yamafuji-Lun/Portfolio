@@ -14,7 +14,7 @@ const ProjectCard = ({ title, imageSrc, technologies, description, websiteLink, 
           <img
             src={imageSrc}
             alt=""
-            className="w-full h-2/3 p-3 rounded-2xl"
+            className="w-full max-h-48 object-cover rounded-xl transition duration-300"
           />
         </a>
         <div className="flex items-center space-x-2 mt-2 p-3 md:mt-0">
@@ -25,7 +25,7 @@ const ProjectCard = ({ title, imageSrc, technologies, description, websiteLink, 
               rel="noopener noreferrer"
               className="transition font-bold text-line-white"
             >
-              <div className="flex items-center transition hover:-translate-y-1 hover:translate-x-1 hover:scale-110">
+              <div className="flex items-center transition hover:-translate-y-1 hover:translate-x-1 hover:scale-105">
                 <MdWebAsset />
                 <span>Live</span>
               </div>
@@ -38,7 +38,7 @@ const ProjectCard = ({ title, imageSrc, technologies, description, websiteLink, 
               rel="noopener noreferrer"
               className="transition font-bold text-line-white"
             >
-              <div className="flex items-center transition hover:-translate-y-1 hover:translate-x-1 hover:scale-110">
+              <div className="flex items-center transition hover:-translate-y-1 hover:translate-x-1 hover:scale-105">
                 <BiCodeAlt />
                 <span>Source Code</span>
               </div>
@@ -48,7 +48,13 @@ const ProjectCard = ({ title, imageSrc, technologies, description, websiteLink, 
       </div>
       <div className="w-full md:w-2/3 p-4">
         <p className="text-2xl text-line-white font-bold mb-1">{title}</p>
-        <p className="pb-2">{description}</p>
+        <ul className="list-disc list-inside pb-2 space-y-1 text-line-white/80">
+          {description.map((item, index) => (
+            <li key={index} className="text-base">
+              {item}
+            </li>
+          ))}
+        </ul>
         <div className="flex flex-wrap items-center space-x-2 mb-4">
           {technologies.map((tech, techIndex) => (
             <div key={techIndex} className="flex items-center space-x-1 mb-2">

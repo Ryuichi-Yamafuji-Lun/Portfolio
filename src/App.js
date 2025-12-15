@@ -4,7 +4,6 @@ import NavBar from "./components/NavBar";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Project from "./pages/Project";
-import OtherProjects from "./pages/OtherProjects";
 import Experience from "./pages/Experience";
 import Contact from "./pages/Contact";
 
@@ -53,7 +52,6 @@ function App() {
         <About />
         <Experience />
         <Project />
-        <OtherProjects />
       </div>
       {isContactFormVisible && <Contact closeContactForm={closeContactForm} />}
     </div>
