@@ -1,10 +1,28 @@
 import MediSkinAI from "../assets/image/MediSkinAI/MediSkinAI.png";
 import MaigoGame from "../assets/image/Maigo/MaigoInGame.png";
 import ProjectCard from "../components/ProjectCard";
-import TetrisAI from "../assets/image/TetrisLM/TetrisLM.png"
+import TetrisAI from "../assets/image/TetrisLM/TetrisLM.png";
 import DT from "../assets/image/FafnirDT/FafnirDT.png";
+import MIRROR from "../assets/image/MIRROR/MIRROR.png"
+
 const Project = () => {
   const projects = [
+    {
+      title: "MIRROR: Byzantine-Resilient LLM Multi-Agent Systems",
+      imageSrc: MIRROR,
+      technologies: [
+        { logo: "LLMs" },
+        { logo: "Multi-Agent" },
+        { logo: "Research" },
+      ],
+      description: [
+        "First-author publication currently under review for NeurIPS 2026 (Double Blind).",
+        "Architected a cryptographic defense framework for LLM multi-agent systems, reducing the attack success rate to 0%.",
+        "Completely bypassed the 35x API token overhead required by standard semantic defenses."
+      ],
+      websiteLink: "https://demo-nine-lemon-64.vercel.app/", 
+      sourceCodeLink: "https://github.com/highphysicist/MIRROR-defense-for-aitm-mas", 
+    },
     {
       title: "MediSkinAI: Melanoma Screening Agent",
       imageSrc: MediSkinAI,
@@ -34,7 +52,7 @@ const Project = () => {
         { logo: "LangGraph" },
       ],
       description: [
-        "Adapted LLM architecture for the **first head-to-head benchmarking** of Generative AI against Reinforcement Learning.",
+        "Adapted LLM architecture for the first head-to-head benchmarking of Generative AI against Reinforcement Learning.",
         "Devised a Chain-of-Thought (CoT) reasoning module (Gemini API) which improved survival rates by 8.2%.",
         "Trained a Deep Q-Network (DQN) policy to establish a high-performance baseline (approx. 600 reward).",
       ],
@@ -50,9 +68,9 @@ const Project = () => {
         { logo: "Research" },
       ],
       description: [
-        "Designed and implemented an elastic reader-writer lock in C++ to eliminate static allocation bottlenecks.",
+        "Proposed a novel elastic reader-writer lock architecture utilizing dynamic thread and timestamp injection to eliminate static allocation bottlenecks.",
         "Restored system throughput from 0 to 500,000+ transactions/sec in benchmarks.",
-        "Authored a technical paper accepted for presentation at the 163rd System Software & OS Symposium.",
+        "First-author technical paper accepted for presentation at the 163rd System Software & OS Symposium (2024).",
       ],
       websiteLink: "https://jglobal.jst.go.jp/en/detail?JGLOBAL_ID=202402231694286824", 
       sourceCodeLink: "https://github.com/Ryuichi-Yamafuji-Lun/FafnirDT",

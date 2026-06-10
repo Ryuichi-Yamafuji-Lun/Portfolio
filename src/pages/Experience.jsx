@@ -1,12 +1,27 @@
 import { AiOutlineArrowRight } from "react-icons/ai";
-
 import { ExperienceCard } from "../components/ExperienceCard";
 
 const Experience = () => {
 
   const experiences = [
     {
-      title: "Software Engineer Intern",
+      title: "AI Engineer Intern, Red Queen Team",
+      company: "Rakuten Group, Inc., Tokyo, Japan",
+      date: "May 2026 ~ Aug 2026",
+      technologies: [
+        { lang: "Python" },
+        { lang: "Claude Agent SDK" },
+        { lang: "GitHub Actions" },
+        { lang: "CI/CD" },
+      ],
+      description: [
+        "Engineered an autonomous reporting pipeline using the Claude Agent SDK and GitHub Actions, scanning repository-wide commits, PRs, and comments to synthesize individualized weekly summaries.",
+        "Designed a scheduled Human-in-the-Loop (HITL) workflow to ensure data accuracy, empowering engineering leads to easily validate and execute context-aware report generation via custom integration commands.",
+        "Deployed an automated Claude-powered code validation tool into the team's CI/CD environment, enforcing continuous quality and logic checks on all incoming Pull Requests to reduce manual review overhead."
+      ],
+    },
+    {
+      title: "AI Engineer Intern",
       company: "Tomorrow's AI, Remote",
       date: "Oct 2024 ~ Oct 2025",
       technologies: [
@@ -16,13 +31,13 @@ const Experience = () => {
         { lang: "AWS" },
       ],
       description: [
-        "Revamped core UI with modular, mobile-optimized React components to enhance usability, reducing sprint completion time by 25%.",
-        "Increased hate speech detection accuracy by 30% by processing and normalizing 7+ real-world news datasets in Python.",
-        "Constructed a Dockerized data ingestion pipeline with web scrapers on AWS EC2, enhancing article freshness by 10% across 3 NLP model pipelines."
+        "Built a Dockerized data ingestion pipeline on AWS EC2 using web scrapers, reducing data ingestion latency by 10% across 3 NLP pipelines.",
+        "Boosted hate speech detection accuracy by 30% by processing and normalizing 7+ real-world news datasets in Python, successfully mitigating linguistic bias across core NLP models.",
+        "Revamped the core web interface with modular, mobile-optimized React components to enhance platform usability, reducing engineering sprint completion times by 25%."
       ],
     },
     {
-      title: "Undergraduate Researcher",
+      title: "Systems Research Engineer",
       company: "Data Platform Laboratory, Keio Research Institute",
       date: "Mar 2022 ~ Sep 2024",
       technologies: [
@@ -30,10 +45,9 @@ const Experience = () => {
         { lang: "C" },
       ],
       description: [
-        "Discovered and diagnosed a critical failure in a high-throughput transactional database system where throughput collapsed to 0 transactions/sec.",
-        "Designed and implemented an elastic reader-writer lock in C++ to dynamically inject threads and timestamps, eliminating static allocation bottlenecks.",
-        "Restored system throughput from 0 to over 500,000 transactions/sec in benchmarks, achieving full recovery with <5% performance overhead.",
-        "Authored a technical paper on the novel architecture, accepted for presentation at the 163rd System Software & OS Symposium."
+        "Restored database throughput from 0 to 500,000+ TPS by diagnosing a critical multicore contention failure and engineering a custom elastic reader-writer lock in C++.",
+        "Achieved recovery with <5% performance overhead by eliminating static allocation bottlenecks through dynamic thread/timestamp injection.",
+        "Benchmarked high-performance architecture across multi-core Linux environments, stress-testing hardware concurrency and data throughput to validate scalable infrastructure for compute-intensive processing pipelines."
       ],
     },
     {
@@ -97,7 +111,7 @@ const Experience = () => {
           <a
             className="group resume-button flex items-center"
             aria-label="View Full Résumé"
-            href="https://docs.google.com/document/d/1LsHdHDT1QlYNuUpqcHDuX9iiHpufoeJY6G4o7vQz6IA/edit?usp=sharing" 
+            href="YOUR_UPDATED_RESUME_LINK_HERE" 
             target="_blank"
             rel="noopener noreferrer"
           >
