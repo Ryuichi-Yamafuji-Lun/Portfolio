@@ -1,125 +1,142 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-scroll";
-import { FaGithub, FaLinkedin, FaFileAlt, FaPaperPlane} from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaFileAlt, FaEnvelope } from "react-icons/fa";
+
+// Flip to false to hide the "Open to full-time" badge when you're not job-hunting.
+const OPEN_TO_WORK = true;
 
 const MenuItems = [
-  { label: "ABOUT ME", to: "about" },
-  { label: "EXPERIENCE", to: "experience" },
-  { label: "PROJECTS", to: "project" },
+  { label: "About", to: "about" },
+  { label: "Experience", to: "experience" },
+  { label: "Research", to: "research" },
+  { label: "Projects", to: "project" },
 ];
 
-const Home = ({ openContactForm }) => {
-  const [activeSection, setActiveSection] = useState(null);
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 1150); 
-  
-  const handleSetActive = (to) => {
-    const activeIndex = MenuItems.findIndex((item) => item.to === to);
-    setActiveSection(activeIndex);
-  };
+const Socials = [
+  {
+    icon: FaGithub,
+    label: "GitHub",
+    href: "https://github.com/Ryuichi-Yamafuji-Lun",
+  },
+  {
+    icon: FaLinkedin,
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/in/ryulun/",
+  },
+  {
+    icon: FaFileAlt,
+    label: "Résumé",
+    href: "https://docs.google.com/document/d/1LsHdHDT1QlYNuUpqcHDuX9iiHpufoeJY6G4o7vQz6IA/edit?usp=sharing",
+  },
+];
 
+const scrollToSection = (id) => {
+  document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
+};
+
+const Home = ({ onContactClick }) => {
+  const [active, setActive] = useState("about");
+
+  // Highlight the section currently in view (replaces react-scroll's spy).
   useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 1150); 
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
+    const sections = MenuItems.map((m) => document.getElementById(m.to)).filter(Boolean);
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) setActive(entry.target.id);
+        });
+      },
+      { rootMargin: "-40% 0px -55% 0px", threshold: 0 }
+    );
+    sections.forEach((s) => observer.observe(s));
+    return () => observer.disconnect();
   }, []);
 
   return (
-    <div name="home" className="w-full h-screen font-lato">
-      <div className="max-w-[1000px] mx-auto p-8 flex flex-col h-full justify-center">
-        <p className="text-4xl text-line-white font-bold sm:text-5xl sm:text-left">
-          Ryuichi Y. Lun,
+    <header
+      id="home"
+      className="flex flex-col justify-between py-16 lg:sticky lg:top-0 lg:h-screen lg:w-[40%] lg:max-w-sm lg:py-28"
+    >
+      <div>
+        <h1 className="text-4xl font-bold tracking-tight text-slate-100 sm:text-5xl">
+          Ryuichi Y. Lun
+        </h1>
+        <h2 className="mt-3 text-lg font-medium text-primary-light sm:text-xl">
+          Software Engineer
+        </h2>
+        <p className="mt-4 max-w-xs leading-relaxed text-slate-400">
+          Building reliable, intelligent systems at the intersection of AI/ML
+          and high-performance infrastructure.
         </p>
-        <p className="text-3xl text-line-white sm:text-4xl font-bold sm:text-left">
-          software engineer.
-        </p>
-        {/* Incorporate the Patalex alongside the menu items here */}
-        {/* Menu Items */}
-        {!isMobile && (
-          <ul className="flex flex-col pt-4">
-            {MenuItems.map((item, index) => (
-              <li key={index} className="pb-2 text-line-white">
-                <Link
-                  to={item.to}
-                  spy={true}
-                  smooth={true}
-                  duration={500}
-                  onSetActive={handleSetActive}
-                  offset={-100} 
+
+        <div className="mt-5 flex flex-wrap items-center gap-2 text-xs font-medium text-slate-400">
+          {OPEN_TO_WORK && (
+            <span className="inline-flex items-center gap-1.5 rounded-full border border-primary/20 bg-primary/10 px-2.5 py-1 text-primary-light">
+              <span className="h-1.5 w-1.5 rounded-full bg-green-400"></span>
+              Open to full-time
+            </span>
+          )}
+          <span className="rounded-full border border-navy-lighter/50 px-2.5 py-1">
+            Graduating Dec 2026
+          </span>
+          <span className="rounded-full border border-navy-lighter/50 px-2.5 py-1">
+            U.S. Permanent Resident
+          </span>
+        </div>
+
+        {/* Desktop section nav */}
+        <nav className="mt-16 hidden lg:block" aria-label="Section navigation">
+          <ul className="space-y-4">
+            {MenuItems.map((item) => (
+              <li key={item.to}>
+                <button
+                  onClick={() => scrollToSection(item.to)}
+                  className="group flex cursor-pointer items-center py-1"
                 >
-                  <div className={`flex items-center ${activeSection === index ? "font-bold" : ""}`}>
-                    <span
-                      className="nav-indicator mr-4 h-px w-8 bg-line-white transition-all group-hover:w-16 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none"
-                      style={{ width: activeSection === index ? "75px" : "30px" }}
-                    ></span>
-                    <p
-                      className="transition-transform transform hover:scale-110 hover:translate-x-1 cursor-pointer"
-                      style={{ minWidth: "150px" }}
-                    >
-                      {item.label}
-                    </p>
-                  </div>
-                </Link>
+                  <span
+                    className={`mr-4 h-px bg-slate-600 transition-all group-hover:w-16 group-hover:bg-slate-100 ${
+                      active === item.to ? "w-16 bg-slate-100" : "w-8"
+                    }`}
+                  />
+                  <span
+                    className={`text-xs font-semibold uppercase tracking-widest transition-colors group-hover:text-slate-100 ${
+                      active === item.to ? "text-slate-100" : "text-slate-500"
+                    }`}
+                  >
+                    {item.label}
+                  </span>
+                </button>
               </li>
             ))}
           </ul>
-        )}
-
-        {/* Footer Section */}
-        
-        <footer className="mt-10">
-          <ul className="flex space-x-4 text-line-white">
-            <li className="hover:scale-110 cursor-pointer">
-              <a
-                href="https://github.com/Ryuichi-Yamafuji-Lun"
-                className="flex items-center"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaGithub className={`${isMobile ? "text-3xl" : "text-base"}`}/>
-                {!isMobile && <span className="ml-2">Github</span>}
-              </a>
-            </li>
-            <li className="hover:scale-110 cursor-pointer">
-              <a
-                href="https://www.linkedin.com/in/ryulun/"
-                className="flex items-center"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaLinkedin className={`${isMobile ? "text-3xl" : "text-base"}`}/>
-                {!isMobile && <span className="ml-2">Linkedin</span>}
-              </a>
-            </li>
-            <li className="hover:scale-110 cursor-pointer">
-              <a
-                href="https://docs.google.com/document/d/1LsHdHDT1QlYNuUpqcHDuX9iiHpufoeJY6G4o7vQz6IA/edit?usp=sharing"
-                className="flex items-center"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaFileAlt className={`${isMobile ? "text-3xl" : "text-base"}`}/>
-                {!isMobile && <span className="ml-2">Résumé</span>}
-              </a>
-            </li>
-            {/* <li className="hover:scale-110 cursor-pointer">
-              <button
-                onClick={openContactForm}
-                className="flex items-center"
-              >
-                <FaPaperPlane className={`${isMobile ? "text-3xl" : "text-base"}`}/>
-                {!isMobile && <span className="ml-2">Contact Me</span>}
-              </button>
-            </li> */}
-          </ul>
-        </footer>    
+        </nav>
       </div>
-    </div>
+
+      {/* Social links */}
+      <ul className="mt-10 flex items-center gap-5 lg:mt-0">
+        {Socials.map(({ icon: Icon, label, href }) => (
+          <li key={label}>
+            <a
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={label}
+              className="text-slate-400 transition-colors hover:text-primary-light"
+            >
+              <Icon className="text-2xl" />
+            </a>
+          </li>
+        ))}
+        <li>
+          <button
+            onClick={onContactClick}
+            aria-label="Contact me"
+            className="text-slate-400 transition-colors hover:text-primary-light"
+          >
+            <FaEnvelope className="text-2xl" />
+          </button>
+        </li>
+      </ul>
+    </header>
   );
 };
 

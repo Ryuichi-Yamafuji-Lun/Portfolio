@@ -1,26 +1,32 @@
+import Tag from "./Tag";
+
 export const ExperienceCard = ({ title, company, date, technologies, description }) => {
   return (
-    <div className="w-full md:w-[600px] m-3 mt-5 md:mt-0 rounded-lg overflow-hidden hover:backdrop-blur-3xl hover:bg-slate-800/50 hover:shadow-[inset_0px_1px_0px_0px_rgba(148,163,184,0.1)] flex flex-col md:flex-row">
-      <div className="w-full md:w-1/3 p-4">
-        <p className="pb-2 text-sm">{date}</p>
-      </div>
-      <div className="w-full md:w-2/3 pl-4">
-        <p className="text-2xl text-line-white font-bold mb-1">{title}</p>
-        <p className="pb-2 italic">{company}</p>
-        <ul className="list-disc list-inside pb-2 space-y-1">
+    <div className="group grid grid-cols-1 gap-2 rounded-xl border border-navy-lighter/30 bg-navy-light/20 p-5 transition-all duration-300 hover:-translate-y-0.5 hover:border-primary/30 hover:bg-navy-light/60 hover:shadow-lg hover:shadow-primary/5 sm:grid-cols-4 sm:gap-6">
+      <p className="pt-1 text-xs font-semibold uppercase tracking-wide text-slate-400 sm:col-span-1">
+        {date}
+      </p>
+
+      <div className="sm:col-span-3">
+        <h3 className="text-base font-semibold text-slate-100 transition-colors group-hover:text-primary-light">
+          {title}
+        </h3>
+        <p className="text-sm font-medium text-slate-400">{company}</p>
+
+        <ul className="mt-3 space-y-2">
           {description.map((item, index) => (
-            <li key={index} className="text-base text-line-white/80">
+            <li
+              key={index}
+              className="relative pl-5 text-sm leading-relaxed text-slate-400 before:absolute before:left-0 before:text-primary before:content-['▹']"
+            >
               {item}
             </li>
           ))}
         </ul>
-        <div className="flex flex-wrap items-center space-x-2 mb-4">
-          {technologies.map((tech, techIndex) => (
-            <div key={techIndex} className="flex items-center space-x-1 mb-2">
-              <div className="rounded-full bg-[#385feb] p-1 px-2 text-white">
-                {tech.lang}
-              </div>
-            </div>
+
+        <div className="mt-4 flex flex-wrap gap-2">
+          {technologies.map((tech, index) => (
+            <Tag key={index}>{tech}</Tag>
           ))}
         </div>
       </div>

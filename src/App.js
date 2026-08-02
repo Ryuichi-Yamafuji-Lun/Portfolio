@@ -1,59 +1,50 @@
 import Headroom from "react-headroom";
 import { useState, useEffect } from "react";
 import NavBar from "./components/NavBar";
+import CustomCursor from "./components/CustomCursor";
+import SpaceBackground from "./components/SpaceBackground";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Project from "./pages/Project";
 import Experience from "./pages/Experience";
+import Publications from "./pages/Publications";
 import Contact from "./pages/Contact";
 
-
 function App() {
-  // states of the website
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 1150);
-  const [isContactFormVisible, setIsContactFormVisible] = useState(false);
+  // Two-column layout kicks in at lg (1024px); below that we show the mobile nav.
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 1024);
+  const [isContactOpen, setIsContactOpen] = useState(false);
 
-  // resizing
   useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 1150);
-    };
-
+    const handleResize = () => setIsMobile(window.innerWidth < 1024);
     window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // state of contact form
-  const openContactForm = () => {
-    setIsContactFormVisible(true);
-  };
-
-  const closeContactForm = () => {
-    setIsContactFormVisible(false);
-  };
+  const openContact = () => setIsContactOpen(true);
+  const closeContact = () => setIsContactOpen(false);
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-7 gap-4">
+    <div className="min-h-screen">
+      <SpaceBackground />
+      <CustomCursor />
       {isMobile && (
         <Headroom>
-          <NavBar onContactClick={openContactForm}/>
+          <NavBar onContactClick={openContact} />
         </Headroom>
       )}
-      <div className="md:col-span-3">
-        <div className={`sticky top-0 ${isMobile ? "" : "md:top-0"}`}>
-          <Home openContactForm={openContactForm}/>
-        </div>
+
+      <div className="mx-auto max-w-6xl px-6 sm:px-10 lg:flex lg:justify-between lg:gap-12 lg:px-12">
+        <Home onContactClick={openContact} />
+        <main className="lg:w-[56%] lg:py-28">
+          <About />
+          <Experience />
+          <Publications />
+          <Project />
+        </main>
       </div>
-      <div className="md:col-span-4">
-        {/* Single-page application sections */}
-        <About />
-        <Experience />
-        <Project />
-      </div>
-      {isContactFormVisible && <Contact closeContactForm={closeContactForm} />}
+
+      {isContactOpen && <Contact closeContactForm={closeContact} />}
     </div>
   );
 }

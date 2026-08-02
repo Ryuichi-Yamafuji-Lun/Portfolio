@@ -1,89 +1,105 @@
 import { useState } from "react";
-import { Link } from "react-scroll";
 import { TiHome } from "react-icons/ti";
-import { FaUserCircle, FaGlasses, FaLaptopCode, FaPaperPlane, FaFileAlt, FaBars, FaTimes, FaGithub, FaLinkedin } from "react-icons/fa";
+import {
+  FaUserCircle, FaGlasses, FaLaptopCode, FaFileAlt, FaFlask,
+  FaBars, FaTimes, FaGithub, FaLinkedin, FaPaperPlane,
+} from "react-icons/fa";
 
 const MobileMenuItems = [
   { label: "Home", icon: <TiHome />, to: "home" },
-  { label: "About Me", icon: <FaUserCircle />, to: "about" },
+  { label: "About", icon: <FaUserCircle />, to: "about" },
   { label: "Experience", icon: <FaGlasses />, to: "experience" },
+  { label: "Research", icon: <FaFlask />, to: "research" },
   { label: "Projects", icon: <FaLaptopCode />, to: "project" },
 ];
 
 const ExternalLinks = [
-  { label: "Resume", icon: <FaFileAlt />, href: "https://docs.google.com/document/d/1LsHdHDT1QlYNuUpqcHDuX9iiHpufoeJY6G4o7vQz6IA/edit?usp=sharing" },
+  { label: "Résumé", icon: <FaFileAlt />, href: "https://docs.google.com/document/d/1LsHdHDT1QlYNuUpqcHDuX9iiHpufoeJY6G4o7vQz6IA/edit?usp=sharing" },
   { label: "Github", icon: <FaGithub />, href: "https://github.com/Ryuichi-Yamafuji-Lun" },
   { label: "Linkedin", icon: <FaLinkedin />, href: "https://www.linkedin.com/in/ryulun/" },
 ];
 
-const NavBar = ({ onContactClick }) => {
-  const [nav, setNav] = useState(false);
+const scrollToSection = (id) => {
+  document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
+};
 
-  const handleClick = () => setNav(!nav);
+const NavBar = ({ onContactClick }) => {
+  const [open, setOpen] = useState(false);
+  const close = () => setOpen(false);
+
+  const go = (id) => {
+    close();
+    // let the overlay unmount before scrolling
+    requestAnimationFrame(() => scrollToSection(id));
+  };
 
   return (
-    <div className="sticky top-0 px-4 h-20 w-screen flex justify-between items-center font-lato bg-background-main text-line-white z-50">
-      {/* Hamburger Icon */}
-      <div onClick={handleClick} className={`md:hidden ml-auto pr-2 ${nav ? "hidden" : ""}`}>
-        {!nav ? <FaBars className="text-3xl" /> : <FaTimes className="text-3xl" />}
-      </div>
+    <nav className="flex h-16 w-full items-center justify-between border-b border-white/5 bg-navy/90 px-6 text-slate-200 backdrop-blur lg:hidden">
+      <button
+        onClick={() => go("home")}
+        className="cursor-pointer font-bold tracking-tight text-slate-100"
+      >
+        Ryuichi Y. Lun
+      </button>
 
-      {/* Mobile Menu Items */}
-      {nav && (
-        <div
-          className="fixed inset-0 z-50 flex justify-center bg-background-main bg-opacity-90"
-          style={{ pointerEvents: "auto" }}
-        >
-          <ul
-            className="flex flex-col items-center p-6 bg-background-main rounded-lg w-11/12 max-w-sm space-y-6 border border-line-white"
-            style={{
-              position: "absolute", 
-              top: "50vh",          
-              left: "50%",         
-              transform: "translate(-50%, -50%)", 
-            }}
+      <button onClick={() => setOpen(true)} aria-label="Open menu">
+        <FaBars className="text-2xl" />
+      </button>
+
+      {open && (
+        <div className="fixed inset-0 z-50 flex flex-col items-center justify-center gap-8 bg-navy/95 backdrop-blur">
+          <button
+            onClick={close}
+            aria-label="Close menu"
+            className="absolute right-6 top-6 text-slate-200"
           >
-            {MobileMenuItems.map((item, index) => (
-              <li key={index}>
-                <Link
-                  to={item.to}
-                  className="flex flex-col items-center"
-                  onClick={() => setNav(false)}
+            <FaTimes className="text-2xl" />
+          </button>
+
+          <ul className="flex flex-col items-center gap-6">
+            {MobileMenuItems.map((item) => (
+              <li key={item.to}>
+                <button
+                  onClick={() => go(item.to)}
+                  className="flex cursor-pointer flex-col items-center gap-1 text-lg text-slate-200 transition-colors hover:text-primary-light"
                 >
-                  {item.icon}
-                  <p>{item.label}</p>
-                </Link>
+                  <span className="text-2xl">{item.icon}</span>
+                  {item.label}
+                </button>
               </li>
             ))}
-            {/* <li
-              className="flex flex-col items-center"
-              onClick={() => {
-                onContactClick();
-                setNav(false);
-              }}
-            >
-              <FaPaperPlane />
-              <p>Contact Me</p>
-            </li> */}
-            {ExternalLinks.map((item, index) => (
-              <li key={index}>
-                <a
-                  href={item.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={item.label}
-                  className="flex flex-col items-center"
-                  onClick={() => setNav(false)}
-                >
-                  {item.icon}
-                  <p>{item.label}</p>
-                </a>
-              </li>
-            ))}
+            <li>
+              <button
+                onClick={() => {
+                  close();
+                  onContactClick();
+                }}
+                className="flex cursor-pointer flex-col items-center gap-1 text-lg text-slate-200 transition-colors hover:text-primary-light"
+              >
+                <span className="text-2xl"><FaPaperPlane /></span>
+                Contact
+              </button>
+            </li>
           </ul>
+
+          <div className="mt-4 flex items-center gap-8">
+            {ExternalLinks.map((item) => (
+              <a
+                key={item.label}
+                href={item.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={item.label}
+                onClick={close}
+                className="text-2xl text-slate-300 transition-colors hover:text-primary-light"
+              >
+                {item.icon}
+              </a>
+            ))}
+          </div>
         </div>
       )}
-    </div>
+    </nav>
   );
 };
 
