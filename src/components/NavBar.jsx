@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { createPortal } from "react-dom";
 import { TiHome } from "react-icons/ti";
 import {
   FaUserCircle, FaGlasses, FaLaptopCode, FaFileAlt, FaFlask,
@@ -46,8 +47,8 @@ const NavBar = ({ onContactClick }) => {
         <FaBars className="text-2xl" />
       </button>
 
-      {open && (
-        <div className="fixed inset-0 z-50 flex flex-col items-center justify-center gap-8 bg-navy/95 backdrop-blur">
+      {open && createPortal(
+        <div className="fixed inset-0 z-[60] flex flex-col items-center justify-center gap-8 bg-navy/95 backdrop-blur">
           <button
             onClick={close}
             aria-label="Close menu"
@@ -97,7 +98,8 @@ const NavBar = ({ onContactClick }) => {
               </a>
             ))}
           </div>
-        </div>
+        </div>,
+        document.body
       )}
     </nav>
   );
