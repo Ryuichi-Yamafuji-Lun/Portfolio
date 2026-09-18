@@ -5,7 +5,7 @@ import DT from "../assets/image/FafnirDT/FafnirDT.png";
 export const publications = [
   {
     title: "MIRROR: Byzantine-Resilient Communication in LLM Multi-Agent Systems",
-    venue: "NeurIPS 2026 · Under Review (Double-Blind)",
+    venue: "NeurIPS 2026 & FLMSec Workshop (NeurIPS 2026) · Under Review",
     authors: "Lun, R. (First Author), et al.",
     imageSrc: MIRROR,
     technologies: ["LLMs", "Multi-Agent", "Cryptography"],

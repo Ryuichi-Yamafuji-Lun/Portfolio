@@ -64,8 +64,8 @@ const Home = ({ onContactClick }) => {
           Software Engineer
         </h2>
         <p className="mt-4 max-w-xs leading-relaxed text-slate-400">
-          Building reliable, intelligent systems at the intersection of AI/ML
-          and high-performance infrastructure.
+          I build AI agent systems and the backend infrastructure that keeps
+          them fast and reliable.
         </p>
 
         <div className="mt-5 flex flex-wrap items-center gap-2 text-xs font-medium text-slate-400">

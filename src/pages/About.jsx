@@ -15,27 +15,30 @@ const About = () => {
 
       <div className="space-y-4 leading-relaxed text-slate-400">
         <p>
-          Hi, I&rsquo;m Ryuichi Lun, an AI-focused Computer Science Master&rsquo;s
-          student at the University of Southern California and currently an AI
-          Engineer Intern at Rakuten Group&rsquo;s AI Center of Excellence. My
-          expertise lies at the intersection of AI/ML solutions and
-          high-performance systems.
+          I&rsquo;m Ryuichi Lun, a Computer Science Master&rsquo;s student at the
+          University of Southern California, graduating December 2026. I work on
+          AI agent infrastructure and the systems underneath it. Most recently I
+          interned on Rakuten Group&rsquo;s AI for Business Center of Excellence,
+          where I built an Azure-hosted LLM cost-monitoring pipeline and a
+          human-in-the-loop reporting bot on the Claude Agent SDK.
         </p>
         <p>
-          I leveraged low-level systems knowledge to design a C++ concurrency
-          lock that restored a database&rsquo;s throughput from 0 to over{" "}
+          Before that I spent two years in a database research lab at Keio,
+          where I diagnosed a multicore contention failure and designed a C++
+          reader-writer lock that restored throughput from 0 to over{" "}
           <span className="font-medium text-slate-200">
             500,000 transactions/sec
           </span>
-          . I now apply this systems rigor to building and scaling end-to-end AI
-          applications &mdash; such as the full-stack melanoma screening tool
-          MediSkinAI, where I achieved{" "}
-          <span className="font-medium text-slate-200">91% model accuracy</span>{" "}
-          and engineered a conversational AI agent.
+          . That systems background shapes how I build AI products; MediSkinAI,
+          a melanoma screening tool I shipped on Google Cloud Run, pairs a
+          ResNet50 trained on{" "}
+          <span className="font-medium text-slate-200">33K dermoscopy images</span>{" "}
+          with a LangGraph agent that explains each result in plain language.
         </p>
         <p>
-          I&rsquo;m actively seeking challenging AI Engineer or Backend Engineer
-          roles where I can build reliable, intelligent systems.
+          I&rsquo;m looking for full-time AI Engineer or Backend Engineer roles
+          where I can build agent platforms, developer tooling, and the pipelines
+          behind them.
         </p>
       </div>
 

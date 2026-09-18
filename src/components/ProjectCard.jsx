@@ -6,11 +6,11 @@ const ProjectCard = ({ title, imageSrc, technologies, description, websiteLink, 
     <div className="group flex flex-col gap-4 rounded-xl border border-navy-lighter/30 bg-navy-light/20 p-4 transition-all duration-300 hover:-translate-y-0.5 hover:border-primary/30 hover:bg-navy-light/60 hover:shadow-lg hover:shadow-primary/5 sm:p-5">
       {/* Full-width landscape screenshot on top */}
       <a
-        href={websiteLink}
+        href={websiteLink || sourceCodeLink}
         target="_blank"
         rel="noopener noreferrer"
         className="block overflow-hidden rounded-lg border border-slate-700/50 transition-colors group-hover:border-primary/40"
-        aria-label={`${title} — live site`}
+        aria-label={websiteLink ? `${title} — live site` : `${title} — source code`}
       >
         <img
           src={imageSrc}
