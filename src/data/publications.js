@@ -4,13 +4,13 @@ import DT from "../assets/image/FafnirDT/FafnirDT.png";
 
 export const publications = [
   {
-    title: "MIRROR: Byzantine-Resilient Communication in LLM Multi-Agent Systems",
-    venue: "NeurIPS 2026 & FLMSec Workshop (NeurIPS 2026) · Under Review",
-    authors: "Lun, R. (First Author), et al.",
+    title: "MIRROR: Multipath Quorum Integrity for LLM Multi-Agent Communication",
+    venue: "NeurIPS 2026 FLMSec Workshop · Accepted",
+    authors: "Lun, R. (First Author, led 4-person team), et al.",
     imageSrc: MIRROR,
-    technologies: ["LLMs", "Multi-Agent", "Cryptography"],
+    technologies: ["LLMs", "Multi-Agent", "Security"],
     description: [
-      "Architected a novel cryptographic defense framework for LLM multi-agent systems, reducing the attack success rate to 0%.",
+      "Architected a quorum-based communication-integrity protocol for LLM multi-agent systems, reducing the attack success rate to 0%.",
       "Bypassed the 35× API token overhead required by standard semantic defenses.",
     ],
     websiteLink: "https://demo-nine-lemon-64.vercel.app/",
