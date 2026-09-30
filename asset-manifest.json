@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Portfolio/static/css/main.acc4720b.css",
-    "main.js": "/Portfolio/static/js/main.68c6d9a5.js",
+    "main.js": "/Portfolio/static/js/main.cee87500.js",
     "static/js/453.1407b060.chunk.js": "/Portfolio/static/js/453.1407b060.chunk.js",
     "static/media/MaigoInGame.png": "/Portfolio/static/media/MaigoInGame.3afce91974239a4b23da.png",
     "static/media/MediSkinAI.png": "/Portfolio/static/media/MediSkinAI.5668f58209a1570cabcb.png",
@@ -10,11 +10,11 @@
     "static/media/FafnirDT.png": "/Portfolio/static/media/FafnirDT.14a7a7dd88b3627ad5bd.png",
     "index.html": "/Portfolio/index.html",
     "main.acc4720b.css.map": "/Portfolio/static/css/main.acc4720b.css.map",
-    "main.68c6d9a5.js.map": "/Portfolio/static/js/main.68c6d9a5.js.map",
+    "main.cee87500.js.map": "/Portfolio/static/js/main.cee87500.js.map",
     "453.1407b060.chunk.js.map": "/Portfolio/static/js/453.1407b060.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.acc4720b.css",
-    "static/js/main.68c6d9a5.js"
+    "static/js/main.cee87500.js"
   ]
 }
