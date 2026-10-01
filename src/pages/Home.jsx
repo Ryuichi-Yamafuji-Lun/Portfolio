@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { FaGithub, FaLinkedin, FaFileAlt, FaEnvelope } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaFileAlt } from "react-icons/fa";
 
 // Flip to false to hide the "Open to full-time" badge when you're not job-hunting.
 const OPEN_TO_WORK = true;
@@ -33,7 +33,7 @@ const scrollToSection = (id) => {
   document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
 };
 
-const Home = ({ onContactClick }) => {
+const Home = () => {
   const [active, setActive] = useState("about");
 
   // Highlight the section currently in view (replaces react-scroll's spy).
@@ -126,15 +126,6 @@ const Home = ({ onContactClick }) => {
             </a>
           </li>
         ))}
-        <li>
-          <button
-            onClick={onContactClick}
-            aria-label="Contact me"
-            className="text-slate-400 transition-colors hover:text-primary-light"
-          >
-            <FaEnvelope className="text-2xl" />
-          </button>
-        </li>
       </ul>
     </header>
   );

@@ -11,7 +11,6 @@ Personal portfolio site for Ryuichi Y. Lun — showcasing experience, research, 
 - **react-headroom** — hide-on-scroll mobile navbar
 - **react-icons** — icons
 - **gh-pages** — deployment
-- **FormSubmit** — backend-less contact form
 
 ## Getting started
 
@@ -34,7 +33,7 @@ public/
 src/
   index.js            # app entry point
   index.css           # Tailwind imports + global styles, custom cursor & space-bg CSS
-  App.js              # layout shell: sidebar + main sections, mobile nav, contact modal
+  App.js              # layout shell: sidebar + main sections, mobile nav
   tailwind.config.js  # (repo root) colors (navy/primary), Inter font
 
   data/               # ← CONTENT lives here (edit these to add/remove entries)
@@ -48,7 +47,6 @@ src/
     Experience.jsx    #   renders data/experiences.js
     Publications.jsx  #   renders data/publications.js  (section id: "research")
     Project.jsx       #   renders data/projects.js
-    Contact.jsx       #   contact form (FormSubmit)
 
   components/         # reusable UI
     NavBar.jsx        #   mobile hamburger menu
@@ -86,13 +84,6 @@ and reference it as `imageSrc`.
 | -------------------------- | ------------------------------------- | --------------------------- |
 | "Open to full-time" badge  | `src/pages/Home.jsx`                  | `OPEN_TO_WORK`              |
 | Space / starfield backdrop | `src/components/SpaceBackground.jsx`  | `SPACE_BACKGROUND`          |
-| Contact email address      | `src/pages/Contact.jsx`               | `EMAIL`                     |
-
-## Contact form
-
-The contact form uses no third-party service. Submitting it opens the visitor's own email app
-with the subject and message pre-filled (`mailto:`), and the address is shown with a Copy button
-for visitors who use webmail. Change the address via `EMAIL` in `src/pages/Contact.jsx`.
 
 ## Deployment
 

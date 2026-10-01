@@ -3,7 +3,7 @@ import { createPortal } from "react-dom";
 import { TiHome } from "react-icons/ti";
 import {
   FaUserCircle, FaGlasses, FaLaptopCode, FaFileAlt, FaFlask,
-  FaBars, FaTimes, FaGithub, FaLinkedin, FaPaperPlane,
+  FaBars, FaTimes, FaGithub, FaLinkedin,
 } from "react-icons/fa";
 
 const MobileMenuItems = [
@@ -24,7 +24,7 @@ const scrollToSection = (id) => {
   document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
 };
 
-const NavBar = ({ onContactClick }) => {
+const NavBar = () => {
   const [open, setOpen] = useState(false);
   const close = () => setOpen(false);
 
@@ -69,18 +69,6 @@ const NavBar = ({ onContactClick }) => {
                 </button>
               </li>
             ))}
-            <li>
-              <button
-                onClick={() => {
-                  close();
-                  onContactClick();
-                }}
-                className="flex cursor-pointer flex-col items-center gap-1 text-lg text-slate-200 transition-colors hover:text-primary-light"
-              >
-                <span className="text-2xl"><FaPaperPlane /></span>
-                Contact
-              </button>
-            </li>
           </ul>
 
           <div className="mt-4 flex items-center gap-8">
