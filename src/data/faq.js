@@ -79,7 +79,7 @@ export const faq = [
   { q: ["hobbies", "what are his hobbies", "hobby", "what does he do for fun", "free time", "interests", "outside of work", "fun", "does he play basketball", "plays basketball"],
     a: "Basketball, gaming, and coding for fun. He also played competitive tennis growing up." },
   { q: ["why ai", "why backend", "why engineering", "what got him into tech", "motivation", "why does he build ai", "passion", "how did he get into coding"],
-    a: "He has loved building things since he was small: robots, Lego, Rube Goldberg machines, Transformers. Destiny 2, the first game he played, made him want to know how things like that work, so he took apart computers and household appliances at home and put them back together. AI and backend engineering scratch the same itch, and he loves building with AI and bringing it into his projects." },
+    a: "Ryu has always liked building things: Lego, robots, Rube Goldberg machines, Transformers. Destiny 2, his first video game, made him curious about how something that complex actually gets built, so he started taking apart computers and household appliances to see how they worked, then putting them back together. Backend and AI engineering let him do the same thing for a living: understand how a system works all the way down, then build something new with it." },
   { q: ["video games", "gaming", "what games does he play", "league of legends", "minecraft", "destiny"],
     a: "League of Legends and Minecraft. Destiny 2 was his first game, and it is part of why he got into engineering." },
   { q: ["what industries", "industry interest", "healthcare", "fintech", "which companies", "what domains"],
