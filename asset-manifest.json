@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.697055da.css",
-    "main.js": "/Portfolio/static/js/main.3e855fd9.js",
+    "main.css": "/Portfolio/static/css/main.809a24ae.css",
+    "main.js": "/Portfolio/static/js/main.158b6514.js",
     "static/js/453.1407b060.chunk.js": "/Portfolio/static/js/453.1407b060.chunk.js",
     "static/media/MaigoInGame.png": "/Portfolio/static/media/MaigoInGame.3afce91974239a4b23da.png",
     "static/media/MediSkinAI.png": "/Portfolio/static/media/MediSkinAI.5668f58209a1570cabcb.png",
@@ -9,12 +9,12 @@
     "static/media/TetrisLM.png": "/Portfolio/static/media/TetrisLM.8a5450f9a8713d79d6cb.png",
     "static/media/FafnirDT.png": "/Portfolio/static/media/FafnirDT.14a7a7dd88b3627ad5bd.png",
     "index.html": "/Portfolio/index.html",
-    "main.697055da.css.map": "/Portfolio/static/css/main.697055da.css.map",
-    "main.3e855fd9.js.map": "/Portfolio/static/js/main.3e855fd9.js.map",
+    "main.809a24ae.css.map": "/Portfolio/static/css/main.809a24ae.css.map",
+    "main.158b6514.js.map": "/Portfolio/static/js/main.158b6514.js.map",
     "453.1407b060.chunk.js.map": "/Portfolio/static/js/453.1407b060.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.697055da.css",
-    "static/js/main.3e855fd9.js"
+    "static/css/main.809a24ae.css",
+    "static/js/main.158b6514.js"
   ]
 }
