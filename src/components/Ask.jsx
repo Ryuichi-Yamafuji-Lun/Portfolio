@@ -65,7 +65,7 @@ const Ask = ({ onShow }) => {
     if (!res.length || res[0].s < 1.25) {
       setAnswer({
         q,
-        item: { a: "Ryu hasn't written about that yet. Send him the question and he'll answer you directly.", email: true, askOnLinkedIn: true },
+        item: { a: "Ryu hasn't written about that yet. Send him the question and he'll get back to you.", email: true, askOnLinkedIn: true },
         related: [0, 9, 3],
       });
       return;
