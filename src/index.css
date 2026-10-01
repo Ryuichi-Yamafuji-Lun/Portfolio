@@ -248,6 +248,11 @@ a { color: inherit; }
 .sheet .timeline .hl { display: none; }
 #experience { border-color: rgba(180, 140, 255, 0.32); box-shadow: 0 0 0 1px rgba(155, 107, 255, 0.08), 0 20px 50px -30px rgba(155, 107, 255, 0.5); }
 #education .tags { margin-top: 0; }
+#education .eyebrow.section { margin-top: 8px; padding-top: 12px; border-top: 1px solid var(--line); }
+#education .plain { margin: 0; padding-left: 18px; display: grid; gap: 4px; font-size: 14px; color: var(--muted); }
+#education .plain li::marker { color: var(--accent); }
+#education .award { color: var(--ice); }
+#experience .stack-label { margin-top: 6px; padding-top: 12px; border-top: 1px solid var(--line); }
 .edu { display: grid; gap: 12px; }
 .edu div { display: grid; gap: 2px; }
 .edu b { font-weight: 600; }

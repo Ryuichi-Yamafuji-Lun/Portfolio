@@ -67,8 +67,8 @@ export const FeaturedRoleTile = ({ role, flash }) => (
   </article>
 );
 
-export const ExperienceTile = ({ roles, full, flash, onDetails }) => (
-  <article {...tileProps("experience", 8, full, flash, "wide")}>
+export const ExperienceTile = ({ roles, stack, full, flash, onDetails }) => (
+  <article {...tileProps("experience", 7, full, flash, "wide")}>
     <div className="head">
       <div>
         <p className="eyebrow">{roles.length} roles · 2022 – 2026</p>
@@ -95,11 +95,17 @@ export const ExperienceTile = ({ roles, full, flash, onDetails }) => (
         </li>
       ))}
     </ol>
+    {!full && stack && (
+      <>
+        <p className="eyebrow stack-label">Stack</p>
+        <Tags items={stack} />
+      </>
+    )}
   </article>
 );
 
-export const EducationTile = ({ education, stack, flash }) => (
-  <article id="education" className={`tile wide ${flash === "education" ? "flash" : ""}`} style={{ "--span": 4 }}>
+export const EducationTile = ({ education, coursework, beyond, awards, flash }) => (
+  <article id="education" className={`tile wide ${flash === "education" ? "flash" : ""}`} style={{ "--span": 5 }}>
     <p className="eyebrow">Education</p>
     <div className="edu">
       {education.map((e) => (
@@ -109,7 +115,22 @@ export const EducationTile = ({ education, stack, flash }) => (
         </div>
       ))}
     </div>
-    <p className="eyebrow" style={{ marginTop: 6 }}>Stack</p>
-    <Tags items={stack} />
+    <p className="eyebrow section">Graduate coursework</p>
+    <Tags items={coursework} />
+    <p className="eyebrow section">Beyond the classroom</p>
+    <ul className="plain">
+      {beyond.map((b) => (
+        <li key={b}>{b}</li>
+      ))}
+    </ul>
+    <p className="eyebrow section">Awards</p>
+    <div className="edu">
+      {awards.map((a) => (
+        <div key={a.name}>
+          <b className="award">{a.name}</b>
+          <span>{a.detail}</span>
+        </div>
+      ))}
+    </div>
   </article>
 );

@@ -11,7 +11,7 @@ const TITLES = {
   fafnir: "FafnirDT",
   tetris: "Tetris benchmark",
   experience: "Experience timeline",
-  education: "Education & stack",
+  education: "Education & awards",
 };
 
 // Filler words that would otherwise drag questions toward the wrong answer.

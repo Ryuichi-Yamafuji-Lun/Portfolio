@@ -5,7 +5,7 @@ import Ask from "./components/Ask";
 import DetailSheet from "./components/DetailSheet";
 import { ProjectTile, FeaturedRoleTile, ExperienceTile, EducationTile } from "./components/Tiles";
 import { GitHubIcon, LinkedInIcon, ResumeIcon, ScholarIcon } from "./components/Icons";
-import { profile, stats, education, stack, RESUME, LINKEDIN, GITHUB, SCHOLAR } from "./data/profile";
+import { profile, stats, education, coursework, beyond, awards, stack, RESUME, LINKEDIN, GITHUB, SCHOLAR } from "./data/profile";
 import { projects, roles } from "./data/work";
 
 // Single-page bento layout: glass hero + stats, the Ask bar, then project, experience and education tiles.
@@ -99,8 +99,8 @@ function App() {
           {rest.map((p) => (
             <ProjectTile key={p.id} p={p} flash={flash} onDetails={openDetails} />
           ))}
-          <ExperienceTile roles={roles} flash={flash} onDetails={openDetails} />
-          <EducationTile education={education} stack={stack} flash={flash} />
+          <ExperienceTile roles={roles} stack={stack} flash={flash} onDetails={openDetails} />
+          <EducationTile education={education} coursework={coursework} beyond={beyond} awards={awards} flash={flash} />
         </main>
         <footer>
           <span>{profile.footer}</span>

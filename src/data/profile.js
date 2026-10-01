@@ -33,6 +33,26 @@ export const education = [
   { degree: "B.A. Environment & Information Studies", where: "Keio University · Sep 2024" },
 ];
 
+// Graduate courses that go beyond a standard CS core.
+export const coursework = [
+  "Adversarial & Trustworthy Foundation Models",
+  "Deep Learning",
+  "Machine Learning",
+  "Applied NLP",
+  "Analysis of Algorithms",
+];
+
+// Learning done outside required coursework.
+export const beyond = [
+  "Mathematics for Machine Learning · Imperial College London",
+  "AWS Certified Cloud Practitioner",
+];
+
+export const awards = [
+  { name: "Outstanding Graduation Project Award", detail: "Keio University · 2024 · one of 12 recipients" },
+  { name: "1999 Mita-kai Scholarship", detail: "Keio University · 2024 · merit-based" },
+];
+
 export const stack = [
   "Python", "Java", "C/C++", "TypeScript", "React", "FastAPI", "Spring Boot",
   "PyTorch", "LangGraph", "PostgreSQL", "Docker", "AWS", "Cloud Run",
