@@ -1,44 +1,33 @@
 import { useState, useEffect } from "react";
 import { FaTimes } from "react-icons/fa";
 
-// FormSubmit.co — sends the form straight to the email below, no backend needed.
-// IMPORTANT: the very first submission triggers a one-time activation email to
-// that address; click the link in it once and the form goes live permanently.
-// To hide your email from the JS bundle later, swap this for the hashed endpoint
-// FormSubmit shows you after activation: https://formsubmit.co/ajax/<your-hash>
-const FORM_ENDPOINT = "https://formsubmit.co/ajax/ryuichi.y.lun@gmail.com";
+// No third-party service: the form builds a mailto: link and hands it to the
+// visitor's own mail app, with the address shown (and copyable) as a fallback.
+const EMAIL = "ryuichi.y.lun@gmail.com";
 
 const Contact = ({ closeContactForm }) => {
-  const [status, setStatus] = useState("idle");
-  const [form, setForm] = useState({ name: "", email: "", message: "" });
+  const [opened, setOpened] = useState(false);
+  const [copied, setCopied] = useState(false);
+  const [form, setForm] = useState({ name: "", message: "" });
 
   const handleChange = (e) =>
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
 
-  const sendEmail = async (e) => {
+  const openMail = (e) => {
     e.preventDefault();
-    setStatus("sending");
+    const subject = encodeURIComponent(`Portfolio contact from ${form.name}`);
+    const body = encodeURIComponent(`${form.message}\n\n${form.name}`);
+    window.location.href = `mailto:${EMAIL}?subject=${subject}&body=${body}`;
+    setOpened(true);
+  };
+
+  const copyEmail = async () => {
     try {
-      const res = await fetch(FORM_ENDPOINT, {
-        method: "POST",
-        headers: { "Content-Type": "application/json", Accept: "application/json" },
-        body: JSON.stringify({
-          name: form.name,
-          email: form.email,
-          message: form.message,
-          _subject: `Portfolio contact from ${form.name}`,
-        }),
-      });
-      const data = await res.json();
-      if (res.ok && (data.success === "true" || data.success === true)) {
-        setStatus("success");
-        setForm({ name: "", email: "", message: "" });
-        setTimeout(() => closeContactForm(), 2500);
-      } else {
-        setStatus("error");
-      }
+      await navigator.clipboard.writeText(EMAIL);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
     } catch {
-      setStatus("error");
+      // Clipboard can be blocked; the address is still visible to copy by hand.
     }
   };
 
@@ -73,56 +62,56 @@ const Contact = ({ closeContactForm }) => {
           Have a role or project in mind? I&rsquo;ll get back to you soon.
         </p>
 
-        {status === "success" ? (
-          <div className="mt-6 rounded-lg border border-primary/30 bg-primary/10 p-4 text-center text-sm text-primary-light">
-            Thanks &mdash; your message has been sent. ✓
-          </div>
-        ) : (
-          <form onSubmit={sendEmail} className="mt-4 space-y-3">
-            <input
-              type="text"
-              name="name"
-              value={form.name}
-              onChange={handleChange}
-              placeholder="Your name"
-              required
-              className={inputClass}
-            />
-            <input
-              type="email"
-              name="email"
-              value={form.email}
-              onChange={handleChange}
-              placeholder="your.email@example.com"
-              required
-              className={inputClass}
-            />
-            <textarea
-              name="message"
-              value={form.message}
-              onChange={handleChange}
-              placeholder="Your message..."
-              rows="5"
-              required
-              className={`${inputClass} resize-none`}
-            />
+        <div className="mt-4 flex items-center justify-between gap-3 rounded-lg border border-navy-lighter/60 bg-navy px-3 py-2">
+          <a
+            href={`mailto:${EMAIL}`}
+            className="truncate text-sm text-primary-light hover:underline"
+          >
+            {EMAIL}
+          </a>
+          <button
+            type="button"
+            onClick={copyEmail}
+            className="flex-shrink-0 text-xs font-semibold text-slate-400 transition-colors hover:text-slate-100"
+          >
+            {copied ? "Copied ✓" : "Copy"}
+          </button>
+        </div>
 
-            {status === "error" && (
-              <p className="text-sm text-red-400">
-                Something went wrong. Please try again, or email me directly at
-                rlun@usc.edu.
-              </p>
-            )}
+        <form onSubmit={openMail} className="mt-4 space-y-3">
+          <input
+            type="text"
+            name="name"
+            value={form.name}
+            onChange={handleChange}
+            placeholder="Your name"
+            required
+            className={inputClass}
+          />
+          <textarea
+            name="message"
+            value={form.message}
+            onChange={handleChange}
+            placeholder="Your message..."
+            rows="5"
+            required
+            className={`${inputClass} resize-none`}
+          />
 
-            <button
-              type="submit"
-              disabled={status === "sending"}
-              className="w-full rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-primary-light disabled:opacity-60"
-            >
-              {status === "sending" ? "Sending…" : "Send message"}
-            </button>
-          </form>
-        )}
+          {opened && (
+            <p className="text-sm text-slate-400">
+              Your email app should have opened with this message. If it
+              didn&rsquo;t, copy the address above and send it from your inbox.
+            </p>
+          )}
+
+          <button
+            type="submit"
+            className="w-full rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-primary-light"
+          >
+            Open in email app
+          </button>
+        </form>
       </div>
     </div>
   );

@@ -86,14 +86,13 @@ and reference it as `imageSrc`.
 | -------------------------- | ------------------------------------- | --------------------------- |
 | "Open to full-time" badge  | `src/pages/Home.jsx`                  | `OPEN_TO_WORK`              |
 | Space / starfield backdrop | `src/components/SpaceBackground.jsx`  | `SPACE_BACKGROUND`          |
-| Contact email endpoint     | `src/pages/Contact.jsx`               | `FORM_ENDPOINT`             |
+| Contact email address      | `src/pages/Contact.jsx`               | `EMAIL`                     |
 
 ## Contact form
 
-The contact form posts to [FormSubmit](https://formsubmit.co) — no backend required.
-The **first** submission triggers a one-time activation email to the configured address;
-click the link once and the form is live. To keep the email out of the JS bundle, swap in
-FormSubmit's hashed endpoint (see the comment in `src/pages/Contact.jsx`).
+The contact form uses no third-party service. Submitting it opens the visitor's own email app
+with the subject and message pre-filled (`mailto:`), and the address is shown with a Copy button
+for visitors who use webmail. Change the address via `EMAIL` in `src/pages/Contact.jsx`.
 
 ## Deployment
 
