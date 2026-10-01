@@ -10,8 +10,8 @@ export const publications = [
     imageSrc: MIRROR,
     technologies: ["LLMs", "Multi-Agent", "Security"],
     description: [
-      "Architected a quorum-based communication-integrity protocol for LLM multi-agent systems, reducing the attack success rate to 0%.",
-      "Bypassed the 35× API token overhead required by standard semantic defenses.",
+      "Protects messages between LLM agents from an intermediary that can read and rewrite them.",
+      "Sends each message over several independent routes and accepts it only when a majority of routes agree, with no extra LLM calls, which judge-based defenses need.",
     ],
     websiteLink: "https://demo-nine-lemon-64.vercel.app/",
     sourceCodeLink: "https://github.com/highphysicist/MIRROR-defense-for-aitm-mas",

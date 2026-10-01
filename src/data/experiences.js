@@ -4,15 +4,16 @@ export const experiences = [
     title: "AI Engineer Intern, Red Queen Team (AI for Business CoE)",
     company: "Rakuten Group, Inc., Tokyo, Japan",
     date: "May 2026 ~ Aug 2026",
-    technologies: ["Python", "Claude Agent SDK", "Azure", "MongoDB", "PostgreSQL", "Microsoft Graph"],
+    technologies: ["Python", "Claude Agent SDK", "Azure", "MongoDB", "PostgreSQL", "GitHub Actions"],
     description: [
-      "Architected an Azure-hosted LLM cost-monitoring pipeline leveraging Claude Managed Agents to analyze MongoDB/PostgreSQL data and detect enterprise-wide token anomalies.",
-      "Automated budget verification for 10,000+ employees by integrating Microsoft Graph v1.0 to autonomously trigger context-aware chat alerts and query workspace owners via Teams bots.",
-      "Automated weekly reporting for a 5-person engineering pod by engineering a Human-in-the-Loop (HITL) bot with the Claude Agent SDK, generating context-aware summaries for L2 and L3 leadership.",
+      "Built an Azure-hosted LLM cost-monitoring pipeline on self-hosted Claude Managed Agents that performs schema-aware retrieval across MongoDB and PostgreSQL, metering LLM spend against real usage data from a 10,000+ employee tenant.",
+      "Eliminated duplicate message processing across concurrent Azure jobs through optimistic concurrency control in MongoDB, claiming each Teams message by unique-ID compare-and-set.",
+      "Engineered a scheduled Human-in-the-Loop reporting bot with the Claude Agent SDK and GitHub Actions to scan repository activity and generate weekly summaries.",
+      "Deployed a Claude-powered code review tool into the team's CI/CD pipeline, extending automated quality and logic checks to 100% of incoming pull requests.",
     ],
   },
   {
-    title: "AI Engineer Intern",
+    title: "Software Engineer Intern",
     company: "Tomorrow's AI, Remote",
     date: "Oct 2024 ~ Oct 2025",
     technologies: ["Python", "React", "Docker", "AWS"],
@@ -23,7 +24,7 @@ export const experiences = [
     ],
   },
   {
-    title: "Systems Research Engineer",
+    title: "Systems Research Engineer (Student)",
     company: "Data Platform Laboratory, Keio Research Institute",
     date: "Mar 2022 ~ Sep 2024",
     technologies: ["C++", "C"],
@@ -34,8 +35,8 @@ export const experiences = [
     ],
   },
   {
-    title: "Program Participant & Student Representative",
-    company: "JST-Mirai Program",
+    title: "Research Engineer Intern",
+    company: "Japan Science and Technology Agency (JST), Tokyo, Japan",
     date: "Aug 2023 ~ Sep 2023",
     technologies: ["Python", "Opentrons"],
     description: [
