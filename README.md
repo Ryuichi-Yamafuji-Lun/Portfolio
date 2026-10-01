@@ -6,11 +6,11 @@ Personal portfolio site for Ryuichi Y. Lun — showcasing experience, research, 
 
 ## Built with
 
-- **React** (Create React App)
-- **Tailwind CSS**
-- **react-headroom** — hide-on-scroll mobile navbar
-- **react-icons** — icons
-- **gh-pages** — deployment
+- **React** (Create React App), plain CSS (no framework)
+- **Fuse.js** for the fuzzy "Ask about Ryu" search (runs in the browser, no API)
+- **gh-pages** for deployment
+
+The previous sidebar design is preserved at the git tag `v1-classic`.
 
 ## Getting started
 
@@ -26,64 +26,36 @@ npm run deploy   # build + publish to the gh-pages branch (goes live)
 ```
 public/
   index.html          # <title>, meta description, Open Graph / Twitter tags, fonts
-  manifest.json       # PWA metadata
-  favicon.ico         # tab icon (robot)
   og-image.jpg        # 1200x630 social link-preview image
 
 src/
   index.js            # app entry point
-  index.css           # Tailwind imports + global styles, custom cursor & space-bg CSS
-  App.js              # layout shell: sidebar + main sections, mobile nav
-  tailwind.config.js  # (repo root) colors (navy/primary), Inter font
+  index.css           # all styles; color, font and layout tokens are in :root at the top
+  App.js              # the single page: hero, stats, Ask bar, tiles, details panel
 
-  data/               # ← CONTENT lives here (edit these to add/remove entries)
-    experiences.js    #   work history
-    projects.js       #   projects
-    publications.js   #   research & publications
+  data/               # CONTENT lives here
+    profile.js        #   name, pitch, availability facts, links, stats, education, stack, Ask chips
+    work.js           #   project tiles and the experience timeline (newest role first)
+    faq.js            #   "Ask about Ryu" questions and answers
 
-  pages/              # page sections
-    Home.jsx          #   sidebar: name, tagline, availability badges, nav, socials
-    About.jsx         #   bio paragraphs + skills chips
-    Experience.jsx    #   renders data/experiences.js
-    Publications.jsx  #   renders data/publications.js  (section id: "research")
-    Project.jsx       #   renders data/projects.js
+  components/
+    Tiles.jsx         #   project, featured role, experience timeline, education tiles
+    Ask.jsx           #   Ask bar: fuzzy matching, email copy, "ask on LinkedIn" fallback
+    DetailSheet.jsx   #   details panel (centered on desktop, full screen on phones)
+    Starfield.jsx     #   twinkling star background
+    OrbitCursor.jsx   #   custom cursor (mouse only)
+    Icons.jsx         #   inline SVG icons
 
-  components/         # reusable UI
-    NavBar.jsx        #   mobile hamburger menu
-    ExperienceCard.jsx
-    ProjectCard.jsx
-    PublicationCard.jsx
-    Tag.jsx           #   tech/skill chip
-    CustomCursor.jsx  #   arc-reactor cursor (mouse devices only)
-    SpaceBackground.jsx  # starfield + nebula glow
-
-  assets/image/       # project & publication images (imported in data/*.js)
+  assets/image/web/   # compressed tile images used by data/work.js
 ```
 
-## How to edit content
+## Editing
 
-Most updates are one-line changes to a **data file** — the page updates automatically.
-
-| To change...                    | Edit                                   |
-| ------------------------------- | -------------------------------------- |
-| Work experience                 | `src/data/experiences.js`              |
-| Projects                        | `src/data/projects.js`                 |
-| Research / publications         | `src/data/publications.js`             |
-| Bio + skills chips              | `src/pages/About.jsx`                  |
-| Name, title, tagline, socials   | `src/pages/Home.jsx`                   |
-| Page title / SEO / link preview | `public/index.html`                    |
-
-**Adding an entry:** copy an existing object in the relevant `data/*.js` array and edit its fields
-(`title`, `technologies` (array of strings), `description` (array of bullets), links).
-**Adding an image:** drop it in `src/assets/image/…`, add an `import` at the top of the data file,
-and reference it as `imageSrc`.
-
-## Toggles
-
-| Setting                    | File                                  | Value                       |
-| -------------------------- | ------------------------------------- | --------------------------- |
-| "Open to full-time" badge  | `src/pages/Home.jsx`                  | `OPEN_TO_WORK`              |
-| Space / starfield backdrop | `src/components/SpaceBackground.jsx`  | `SPACE_BACKGROUND`          |
+- **Change text, links or availability:** `src/data/profile.js`.
+- **Add or edit a project or role:** `src/data/work.js`. A project's `span` is its desktop width out of 12 columns.
+- **Teach the Ask bar something new:** add an entry to `src/data/faq.js` with a few phrasings in `q` and the answer in `a`.
+  Questions on private topics (age, salary, relationships) always fall through to "ask Ryu on LinkedIn".
+- **Colors:** the `:root` block at the top of `src/index.css`.
 
 ## Deployment
 

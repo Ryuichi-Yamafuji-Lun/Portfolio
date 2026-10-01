@@ -1,45 +1,116 @@
-import Headroom from "react-headroom";
-import { useState, useEffect } from "react";
-import NavBar from "./components/NavBar";
-import CustomCursor from "./components/CustomCursor";
-import SpaceBackground from "./components/SpaceBackground";
-import Home from "./pages/Home";
-import About from "./pages/About";
-import Project from "./pages/Project";
-import Experience from "./pages/Experience";
-import Publications from "./pages/Publications";
+import { useCallback, useRef, useState } from "react";
+import Starfield from "./components/Starfield";
+import OrbitCursor from "./components/OrbitCursor";
+import Ask from "./components/Ask";
+import DetailSheet from "./components/DetailSheet";
+import { ProjectTile, FeaturedRoleTile, ExperienceTile, EducationTile } from "./components/Tiles";
+import { GitHubIcon, LinkedInIcon, ResumeIcon } from "./components/Icons";
+import { profile, stats, education, stack, RESUME, LINKEDIN, GITHUB } from "./data/profile";
+import { projects, roles } from "./data/work";
 
+// Single-page bento layout: glass hero + stats, the Ask bar, then project, experience and education tiles.
+// Details open in a panel above the grid (DetailSheet), so tiles never reflow.
 function App() {
-  // Two-column layout kicks in at lg (1024px); below that we show the mobile nav.
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 1024);
+  const [flash, setFlash] = useState(null);
+  const [sheet, setSheet] = useState(null); // { id, opener }
+  const flashTimer = useRef(null);
 
-  useEffect(() => {
-    const handleResize = () => setIsMobile(window.innerWidth < 1024);
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+  const show = useCallback((id, { scroll = true } = {}) => {
+    const el = document.getElementById(id);
+    if (!el) return;
+    if (scroll) {
+      const smooth = !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      el.scrollIntoView({ behavior: smooth ? "smooth" : "auto", block: "start" });
+    }
+    // Clear first so a repeat click on the same tile restarts the glow.
+    clearTimeout(flashTimer.current);
+    setFlash(null);
+    flashTimer.current = setTimeout(() => {
+      setFlash(id);
+      flashTimer.current = setTimeout(() => setFlash(null), 1800);
+    }, 30);
   }, []);
 
-  return (
-    <div className="min-h-screen">
-      <SpaceBackground />
-      <CustomCursor />
-      {isMobile && (
-        <Headroom>
-          <NavBar />
-        </Headroom>
-      )}
+  const openDetails = (id, opener) => setSheet({ id, opener });
+  const byId = Object.fromEntries(projects.map((p) => [p.id, p]));
+  const [mirror, ...rest] = projects;
 
-      <div className="mx-auto max-w-6xl px-6 sm:px-10 lg:flex lg:justify-between lg:gap-12 lg:px-12">
-        <Home />
-        <main className="lg:w-[56%] lg:py-28">
-          <About />
-          <Experience />
-          <Publications />
-          <Project />
+  const sheetContent = () => {
+    if (!sheet) return null;
+    if (sheet.id === "experience") return { title: "Experience", body: <ExperienceTile roles={roles} full /> };
+    const p = byId[sheet.id];
+    return { title: p.title, body: <ProjectTile p={p} full /> };
+  };
+  const content = sheetContent();
+
+  return (
+    <>
+      <Starfield />
+      <OrbitCursor />
+
+      <div className="wrap">
+        <main className="grid">
+          <div className="hero-wrap">
+            <section className="hero" id="hero" aria-label="Introduction">
+              <div>
+                <p className="role">{profile.role}</p>
+                <h1>{profile.name}</h1>
+                <p className="pitch">{profile.pitch}</p>
+              </div>
+              <div className="facts" aria-label="Availability">
+                {profile.facts.map((f) => (
+                  <span key={f.label} className={`fact ${f.available ? "available" : ""}`}>
+                    {f.available && <span className="dot" aria-hidden="true" />}
+                    {f.label}
+                  </span>
+                ))}
+              </div>
+              <div className="links">
+                <a className="btn primary" href={RESUME} target="_blank" rel="noopener noreferrer">
+                  <ResumeIcon /> Résumé
+                </a>
+                <a className="btn" href={LINKEDIN} target="_blank" rel="noopener noreferrer">
+                  <LinkedInIcon /> LinkedIn
+                </a>
+                <a className="btn" href={GITHUB} target="_blank" rel="noopener noreferrer">
+                  <GitHubIcon /> GitHub
+                </a>
+              </div>
+            </section>
+          </div>
+
+          <div className="stats" aria-label="Highlights">
+            {stats.map((s) => (
+              <button className="stat" type="button" key={s.value} onClick={() => show(s.target)}>
+                <small>{s.source}</small>
+                <b>{s.value}</b>
+                <span>{s.label}</span>
+              </button>
+            ))}
+          </div>
+
+          <Ask onShow={show} />
+
+          <ProjectTile p={mirror} flash={flash} onDetails={openDetails} />
+          <FeaturedRoleTile role={roles[0]} flash={flash} />
+          {rest.map((p) => (
+            <ProjectTile key={p.id} p={p} flash={flash} onDetails={openDetails} />
+          ))}
+          <ExperienceTile roles={roles} flash={flash} onDetails={openDetails} />
+          <EducationTile education={education} stack={stack} flash={flash} />
         </main>
+        <footer>
+          <span>{profile.footer}</span>
+          <span>© {new Date().getFullYear()} Ryuichi Lun</span>
+        </footer>
       </div>
 
-    </div>
+      {content && (
+        <DetailSheet title={content.title} opener={sheet.opener} onClose={() => setSheet(null)}>
+          {content.body}
+        </DetailSheet>
+      )}
+    </>
   );
 }
 
