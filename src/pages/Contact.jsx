@@ -3,20 +3,32 @@ import { FaTimes } from "react-icons/fa";
 
 // No third-party service: the form builds a mailto: link and hands it to the
 // visitor's own mail app, with the address shown (and copyable) as a fallback.
-const EMAIL = "ryuichi.y.lun@gmail.com";
+// The address is assembled at runtime so it never appears as one string in the
+// bundle, which keeps naive email-harvesting scrapers from picking it up.
+const EMAIL = ["ryuichi.y.lun", "gmail.com"].join("@");
+const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 
 const Contact = ({ closeContactForm }) => {
   const [opened, setOpened] = useState(false);
   const [copied, setCopied] = useState(false);
-  const [form, setForm] = useState({ name: "", message: "" });
+  const [form, setForm] = useState({ name: "", email: "", message: "" });
+  const [emailError, setEmailError] = useState(false);
 
-  const handleChange = (e) =>
+  const handleChange = (e) => {
+    if (e.target.name === "email") setEmailError(false);
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  };
 
   const openMail = (e) => {
     e.preventDefault();
+    if (!EMAIL_PATTERN.test(form.email.trim())) {
+      setEmailError(true);
+      return;
+    }
     const subject = encodeURIComponent(`Portfolio contact from ${form.name}`);
-    const body = encodeURIComponent(`${form.message}\n\n${form.name}`);
+    const body = encodeURIComponent(
+      `${form.message}\n\n${form.name}\nReply to: ${form.email.trim()}`
+    );
     window.location.href = `mailto:${EMAIL}?subject=${subject}&body=${body}`;
     setOpened(true);
   };
@@ -88,6 +100,19 @@ const Contact = ({ closeContactForm }) => {
             required
             className={inputClass}
           />
+          <input
+            type="email"
+            name="email"
+            value={form.email}
+            onChange={handleChange}
+            placeholder="Your email (so I can reply)"
+            required
+            aria-invalid={emailError}
+            className={inputClass}
+          />
+          {emailError && (
+            <p className="text-sm text-red-400">Please enter a valid email address.</p>
+          )}
           <textarea
             name="message"
             value={form.message}
