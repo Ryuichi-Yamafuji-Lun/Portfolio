@@ -1,20 +1,17 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.25ba275d.css",
-    "main.js": "/Portfolio/static/js/main.7065ce95.js",
-    "static/js/453.1407b060.chunk.js": "/Portfolio/static/js/453.1407b060.chunk.js",
-    "static/media/MaigoInGame.png": "/Portfolio/static/media/MaigoInGame.3afce91974239a4b23da.png",
-    "static/media/MediSkinAI.png": "/Portfolio/static/media/MediSkinAI.5668f58209a1570cabcb.png",
-    "static/media/MIRROR.png": "/Portfolio/static/media/MIRROR.4c8463b341ab6b73bdec.png",
-    "static/media/TetrisLM.png": "/Portfolio/static/media/TetrisLM.8a5450f9a8713d79d6cb.png",
-    "static/media/FafnirDT.png": "/Portfolio/static/media/FafnirDT.14a7a7dd88b3627ad5bd.png",
+    "main.css": "/Portfolio/static/css/main.e6dd7229.css",
+    "main.js": "/Portfolio/static/js/main.061e84e2.js",
+    "static/media/tetris.jpg": "/Portfolio/static/media/tetris.0fce42ec147797ceb136.jpg",
+    "static/media/mirror.jpg": "/Portfolio/static/media/mirror.045c3814aba46e4cc298.jpg",
+    "static/media/mediskinai.jpg": "/Portfolio/static/media/mediskinai.53bda99c4eb0ee803e04.jpg",
+    "static/media/fafnirdt.jpg": "/Portfolio/static/media/fafnirdt.9703407d1a681f62f224.jpg",
     "index.html": "/Portfolio/index.html",
-    "main.25ba275d.css.map": "/Portfolio/static/css/main.25ba275d.css.map",
-    "main.7065ce95.js.map": "/Portfolio/static/js/main.7065ce95.js.map",
-    "453.1407b060.chunk.js.map": "/Portfolio/static/js/453.1407b060.chunk.js.map"
+    "main.e6dd7229.css.map": "/Portfolio/static/css/main.e6dd7229.css.map",
+    "main.061e84e2.js.map": "/Portfolio/static/js/main.061e84e2.js.map"
   },
   "entrypoints": [
-    "static/css/main.25ba275d.css",
-    "static/js/main.7065ce95.js"
+    "static/css/main.e6dd7229.css",
+    "static/js/main.061e84e2.js"
   ]
 }
