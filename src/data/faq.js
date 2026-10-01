@@ -1,7 +1,7 @@
 // "Ask about Ryu" answers. Each entry lists the ways people tend to ask ("q") and the answer ("a").
 // Matching is fuzzy (Fuse.js), so add a few phrasings per entry. Answers must only state things Ryu has approved.
 // Optional fields: links [[label, url]], tiles [ids to highlight], email: true (shows the copyable address).
-import { RESUME, LINKEDIN, GITHUB } from "./profile";
+import { RESUME, LINKEDIN, GITHUB, SCHOLAR } from "./profile";
 
 export const faq = [
   { q: ["is he open to work", "is he available", "is he looking for a job", "can we hire him", "when can he start", "start date", "is he job hunting", "open to full time", "available for work", "is he available for work"],
@@ -31,7 +31,8 @@ export const faq = [
     tiles: ["mirror", "rakuten", "mediskin"] },
   { q: ["research", "papers", "publications", "has he published", "neurips", "flmsec", "workshop", "academic"],
     a: "Two first-author papers. MIRROR was accepted at the NeurIPS 2026 FLMSec workshop. FafnirDT was presented at the 163rd System Software & OS Symposium in 2024.",
-    tiles: ["mirror", "fafnir"] },
+    tiles: ["mirror", "fafnir"],
+    links: [["Google Scholar", SCHOLAR]] },
   { q: ["what is mirror", "explain mirror", "multi agent security", "agent in the middle", "quorum"],
     a: "MIRROR protects messages between LLM agents from an intermediary that can read and rewrite them. Each message travels over several independent routes and is accepted only when a majority of routes agree, with no extra LLM calls.",
     tiles: ["mirror"] },
@@ -100,6 +101,9 @@ export const faq = [
     a: "His name changes with the country. His Brazilian birth certificate says Alfredo, which he didn't find out until he was 13, because he had always been Ryu. In Japan he is Ryuichi Yamafuji, and in the U.S. he is Ryuichi Lun, which is the one he prefers. He was also once ranked No. 7 in Hawaii in tennis." },
   { q: ["what is his name", "why ryu", "what should i call him", "name", "ryuichi", "yamafuji", "lun", "is his name alfredo", "named after", "ryuichi sakamoto", "why is he called ryu", "called ryu", "nickname", "full name"],
     a: "Call him Ryu. He's named after the composer Ryuichi Sakamoto. In Japan he goes by Ryuichi Yamafuji and in the U.S. by Ryuichi Lun, which he prefers. His Brazilian birth certificate actually says Alfredo, something he only learned at 13." },
+  { q: ["google scholar", "scholar", "citations", "scholar profile"],
+    a: "His papers are listed on Google Scholar.",
+    links: [["Open Google Scholar", SCHOLAR]] },
   { q: ["github", "code", "source code", "repositories"],
     a: "His code is on GitHub, and each project tile links to its repository.",
     links: [["Open GitHub", GITHUB]] },

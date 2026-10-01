@@ -4,8 +4,8 @@ import OrbitCursor from "./components/OrbitCursor";
 import Ask from "./components/Ask";
 import DetailSheet from "./components/DetailSheet";
 import { ProjectTile, FeaturedRoleTile, ExperienceTile, EducationTile } from "./components/Tiles";
-import { GitHubIcon, LinkedInIcon, ResumeIcon } from "./components/Icons";
-import { profile, stats, education, stack, RESUME, LINKEDIN, GITHUB } from "./data/profile";
+import { GitHubIcon, LinkedInIcon, ResumeIcon, ScholarIcon } from "./components/Icons";
+import { profile, stats, education, stack, RESUME, LINKEDIN, GITHUB, SCHOLAR } from "./data/profile";
 import { projects, roles } from "./data/work";
 
 // Single-page bento layout: glass hero + stats, the Ask bar, then project, experience and education tiles.
@@ -74,6 +74,9 @@ function App() {
                 </a>
                 <a className="btn" href={GITHUB} target="_blank" rel="noopener noreferrer">
                   <GitHubIcon /> GitHub
+                </a>
+                <a className="btn" href={SCHOLAR} target="_blank" rel="noopener noreferrer">
+                  <ScholarIcon /> Scholar
                 </a>
               </div>
             </section>

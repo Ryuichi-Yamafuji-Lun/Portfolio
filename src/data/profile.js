@@ -3,6 +3,7 @@ export const RESUME =
   "https://docs.google.com/document/d/1LsHdHDT1QlYNuUpqcHDuX9iiHpufoeJY6G4o7vQz6IA/edit?usp=sharing";
 export const LINKEDIN = "https://www.linkedin.com/in/ryulun/";
 export const GITHUB = "https://github.com/Ryuichi-Yamafuji-Lun";
+export const SCHOLAR = "https://scholar.google.com/citations?user=oITHaT0AAAAJ&hl=en";
 
 // Assembled at runtime so the address never sits in the bundle as one plain string.
 export const getEmail = () => ["ryuichi.y.lun", "gmail.com"].join("@");
