@@ -21,7 +21,7 @@ export const projects = [
     imageSrc: TetrisAI,
     technologies: ["Gemini API", "Python", "DQN", "LangGraph"],
     description: [
-      "Adapted LLM architecture for the first head-to-head benchmarking of Generative AI against Reinforcement Learning.",
+      "Built a custom Gymnasium interface that lets text-based foundation models (Gemini, GPT) play Tetris, benchmarking them head-to-head against a reinforcement learning agent.",
       "Devised a Chain-of-Thought (CoT) reasoning module (Gemini API) which improved survival rates by 8.2%.",
       "Trained a Deep Q-Network (DQN) policy to establish a high-performance baseline (approx. 600 reward).",
     ],
@@ -33,7 +33,7 @@ export const projects = [
     technologies: ["Firebase", "TypeScript", "Svelte"],
     description: [
       "A GeoGuessr clone for MMO developed collaboratively with a team of six.",
-      "Showcases front-end development, real-time collaboration, and proficiency with modern web technologies (TypeScript, Svelte).",
+      "Contributed to user authentication for multiplayer game rooms using SvelteKit, TypeScript, and Firebase.",
     ],
     websiteLink: "https://maigo-bd6b7.web.app/",
     sourceCodeLink: "https://github.com/leochoo/maigo",

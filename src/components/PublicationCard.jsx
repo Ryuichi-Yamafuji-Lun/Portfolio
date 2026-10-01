@@ -18,7 +18,7 @@ const PublicationCard = ({
           src={imageSrc}
           alt={`${title} figure`}
           loading="lazy"
-          className="aspect-video w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"
+          className="aspect-video w-full bg-white object-contain transition-transform duration-500 group-hover:scale-[1.03]"
         />
       </a>
 

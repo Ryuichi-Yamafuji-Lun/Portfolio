@@ -16,7 +16,7 @@ const ProjectCard = ({ title, imageSrc, technologies, description, websiteLink, 
           src={imageSrc}
           alt={`${title} screenshot`}
           loading="lazy"
-          className="aspect-video w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"
+          className="aspect-video w-full bg-slate-900 object-contain transition-transform duration-500 group-hover:scale-[1.03]"
         />
       </a>
 
