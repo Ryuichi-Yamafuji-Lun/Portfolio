@@ -19,7 +19,10 @@ export const projects = [
       "Sends each message over several independent routes and accepts it only when a majority of routes agree.",
       "Adds no extra LLM calls, which judge-based defenses need.",
     ],
-    links: [["Code", "https://github.com/highphysicist/MIRROR-defense-for-aitm-mas"]],
+    links: [
+      ["Paper", "https://arxiv.org/abs/2610.02349"],
+      ["Code", "https://github.com/highphysicist/MIRROR-defense-for-aitm-mas"],
+    ],
     tags: ["LLMs", "Multi-Agent", "Security"],
   },
   {
