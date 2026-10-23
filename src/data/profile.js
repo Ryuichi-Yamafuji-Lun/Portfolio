@@ -13,7 +13,7 @@ export const profile = {
   role: "Software Engineer · AI agents & backend",
   pitch: "I build AI agent systems and the backend infrastructure that keeps them fast and reliable.",
   facts: [
-    { label: "Open to full-time", available: true },
+    { label: "Starting full-time Feb 2027" },
     { label: "Graduating Dec 2026" },
     { label: "U.S. Permanent Resident" },
   ],
@@ -59,7 +59,7 @@ export const stack = [
 ];
 
 export const askChips = [
-  "Is he open to work?",
+  "What is he doing next?",
   "How do I contact Ryu?",
   "Most memorable projects",
   "Why AI and backend?",

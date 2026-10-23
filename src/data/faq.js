@@ -4,9 +4,9 @@
 import { RESUME, LINKEDIN, GITHUB, SCHOLAR } from "./profile";
 
 export const faq = [
-  { q: ["is he open to work", "is he available", "is he looking for a job", "can we hire him", "when can he start", "start date", "is he job hunting", "open to full time", "available for work", "is he available for work"],
-    a: "Yes. Ryu is looking for full-time AI Engineer or Backend Engineer roles, available from January 2027. He graduates from USC in December 2026.",
-    links: [["Open résumé", RESUME], ["Message on LinkedIn", LINKEDIN]] },
+  { q: ["what is he doing next", "is he open to work", "is he available", "is he looking for a job", "can we hire him", "when can he start", "start date", "is he job hunting", "open to full time", "available for work", "is he available for work"],
+    a: "Ryu has accepted a full-time software engineering role starting February 2027, so he is not job hunting right now. He graduates from USC in December 2026. LinkedIn is the best way to stay in touch.",
+    links: [["Message on LinkedIn", LINKEDIN]] },
   { q: ["does he need sponsorship", "visa", "work authorization", "is he authorized to work in the us", "green card", "permanent resident", "citizenship", "h1b"],
     a: "No sponsorship needed. Ryu is a U.S. Permanent Resident." },
   { q: ["what is his email", "email address", "how do i email him", "mail", "gmail"],
@@ -18,11 +18,11 @@ export const faq = [
   { q: ["where is he from", "where does he live", "where is he based", "location", "hometown", "what city", "where is he located", "where was he born", "where did he grow up", "brazil", "hawaii", "honolulu"],
     a: "Ryu was born in São Paulo, Brazil, and raised in Honolulu, Hawaii. He earned his undergraduate degree at Keio University in Japan and is now based in Los Angeles, finishing his M.S. at USC." },
   { q: ["can he relocate", "remote", "hybrid", "on site", "onsite", "willing to move", "which locations", "can he work remotely", "remotely", "relocation"],
-    a: "He is open to on-site, hybrid, and remote roles in the United States, and to relocating within the U.S." },
+    a: "He has accepted a full-time role starting February 2027, so he is not considering other locations right now." },
   { q: ["what languages does he speak", "does he speak japanese", "english", "bilingual", "japanese"],
     a: "English and Japanese, both fluently." },
   { q: ["what roles is he looking for", "what kind of job", "what position", "what does he want to do", "ideal role", "career goal"],
-    a: "Full-time AI Engineer or Backend Engineer roles where he can build agent platforms, developer tooling, and the pipelines behind them." },
+    a: "He has accepted a full-time software engineering role starting February 2027. Long term, he is most interested in AI infrastructure: agent platforms, developer tooling, and the pipelines behind them." },
   { q: ["who is ryu", "tell me about him", "summary", "about", "introduce", "background", "who is he", "what does he do"],
     a: "Ryu is a software engineer finishing his M.S. in Computer Science at USC (Dec 2026). He builds AI agents and the backend systems around them: LLM cost monitoring and AI code review at Rakuten, a first-author paper on securing multi-agent LLM communication, and earlier database systems research at Keio.",
     tiles: ["rakuten", "mirror"] },

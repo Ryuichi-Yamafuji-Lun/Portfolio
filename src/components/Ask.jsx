@@ -26,7 +26,7 @@ const words = (s) =>
   s.toLowerCase().replace(/[^a-z0-9+' ]/g, " ").split(/\s+/).filter((w) => w && !STOP.has(w));
 
 const OPEN_ANSWER = {
-  q: "Is he open to work?",
+  q: "What is he doing next?",
   item: faq[0],
   related: [],
 };
