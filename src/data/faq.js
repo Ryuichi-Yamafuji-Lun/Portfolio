@@ -4,7 +4,7 @@
 import { RESUME, LINKEDIN, GITHUB, SCHOLAR } from "./profile";
 
 export const faq = [
-  { q: ["what is he doing next", "is he open to work", "is he available", "is he looking for a job", "can we hire him", "when can he start", "start date", "is he job hunting", "open to full time", "available for work", "is he available for work"],
+  { q: ["is he open to work", "is he available", "is he looking for a job", "can we hire him", "when can he start", "start date", "is he job hunting", "open to full time", "available for work", "is he available for work"],
     a: "Ryu has accepted a full-time software engineering role starting February 2027, so he is not job hunting right now. He graduates from USC in December 2026. LinkedIn is the best way to stay in touch.",
     links: [["Message on LinkedIn", LINKEDIN]] },
   { q: ["does he need sponsorship", "visa", "work authorization", "is he authorized to work in the us", "green card", "permanent resident", "citizenship", "h1b"],
@@ -113,5 +113,9 @@ export const faq = [
     links: [["Open GitHub", GITHUB]] },
   { q: ["resume", "cv", "download resume"],
     a: "Here is his résumé.",
-    links: [["Open résumé", RESUME]] }
+    links: [["Open résumé", RESUME]] },
+  { q: ["what is he doing next", "what's next", "what is he up to", "paris", "poster", "poster presentation", "is he going to neurips", "where will he be in december", "upcoming"],
+    a: "Next up is Paris. Ryu is presenting MIRROR as a poster at the FLMSec workshop (Foundations of Language Model Security) at NeurIPS 2026 on December 13.",
+    tiles: ["mirror"],
+    links: [["Read the paper", "https://arxiv.org/abs/2610.02349"]] }
 ];

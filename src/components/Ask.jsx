@@ -25,15 +25,9 @@ const PRIVATE =
 const words = (s) =>
   s.toLowerCase().replace(/[^a-z0-9+' ]/g, " ").split(/\s+/).filter((w) => w && !STOP.has(w));
 
-const OPEN_ANSWER = {
-  q: "What is he doing next?",
-  item: faq[0],
-  related: [],
-};
-
 const Ask = ({ onShow }) => {
   const [value, setValue] = useState("");
-  const [answer, setAnswer] = useState(OPEN_ANSWER);
+  const [answer, setAnswer] = useState(null);
   const [copied, setCopied] = useState(false);
 
   const fuse = useMemo(() => {
@@ -94,7 +88,6 @@ const Ask = ({ onShow }) => {
     ask(text);
   };
 
-  const { q, item, related } = answer;
   return (
     <section className="ask" aria-label="Ask about Ryu">
       <form
@@ -118,10 +111,11 @@ const Ask = ({ onShow }) => {
         ))}
       </div>
 
+      {answer && (
       <div className="answer" aria-live="polite">
-        <span className="q">{q}</span>
-        <p>{item.a}</p>
-        {item.email && (
+        <span className="q">{answer.q}</span>
+        <p>{answer.item.a}</p>
+        {answer.item.email && (
           <div className="mail">
             <span>{getEmail()}</span>
             <button className="ref" type="button" onClick={() => copyText(getEmail(), () => setCopied(true))}>
@@ -130,35 +124,36 @@ const Ask = ({ onShow }) => {
           </div>
         )}
         <div className="refs">
-          {item.askOnLinkedIn && (
+          {answer.item.askOnLinkedIn && (
             <a
               className="ref strong"
               href={LINKEDIN}
               target="_blank"
               rel="noopener noreferrer"
-              onClick={() => copyText(`Hi Ryu, I saw your portfolio and wanted to ask: ${q}`, () => {})}
+              onClick={() => copyText(`Hi Ryu, I saw your portfolio and wanted to ask: ${answer.q}`, () => {})}
             >
               Copy question &amp; open LinkedIn
             </a>
           )}
-          {(item.tiles || []).map((id) => (
+          {(answer.item.tiles || []).map((id) => (
             <button className="ref" type="button" key={id} onClick={() => onShow(id, { scroll: true })}>
               Show {TITLES[id] || id}
             </button>
           ))}
-          {(item.links || []).map(([label, href]) => (
+          {(answer.item.links || []).map(([label, href]) => (
             <a className="ref" key={label} href={href} target="_blank" rel="noopener noreferrer">{label}</a>
           ))}
         </div>
-        {related.length > 0 && (
+        {answer.related.length > 0 && (
           <div className="also">
             <span>Related:</span>
-            {related.map((i) => (
+            {answer.related.map((i) => (
               <button className="chip" type="button" key={i} onClick={() => runChip(chipLabel(i))}>{chipLabel(i)}</button>
             ))}
           </div>
         )}
       </div>
+      )}
       <p className="note">Answers come from Ryu's own write-ups. No AI model is involved, so nothing is made up.</p>
     </section>
   );
