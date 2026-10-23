@@ -97,11 +97,11 @@ export const roles = [
     title: "Software Engineer Intern",
     when: "Oct 2024 – Oct 2025",
     org: "Tomorrow's AI · Remote",
-    highlight: "NLP data pipelines on AWS, 30% better hate-speech detection, and a React front-end rebuild.",
+    highlight: "NLP data pipelines on AWS, 150,000+ articles normalized for hate-speech NLP, and a React front-end rebuild.",
     bullets: [
       "Slashed data ingestion latency by 10% across 3 NLP pipelines by building a Dockerized, web-scraper-driven pipeline on AWS EC2.",
-      "Boosted hate-speech detection accuracy by 30% and mitigated linguistic bias by processing and normalizing 150,000+ real-world news articles (450+ MB) in Python.",
-      "Reduced engineering sprint completion times by 25% by revamping the core web interface with modular, mobile-optimized React components.",
+      "Processed and normalized 150,000+ real-world news articles (450+ MB) in Python to reduce linguistic bias in hate-speech detection across core NLP models.",
+      "Revamped the core web interface with modular, mobile-optimized React components to improve platform usability.",
     ],
   },
   {
