@@ -16,7 +16,7 @@ export const faq = [
     a: "Email or LinkedIn both reach him. His phone number is on his résumé.", email: true,
     links: [["Message on LinkedIn", LINKEDIN], ["Open résumé", RESUME]] },
   { q: ["where is he from", "where does he live", "where is he based", "location", "hometown", "what city", "where is he located", "where was he born", "where did he grow up", "brazil", "hawaii", "honolulu"],
-    a: "Ryu was born in São Paulo, Brazil, and raised in Honolulu, Hawaii. He earned his undergraduate degree at Keio University in Japan and is now based in Los Angeles, finishing his M.S. at USC." },
+    a: "Ryu was born in São Paulo, Brazil, and raised in Honolulu, Hawaii, where he graduated from Punahou School. He earned his undergraduate degree at Keio University in Japan and is now based in Los Angeles, finishing his M.S. at USC." },
   { q: ["can he relocate", "remote", "hybrid", "on site", "onsite", "willing to move", "which locations", "can he work remotely", "remotely", "relocation"],
     a: "He has accepted a full-time role starting February 2027, so he is not considering other locations right now." },
   { q: ["what languages does he speak", "does he speak japanese", "english", "bilingual", "japanese"],
