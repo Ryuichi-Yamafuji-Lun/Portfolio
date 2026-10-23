@@ -30,7 +30,8 @@ export const stats = [
 
 export const education = [
   { degree: "M.S. Computer Science", where: "University of Southern California · Dec 2026" },
-  { degree: "B.A. Environment & Information Studies", where: "Keio University · Sep 2024" },
+  { degree: "B.A. Environment & Information Studies (Business & CS)", where: "Keio University · Sep 2024" },
+  { degree: "High School Diploma, with Honors", where: "Punahou School · May 2020" },
 ];
 
 // Graduate courses that go beyond a standard CS core.
@@ -39,6 +40,7 @@ export const coursework = [
   "Deep Learning",
   "Machine Learning",
   "Applied NLP",
+  "Artificial Intelligence",
   "Analysis of Algorithms",
 ];
 
@@ -51,6 +53,7 @@ export const beyond = [
 export const awards = [
   { name: "Outstanding Graduation Project Award", detail: "Keio University · 2024 · one of 12 recipients" },
   { name: "1999 Mita-kai Scholarship", detail: "Keio University · 2024 · merit-based" },
+  { name: "GIC & GIGA Program Certificates", detail: "Keio University · global interdisciplinary programs" },
 ];
 
 export const stack = [
