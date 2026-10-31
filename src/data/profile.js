@@ -13,7 +13,7 @@ export const profile = {
   role: "Software Engineer · AI agents & backend",
   pitch: "I build AI agent systems and the backend infrastructure that keeps them fast and reliable.",
   facts: [
-    { label: "Starting full-time Feb 2027" },
+    { label: "Open to connect", available: true },
     { label: "Graduating Dec 2026" },
     { label: "U.S. Permanent Resident" },
   ],

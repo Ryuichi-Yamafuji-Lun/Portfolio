@@ -4,8 +4,8 @@
 import { RESUME, LINKEDIN, GITHUB, SCHOLAR } from "./profile";
 
 export const faq = [
-  { q: ["is he open to work", "is he available", "is he looking for a job", "can we hire him", "when can he start", "start date", "is he job hunting", "open to full time", "available for work", "is he available for work"],
-    a: "Ryu has accepted a full-time software engineering role starting February 2027, so he is not job hunting right now. He graduates from USC in December 2026. LinkedIn is the best way to stay in touch.",
+  { q: ["is he open to networking", "can i network with him", "coffee chat", "is he open to work", "is he available", "is he looking for a job", "can we hire him", "when can he start", "start date", "is he job hunting", "open to full time", "available for work", "is he available for work"],
+    a: "Ryu has accepted a full-time software engineering role starting February 2027, so he is not job hunting right now. He is always happy to connect, whether that is talking AI infrastructure, research, or just trading notes. LinkedIn or email both reach him.", email: true,
     links: [["Message on LinkedIn", LINKEDIN]] },
   { q: ["does he need sponsorship", "visa", "work authorization", "is he authorized to work in the us", "green card", "permanent resident", "citizenship", "h1b"],
     a: "No sponsorship needed. Ryu is a U.S. Permanent Resident." },
