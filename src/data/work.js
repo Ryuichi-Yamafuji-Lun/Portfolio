@@ -37,10 +37,7 @@ export const projects = [
       "Built a LangGraph agent that routes the CNN prediction through a Gemini reasoning node for plain-language explanations and next steps.",
       "Migrated the FastAPI backend from Render to Google Cloud Run, cutting hosting cost to $0 on the free tier; uploads are deleted after inference.",
     ],
-    links: [
-      ["Live site", "https://mediskinai.vercel.app/"],
-      ["Code", "https://github.com/Ryuichi-Yamafuji-Lun/MediSkinAI"],
-    ],
+    links: [["Code", "https://github.com/Ryuichi-Yamafuji-Lun/MediSkinAI"]],
     tags: ["PyTorch", "LangGraph", "FastAPI", "React", "Cloud Run"],
   },
   {
