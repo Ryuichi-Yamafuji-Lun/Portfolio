@@ -111,7 +111,9 @@ export const EducationTile = ({ education, coursework, beyond, awards, flash }) 
       {education.map((e) => (
         <div key={e.degree}>
           <b>{e.degree}</b>
-          <span>{e.where}</span>
+          <span>
+            <a href={e.url} target="_blank" rel="noopener noreferrer">{e.school} ↗</a> · {e.when}
+          </span>
         </div>
       ))}
     </div>

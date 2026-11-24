@@ -262,6 +262,8 @@ a { color: inherit; }
 .edu div { display: grid; gap: 2px; }
 .edu b { font-weight: 600; }
 .edu span { color: var(--muted); font-size: 14px; }
+.edu a { color: var(--accent); text-decoration: none; }
+.edu a:hover { text-decoration: underline; }
 
 footer { margin-top: 28px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; color: var(--muted); font-size: 13px; }
 
