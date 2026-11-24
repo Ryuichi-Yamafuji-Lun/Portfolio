@@ -75,8 +75,15 @@ export const projects = [
   },
 ];
 
-// Newest first. The first role gets the glowing "current" dot and its own feature tile.
+// Newest first. The first role gets the glowing "current" dot; the feature tile is pinned to Rakuten in App.js.
 export const roles = [
+  {
+    title: "Software Engineer (Incoming)",
+    when: "Starting Feb 2027",
+    org: "Capital One · Richmond, VA",
+    highlight: "Joining full-time after finishing the M.S. at USC.",
+    bullets: [],
+  },
   {
     title: "AI Engineer Intern",
     when: "May – Aug 2026",

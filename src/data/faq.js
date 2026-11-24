@@ -5,7 +5,7 @@ import { RESUME, LINKEDIN, GITHUB, SCHOLAR } from "./profile";
 
 export const faq = [
   { q: ["is he open to networking", "can i network with him", "coffee chat", "is he open to work", "is he available", "is he looking for a job", "can we hire him", "when can he start", "start date", "is he job hunting", "open to full time", "available for work", "is he available for work"],
-    a: "Ryu has accepted a full-time software engineering role starting February 2027, so he is not job hunting right now. He is always happy to connect, whether that is talking AI infrastructure, research, or just trading notes. LinkedIn or email both reach him.", email: true,
+    a: "Ryu is joining Capital One as a software engineer in February 2027, so he is not job hunting right now. He is always happy to connect, whether that is talking AI infrastructure, research, or just trading notes. LinkedIn or email both reach him.", email: true,
     links: [["Message on LinkedIn", LINKEDIN]] },
   { q: ["does he need sponsorship", "visa", "work authorization", "is he authorized to work in the us", "green card", "permanent resident", "citizenship", "h1b"],
     a: "No sponsorship needed. Ryu is a U.S. Permanent Resident." },
@@ -16,15 +16,15 @@ export const faq = [
     a: "Email or LinkedIn both reach him. His phone number is on his résumé.", email: true,
     links: [["Message on LinkedIn", LINKEDIN], ["Open résumé", RESUME]] },
   { q: ["where is he from", "where does he live", "where is he based", "location", "hometown", "what city", "where is he located", "where was he born", "where did he grow up", "brazil", "hawaii", "honolulu"],
-    a: "Ryu was born in São Paulo, Brazil, and raised in Honolulu, Hawaii, where he graduated from Punahou School. He earned his undergraduate degree at Keio University in Japan and is now based in Los Angeles, finishing his M.S. at USC." },
+    a: "Ryu was born in São Paulo, Brazil, and raised in Honolulu, Hawaii, where he graduated from Punahou School. He earned his undergraduate degree at Keio University in Japan and is now based in Los Angeles, finishing his M.S. at USC. In February 2027 he moves to Richmond, VA to join Capital One." },
   { q: ["can he relocate", "remote", "hybrid", "on site", "onsite", "willing to move", "which locations", "can he work remotely", "remotely", "relocation"],
-    a: "He has accepted a full-time role starting February 2027, so he is not considering other locations right now." },
+    a: "He is joining Capital One as a software engineer in Richmond, VA in February 2027, so he is not considering other locations right now." },
   { q: ["what languages does he speak", "does he speak japanese", "english", "bilingual", "japanese"],
     a: "English and Japanese, both fluently." },
-  { q: ["what roles is he looking for", "what kind of job", "what position", "what does he want to do", "ideal role", "career goal"],
-    a: "He has accepted a full-time software engineering role starting February 2027. Long term, he is most interested in AI infrastructure: agent platforms, developer tooling, and the pipelines behind them." },
+  { q: ["what roles is he looking for", "what kind of job", "what position", "what does he want to do", "ideal role", "career goal", "capital one", "where will he work", "where is he working", "what company", "new job", "incoming"],
+    a: "He is joining Capital One as a software engineer in February 2027. Long term, he is most interested in AI infrastructure: agent platforms, developer tooling, and the pipelines behind them." },
   { q: ["who is ryu", "tell me about him", "summary", "about", "introduce", "background", "who is he", "what does he do"],
-    a: "Ryu is a software engineer finishing his M.S. in Computer Science at USC (Dec 2026). He builds AI agents and the backend systems around them: LLM cost monitoring and AI code review at Rakuten, a first-author paper on securing multi-agent LLM communication, and earlier database systems research at Keio.",
+    a: "Ryu is a software engineer finishing his M.S. in Computer Science at USC (Dec 2026) and joining Capital One in February 2027. He builds AI agents and the backend systems around them: LLM cost monitoring and AI code review at Rakuten, a first-author paper on securing multi-agent LLM communication, and earlier database systems research at Keio.",
     tiles: ["rakuten", "mirror"] },
   { q: ["most memorable projects", "best projects", "what is he proud of", "show me his work", "highlights", "projects", "portfolio"],
     a: "Three stand out: MIRROR, a first-author paper accepted at the NeurIPS 2026 FLMSec workshop; his Rakuten internship, with LLM cost monitoring on Claude agents and AI code review for every pull request; and MediSkinAI, a melanoma screening agent with 27+ early users.",
@@ -115,7 +115,7 @@ export const faq = [
     a: "Here is his résumé.",
     links: [["Open résumé", RESUME]] },
   { q: ["what is he doing next", "what's next", "what is he up to", "paris", "poster", "poster presentation", "is he going to neurips", "where will he be in december", "upcoming"],
-    a: "Next up is Paris. Ryu is presenting MIRROR as a poster at the FLMSec workshop (Foundations of Language Model Security) at NeurIPS 2026 on December 13.",
+    a: "Next up is Paris. Ryu is presenting MIRROR as a poster at the FLMSec workshop (Foundations of Language Model Security) at NeurIPS 2026 on December 13. After that, he finishes his M.S. at USC in December and starts as a software engineer at Capital One in February 2027.",
     tiles: ["mirror"],
     links: [["Read the paper", "https://arxiv.org/abs/2610.02349"]] }
 ];
