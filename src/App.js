@@ -95,7 +95,7 @@ function App() {
           <Ask onShow={show} />
 
           <ProjectTile p={mirror} flash={flash} onDetails={openDetails} />
-          <FeaturedRoleTile role={roles.find((r) => r.org.startsWith("Rakuten"))} flash={flash} />
+          <FeaturedRoleTile role={roles[0]} flash={flash} />
           {rest.map((p) => (
             <ProjectTile key={p.id} p={p} flash={flash} onDetails={openDetails} />
           ))}

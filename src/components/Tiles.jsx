@@ -71,7 +71,7 @@ export const ExperienceTile = ({ roles, stack, full, flash, onDetails }) => (
   <article {...tileProps("experience", 7, full, flash, "wide")}>
     <div className="head">
       <div>
-        <p className="eyebrow">{roles.length} roles · 2022 – 2027</p>
+        <p className="eyebrow">{roles.length} roles · 2022 – 2026</p>
         <h3>Experience</h3>
       </div>
       {!full && <DetailsButton label="All details" onClick={(e) => onDetails("experience", e.currentTarget)} />}
@@ -85,7 +85,7 @@ export const ExperienceTile = ({ roles, stack, full, flash, onDetails }) => (
           </div>
           <span className="org">{r.org}</span>
           <p className="hl">{r.highlight}</p>
-          {full && r.bullets.length > 0 && (
+          {full && (
             <ul className="detail">
               {r.bullets.map((b) => (
                 <li key={b}>{b}</li>
