@@ -24,7 +24,7 @@ export const profile = {
 export const stats = [
   { source: "FafnirDT", value: "500,000+", label: "transactions/sec restored from 0 under multicore contention", target: "fafnir" },
   { source: "Rakuten", value: "10,000+", label: "employee tenant metered for LLM spend", target: "rakuten" },
-  { source: "Rakuten", value: "100%", label: "of pull requests get AI code review", target: "rakuten" },
+  { source: "MIRROR", value: "1× vs 35×", label: "LLM token cost vs an LLM-judge defense", target: "mirror" },
   { source: "MediSkinAI", value: "33,126", label: "dermoscopy images, 56:1 class imbalance", target: "mediskin" },
 ];
 

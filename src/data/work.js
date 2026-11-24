@@ -1,7 +1,7 @@
 // Projects, research, and experience. Edit here to add, remove, or reword tiles.
-import mirrorImg from "../assets/image/web/mirror.jpg";
+import mirrorImg from "../assets/image/web/mirror.svg";
 import mediskinImg from "../assets/image/web/mediskinai.jpg";
-import fafnirImg from "../assets/image/web/fafnirdt.jpg";
+import fafnirImg from "../assets/image/web/fafnirdt.svg";
 import tetrisImg from "../assets/image/web/tetris.jpg";
 
 // Image tiles in grid order. "span" is the width on desktop (out of 12 columns).
@@ -10,8 +10,8 @@ export const projects = [
     id: "mirror",
     span: 7,
     image: mirrorImg,
-    alt: "MIRROR diagram: a traditional attack, an agent-in-the-middle attack, and the MIRROR quorum defense",
-    badge: "NeurIPS 2026 FLMSec Workshop · Accepted",
+    alt: "MIRROR diagram: a sender agent sends one message over three routes, an intermediary rewrites one copy, and the receiver delivers the version that two of three routes agree on",
+    badge: "FLMSec Workshop @ NeurIPS 2026 · Poster, Paris Dec 13",
     title: "MIRROR: Multipath Quorum Integrity for LLM Multi-Agent Communication",
     sub: "First author, led a 4-person team",
     lead: "Protects messages between LLM agents from an intermediary that can read and rewrite them.",
@@ -44,7 +44,7 @@ export const projects = [
     id: "fafnir",
     span: 4,
     image: fafnirImg,
-    alt: "FafnirDT throughput chart",
+    alt: "Throughput when long transactions hold every thread: 2PLSF drops to 0 transactions/sec, FafnirDT sustains 500,000+",
     badge: "163rd System Software & OS Symposium, 2024",
     title: "FafnirDT",
     sub: "Dynamic timestamps in lock-based concurrency control · First author",
@@ -53,7 +53,7 @@ export const projects = [
       "Restored system throughput from 0 to 500,000+ transactions/sec in benchmarks.",
     ],
     links: [
-      ["Paper", "https://jglobal.jst.go.jp/en/detail?JGLOBAL_ID=202402231694286824"],
+      ["Paper", "https://ipsj.ixsq.nii.ac.jp/records/234364"],
       ["Code", "https://github.com/Ryuichi-Yamafuji-Lun/FafnirDT"],
     ],
     tags: ["C++", "Concurrency", "Databases"],

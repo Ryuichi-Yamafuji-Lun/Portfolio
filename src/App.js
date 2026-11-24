@@ -4,8 +4,8 @@ import OrbitCursor from "./components/OrbitCursor";
 import Ask from "./components/Ask";
 import DetailSheet from "./components/DetailSheet";
 import { ProjectTile, FeaturedRoleTile, ExperienceTile, EducationTile } from "./components/Tiles";
-import { GitHubIcon, LinkedInIcon, ResumeIcon, ScholarIcon } from "./components/Icons";
-import { profile, stats, education, coursework, beyond, awards, stack, RESUME, LINKEDIN, GITHUB, SCHOLAR } from "./data/profile";
+import { GitHubIcon, LinkedInIcon, MailIcon, ResumeIcon, ScholarIcon } from "./components/Icons";
+import { profile, stats, education, coursework, beyond, awards, stack, getEmail, RESUME, LINKEDIN, GITHUB, SCHOLAR } from "./data/profile";
 import { projects, roles } from "./data/work";
 
 // Single-page bento layout: glass hero + stats, the Ask bar, then project, experience and education tiles.
@@ -66,11 +66,14 @@ function App() {
                 ))}
               </div>
               <div className="links">
-                <a className="btn primary" href={RESUME} target="_blank" rel="noopener noreferrer">
-                  <ResumeIcon /> Résumé
+                <a className="btn primary" href={`mailto:${getEmail()}`}>
+                  <MailIcon /> Email
                 </a>
                 <a className="btn" href={LINKEDIN} target="_blank" rel="noopener noreferrer">
                   <LinkedInIcon /> LinkedIn
+                </a>
+                <a className="btn" href={RESUME} target="_blank" rel="noopener noreferrer">
+                  <ResumeIcon /> Résumé
                 </a>
                 <a className="btn" href={GITHUB} target="_blank" rel="noopener noreferrer">
                   <GitHubIcon /> GitHub
@@ -101,6 +104,21 @@ function App() {
           ))}
           <ExperienceTile roles={roles} stack={stack} flash={flash} onDetails={openDetails} />
           <EducationTile education={education} coursework={coursework} beyond={beyond} awards={awards} flash={flash} />
+          <section className="tile" id="contact" aria-label="Get in touch">
+            <div>
+              <p className="eyebrow">Get in touch</p>
+              <h3>Let's talk.</h3>
+              <p className="sub">AI agents in production, multi-agent security, or database internals. I'm always happy to trade notes.</p>
+            </div>
+            <div className="links">
+              <a className="btn primary" href={`mailto:${getEmail()}`}>
+                <MailIcon /> Email me
+              </a>
+              <a className="btn" href={LINKEDIN} target="_blank" rel="noopener noreferrer">
+                <LinkedInIcon /> LinkedIn
+              </a>
+            </div>
+          </section>
         </main>
         <footer>
           <span>{profile.footer}</span>
