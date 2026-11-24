@@ -29,7 +29,7 @@ export const stats = [
 ];
 
 export const education = [
-  { degree: "M.S. Computer Science", school: "University of Southern California", url: "https://www.usc.edu/about/", when: "Dec 2026" },
+  { degree: "M.S. Computer Science", school: "USC Viterbi School of Engineering", url: "https://viterbischool.usc.edu/about/", when: "Dec 2026" },
   { degree: "B.A. Environment & Information Studies (Business & CS)", school: "Keio University", url: "https://www.keio.ac.jp/en/about/", when: "Sep 2024" },
   { degree: "High School Diploma, with Honors", school: "Punahou School", url: "https://www.punahou.edu/about", when: "May 2020" },
 ];
